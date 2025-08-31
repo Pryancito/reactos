@@ -387,3 +387,19 @@ Enable this if the module uses typeid or dynamic_cast. You will probably need to
 
     add_dependency_footer()
 endif()
+# Configuración global CORREGIDA según análisis de Claude
+# Evita duplicación de flags y conflictos de linker
+
+# Flags de compilación globales optimizados (sin duplicación)
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fno-stack-protector -O1 -fno-strict-aliasing")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-stack-protector -O1 -fno-strict-aliasing")
+
+# Flags de linker globales simplificados
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,--enable-stdcall-fixup -static-libgcc")
+set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -Wl,--enable-stdcall-fixup -static-libgcc")
+set(CMAKE_MODULE_LINKER_FLAGS "${CMAKE_MODULE_LINKER_FLAGS} -Wl,--enable-stdcall-fixup -static-libgcc")
+
+# Asegurar que todas las librerías de runtime estén disponibles
+link_libraries(gcc)
+
+message(STATUS "Configuración global corregida aplicada - flags simplificados y sin duplicación")
