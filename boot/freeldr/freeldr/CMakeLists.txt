@@ -121,9 +121,22 @@ if(ARCH STREQUAL "i386" OR ARCH STREQUAL "amd64")
 endif()
 
 include(pcat.cmake)
-include(rosload.cmake)
+# include(rosload.cmake)  # COMENTADO: rosload causa problemas persistentes de ranlib
 if(NOT ARCH STREQUAL "i386" OR NOT (SARCH STREQUAL "pc98" OR SARCH STREQUAL "xbox"))
     include(uefi.cmake)
+endif()
+
+# ============================================================================
+# INTEGRACIÓN: BOOTLOADER UEFI NATIVO
+# ============================================================================
+# 
+# Incluir nuestro bootloader UEFI nativo que es completamente
+# compatible con sistemas UEFI estrictos como ASUS 10ª generación
+#
+if(ARCH STREQUAL "amd64" OR ARCH STREQUAL "i386")
+    message(STATUS "🚀 Integrando bootloader UEFI nativo para ${ARCH}")
+    include(uefi-native.cmake)
+    message(STATUS "✅ Bootloader UEFI nativo integrado exitosamente")
 endif()
 
 ## ========================================
