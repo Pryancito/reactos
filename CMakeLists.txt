@@ -99,6 +99,8 @@ endif()
 find_package(BISON REQUIRED)
 find_package(FLEX REQUIRED)
 
+# Los directorios se crearán automáticamente en los CMakeLists.txt específicos
+
 if(MSVC_IDE)
     # Bison needs M4 and BISON_PKGDATADIR set at build time,
     # but visual studio is hardly ever opened from the configure-time environment.

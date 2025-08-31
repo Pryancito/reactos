@@ -88,3 +88,32 @@ target_link_options(rosload PRIVATE
 )
 
 add_cd_file(TARGET rosload DESTINATION loader NO_CAB FOR bootcd regtest livecd hybridcd)
+
+## ========================================
+## SOLUCIÓN AUTOMÁTICA PARA RANLIB
+## ========================================
+## 
+## PROBLEMA IDENTIFICADO:
+## - Las bibliotecas .a generadas por MinGW-w64 POSIX no tienen índice
+## - Error: "el archivo no tiene índice. Ejecute ranlib para añadir uno"
+## - Causa: Incompatibilidad entre el toolchain y el sistema de build
+##
+## SOLUCIÓN APLICADA:
+## - Ejecutar ranlib automáticamente en libfreeldr antes de enlazar rosload
+## - Se ejecuta automáticamente en cada build
+## - Evita errores de enlazado por bibliotecas sin índice
+
+if(ARCH STREQUAL "amd64" AND NOT MSVC)
+    message(STATUS "🔧 SOLUCIÓN AUTOMÁTICA: Configurando ranlib automático para rosload")
+    
+    # Ejecutar ranlib automáticamente en libfreeldr antes de enlazar
+    add_custom_command(
+        TARGET rosload
+        PRE_LINK
+        COMMAND ${CMAKE_COMMAND} -E echo "🔧 SOLUCIÓN AUTOMÁTICA: Ejecutando ranlib en libfreeldr.a"
+        COMMAND x86_64-w64-mingw32-ranlib ${CMAKE_CURRENT_BINARY_DIR}/libfreeldr.a
+        COMMENT "SOLUCIÓN AUTOMÁTICA: ranlib ejecutado en libfreeldr.a antes de enlazar rosload"
+    )
+    
+    message(STATUS "✅ SOLUCIÓN AUTOMÁTICA: ranlib configurado para rosload")
+endif()

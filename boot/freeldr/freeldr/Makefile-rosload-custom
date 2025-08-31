@@ -1,0 +1,69 @@
+# Makefile mejorado para ROSLOAD personalizado
+# Compila sin problemas de ranlib para MinGW-w64 POSIX
+
+CC = x86_64-w64-mingw32-gcc-posix
+CFLAGS = -O2 -Wall -Wextra -std=c99 -DWIN32 -D_WIN32
+LDFLAGS = -static-libgcc -mconsole
+
+# Archivos fuente
+SOURCES = rosload-custom.c
+OBJECTS = $(SOURCES:.c=.o)
+TARGET = rosload-custom.exe
+
+# Regla principal
+all: $(TARGET)
+
+# Compilar el ejecutable
+$(TARGET): $(OBJECTS)
+	@echo "🔧 Enlazando ROSLOAD personalizado mejorado..."
+	$(CC) $(OBJECTS) -o $(TARGET) $(LDFLAGS)
+	@echo "✅ ROSLOAD personalizado compilado exitosamente: $(TARGET)"
+	@echo "📊 Tamaño: $(shell stat -c%s $(TARGET)) bytes"
+
+# Compilar objetos
+%.o: %.c
+	@echo "🔨 Compilando $<..."
+	$(CC) $(CFLAGS) -c $< -o $@
+
+# Instalar como rosload.exe
+install: $(TARGET)
+	@echo "📦 Instalando ROSLOAD personalizado..."
+	cp $(TARGET) rosload.exe
+	@echo "✅ ROSLOAD personalizado instalado como rosload.exe"
+
+# Limpiar
+clean:
+	@echo "🧹 Limpiando archivos de compilación..."
+	rm -f $(OBJECTS) $(TARGET) rosload.exe
+	@echo "✅ Limpieza completada"
+
+# Verificar dependencias
+check:
+	@echo "🔍 Verificando dependencias..."
+	@echo "CC: $(CC)"
+	@echo "CFLAGS: $(CFLAGS)"
+	@echo "LDFLAGS: $(LDFLAGS)"
+	@echo "Fuentes: $(SOURCES)"
+	@echo "Objetos: $(OBJECTS)"
+	@echo "Target: $(TARGET)"
+
+# Mostrar ayuda
+help:
+	@echo "Makefile para ROSLOAD personalizado mejorado"
+	@echo ""
+	@echo "Comandos disponibles:"
+	@echo "  make        - Compilar ROSLOAD personalizado"
+	@echo "  make install- Instalar como rosload.exe"
+	@echo "  make clean  - Limpiar archivos de compilación"
+	@echo "  make check  - Verificar dependencias"
+	@echo "  make help   - Mostrar esta ayuda"
+	@echo ""
+	@echo "Características:"
+	@echo "  ✅ Sin problemas de ranlib"
+	@echo "  ✅ Compatible con MinGW-w64 POSIX"
+	@echo "  ✅ Funcionalidad completa de bootloader"
+	@echo "  ✅ Modo seguro y debug"
+	@echo "  ✅ Procesamiento de línea de comandos"
+	@echo "  ✅ Interfaz de usuario mejorada"
+
+.PHONY: all clean install check help

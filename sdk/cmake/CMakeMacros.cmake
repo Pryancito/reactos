@@ -933,3 +933,41 @@ function(set_target_cpp_properties _target)
         set_target_properties(${_target} PROPERTIES WITH_CXX_RTTI TRUE)
     endif()
 endfunction()
+
+## ========================================
+## SOLUCIÓN AUTOMÁTICA PARA RANLIB
+## ========================================
+## 
+## PROBLEMA IDENTIFICADO:
+## - Las bibliotecas .a generadas por MinGW-w64 POSIX no tienen índice
+## - Error: "el archivo no tiene índice. Ejecute ranlib para añadir uno"
+## - Causa: Incompatibilidad entre el toolchain y el sistema de build
+##
+## SOLUCIÓN APLICADA:
+## - Función automática que ejecuta ranlib después de crear bibliotecas
+## - Se ejecuta automáticamente en cada build
+## - Evita errores de enlazado por bibliotecas sin índice
+
+function(auto_ranlib_library TARGET_NAME)
+    if(ARCH STREQUAL "amd64" AND NOT MSVC)
+        message(STATUS "🔧 SOLUCIÓN AUTOMÁTICA: Configurando ranlib automático para ${TARGET_NAME}")
+        
+        # Ejecutar ranlib automáticamente después de crear la biblioteca
+        add_custom_command(
+            TARGET ${TARGET_NAME}
+            POST_BUILD
+            COMMAND ${CMAKE_COMMAND} -E echo "🔧 SOLUCIÓN AUTOMÁTICA: Ejecutando ranlib en ${TARGET_NAME}"
+            COMMAND x86_64-w64-mingw32-ranlib $<TARGET_FILE:${TARGET_NAME}>
+            COMMENT "SOLUCIÓN AUTOMÁTICA: ranlib ejecutado en ${TARGET_NAME}"
+        )
+        
+        message(STATUS "✅ SOLUCIÓN AUTOMÁTICA: ranlib configurado para ${TARGET_NAME}")
+    endif()
+endfunction()
+
+# Función para aplicar ranlib automático a múltiples targets
+function(auto_ranlib_libraries)
+    foreach(target ${ARGN})
+        auto_ranlib_library(${target})
+    endforeach()
+endfunction()

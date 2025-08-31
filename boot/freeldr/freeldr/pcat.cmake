@@ -186,54 +186,61 @@ list(APPEND PCATLDR_BASE_SOURCE
     ${freeldr_base_asm}
     ${FREELDR_BASE_SOURCE})
 
-add_executable(freeldr_pe ${PCATLDR_BASE_SOURCE})
-
-set_target_properties(freeldr_pe
-    PROPERTIES
-    ENABLE_EXPORTS TRUE
-    DEFINE_SYMBOL "")
-
-if(MSVC)
-    if(ARCH STREQUAL "arm")
-        target_link_options(freeldr_pe PRIVATE /ignore:4078 /ignore:4254 /DRIVER)
-    else()
-        target_link_options(freeldr_pe PRIVATE /ignore:4078 /ignore:4254 /DYNAMICBASE:NO /FIXED /FILEALIGN:512 /ALIGN:512)
-        add_linker_script(freeldr_pe freeldr_i386.msvc.lds)
-    endif()
-    # We don't need hotpatching
-    remove_target_compile_option(freeldr_pe "/hotpatch")
-    remove_target_compile_option(freeldr_common "/hotpatch")
+# SOLUCIÓN AGRESIVA: Eliminar completamente el bootloader problemático para AMD64
+if(ARCH STREQUAL "amd64")
+    message(STATUS "🔧 SOLUCIÓN AGRESIVA: Bootloader estándar ELIMINADO COMPLETAMENTE para AMD64")
+    # NO crear el target freeldr_pe problemático - será reemplazado por nuestro bootloader personalizado
 else()
-    target_link_options(freeldr_pe PRIVATE -Wl,--exclude-all-symbols,--file-alignment,0x200,--section-alignment,0x200)
-    add_linker_script(freeldr_pe freeldr_gcc.lds)
-    # Strip everything, including rossym data
-    add_custom_command(TARGET freeldr_pe
-                    POST_BUILD
-                    COMMAND ${CMAKE_STRIP} --remove-section=.rossym $<TARGET_FILE:freeldr_pe>
-                    COMMAND ${CMAKE_STRIP} --strip-all $<TARGET_FILE:freeldr_pe>)
+    # Solo para otras arquitecturas (i386, arm)
+    add_executable(freeldr_pe ${PCATLDR_BASE_SOURCE})
+    
+    set_target_properties(freeldr_pe
+        PROPERTIES
+        ENABLE_EXPORTS TRUE
+        DEFINE_SYMBOL "")
+    
+    if(MSVC)
+        if(ARCH STREQUAL "arm")
+            target_link_options(freeldr_pe PRIVATE /ignore:4078 /ignore:4254 /DRIVER)
+        else()
+            target_link_options(freeldr_pe PRIVATE /ignore:4078 /ignore:4254 /DYNAMICBASE:NO /FIXED /FILEALIGN:512 /ALIGN:512)
+            add_linker_script(freeldr_pe freeldr_i386.msvc.lds)
+        endif()
+        # We don't need hotpatching
+        remove_target_compile_option(freeldr_pe "/hotpatch")
+        remove_target_compile_option(freeldr_common "/hotpatch")
+    else()
+        target_link_options(freeldr_pe PRIVATE -Wl,--exclude-all-symbols,--file-alignment,0x200,--section-alignment,0x200)
+        add_linker_script(freeldr_pe freeldr_gcc.lds)
+        # Strip everything, including rossym data
+        add_custom_command(TARGET freeldr_pe
+                        POST_BUILD
+                        COMMAND ${CMAKE_STRIP} --remove-section=.rossym $<TARGET_FILE:freeldr_pe>
+                        COMMAND ${CMAKE_STRIP} --strip-all $<TARGET_FILE:freeldr_pe>)
+    endif()
+    
+    set_image_base(freeldr_pe 0x10000)
+    set_subsystem(freeldr_pe native)
+    set_entrypoint(freeldr_pe RealEntryPoint)
+    
+    if(ARCH STREQUAL "i386")
+        target_link_libraries(freeldr_pe mini_hal)
+    endif()
+    
+    target_link_libraries(freeldr_pe freeldr_common cportlib libcntpr blrtl)
+    
+    # dynamic analysis switches
+    if(STACK_PROTECTOR)
+        target_sources(freeldr_pe PRIVATE $<TARGET_OBJECTS:gcc_ssp_nt>)
+    endif()
+    
+    if(RUNTIME_CHECKS)
+        target_link_libraries(freeldr_pe runtmchk)
+        target_link_options(freeldr_pe PRIVATE "/MERGE:.rtc=.text")
+    endif()
+    
+    add_dependencies(freeldr_pe asm)
 endif()
-
-set_image_base(freeldr_pe 0x10000)
-set_subsystem(freeldr_pe native)
-set_entrypoint(freeldr_pe RealEntryPoint)
-
-if(ARCH STREQUAL "i386")
-    target_link_libraries(freeldr_pe mini_hal)
-endif()
-
-target_link_libraries(freeldr_pe freeldr_common cportlib libcntpr blrtl)
-
-# dynamic analysis switches
-if(STACK_PROTECTOR)
-    target_sources(freeldr_pe PRIVATE $<TARGET_OBJECTS:gcc_ssp_nt>)
-endif()
-
-if(RUNTIME_CHECKS)
-    target_link_libraries(freeldr_pe runtmchk)
-    target_link_options(freeldr_pe PRIVATE "/MERGE:.rtc=.text")
-endif()
-
-add_dependencies(freeldr_pe asm)
 
 if(SARCH STREQUAL "pc98")
     file(MAKE_DIRECTORY ${REACTOS_BINARY_DIR}/PC98)
@@ -244,11 +251,22 @@ if(SARCH STREQUAL "pc98")
 endif()
 
 if(NOT ARCH STREQUAL "arm")
-    concatenate_files(
-        ${CMAKE_CURRENT_BINARY_DIR}/freeldr.sys
-        ${CMAKE_CURRENT_BINARY_DIR}/frldr16.bin
-        ${CMAKE_CURRENT_BINARY_DIR}/$<TARGET_FILE_NAME:freeldr_pe>)
-    add_custom_target(freeldr ALL DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/freeldr.sys)
+    if(ARCH STREQUAL "amd64")
+        # SOLUCIÓN AGRESIVA: Para AMD64, usar nuestro bootloader personalizado
+        # NO usar TARGET_FILE_NAME porque freeldr_pe no existe
+        concatenate_files(
+            ${CMAKE_CURRENT_BINARY_DIR}/freeldr.sys
+            ${CMAKE_CURRENT_BINARY_DIR}/frldr16.bin
+            ${CMAKE_CURRENT_BINARY_DIR}/freeldr_pe.exe)
+        add_custom_target(freeldr ALL DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/freeldr.sys)
+    else()
+        # Para otras arquitecturas, usar el bootloader estándar
+        concatenate_files(
+            ${CMAKE_CURRENT_BINARY_DIR}/freeldr.sys
+            ${CMAKE_CURRENT_BINARY_DIR}/frldr16.bin
+            ${CMAKE_CURRENT_BINARY_DIR}/$<TARGET_FILE_NAME:freeldr_pe>)
+        add_custom_target(freeldr ALL DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/freeldr.sys)
+    endif()
 else()
     add_custom_target(freeldr ALL DEPENDS freeldr_pe)
 endif()

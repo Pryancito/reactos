@@ -4,6 +4,25 @@ include_directories(include)
 
 add_definitions(-D_CRTBLD)
 
+# SOLUCIÓN PERMANENTE: Crear automáticamente todos los directorios necesarios
+# Esto evita errores de compilación por directorios faltantes
+# Se ejecuta automáticamente en cada build
+message(STATUS "🔧 Creando directorios necesarios para bibliotecas CRT...")
+
+# Directorios principales para bibliotecas CRT
+file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/math/libm_sse2)
+file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/math/amd64)
+file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/except/amd64)
+file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/startup)
+
+# Directorios adicionales que puedan ser necesarios
+file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/math/i386)
+file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/except/i386)
+file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/stdio)
+file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/stdlib)
+
+message(STATUS "✅ Directorios CRT creados exitosamente")
+
 include(conio/conio.cmake)
 include(direct/direct.cmake)
 include(except/except.cmake)
