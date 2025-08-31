@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libportcls_delayed.a CMakeFiles/libportcls_delayed.dir/libportcls_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libportcls_delayed.a

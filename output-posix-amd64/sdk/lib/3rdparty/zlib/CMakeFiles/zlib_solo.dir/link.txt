@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libzlib_solo.a CMakeFiles/zlib_solo.dir/adler32.c.obj CMakeFiles/zlib_solo.dir/crc32.c.obj CMakeFiles/zlib_solo.dir/deflate.c.obj CMakeFiles/zlib_solo.dir/inffast.c.obj CMakeFiles/zlib_solo.dir/inflate.c.obj CMakeFiles/zlib_solo.dir/inftrees.c.obj CMakeFiles/zlib_solo.dir/trees.c.obj CMakeFiles/zlib_solo.dir/zutil.c.obj
+/usr/bin/x86_64-w64-mingw32-ranlib libzlib_solo.a

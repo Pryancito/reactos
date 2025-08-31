@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libavifil32.a CMakeFiles/libavifil32.dir/libavifil32.a
+/usr/bin/x86_64-w64-mingw32-ranlib libavifil32.a

@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libpathcch_static.a CMakeFiles/pathcch_static.dir/__/__/__/dll/win32/kernelbase/wine/path.c.obj
+/usr/bin/x86_64-w64-mingw32-ranlib libpathcch_static.a

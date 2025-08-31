@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libd3drm.a CMakeFiles/libd3drm.dir/libd3drm.a
+/usr/bin/x86_64-w64-mingw32-ranlib libd3drm.a

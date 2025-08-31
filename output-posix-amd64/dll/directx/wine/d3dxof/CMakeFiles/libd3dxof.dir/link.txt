@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libd3dxof.a CMakeFiles/libd3dxof.dir/libd3dxof.a
+/usr/bin/x86_64-w64-mingw32-ranlib libd3dxof.a

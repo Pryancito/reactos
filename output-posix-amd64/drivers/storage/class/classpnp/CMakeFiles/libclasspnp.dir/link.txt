@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libclasspnp.a CMakeFiles/libclasspnp.dir/libclasspnp.a
+/usr/bin/x86_64-w64-mingw32-ranlib libclasspnp.a

@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libw32time_delayed.a CMakeFiles/libw32time_delayed.dir/libw32time_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libw32time_delayed.a

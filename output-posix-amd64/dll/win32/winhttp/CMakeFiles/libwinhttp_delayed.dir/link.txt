@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libwinhttp_delayed.a CMakeFiles/libwinhttp_delayed.dir/libwinhttp_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libwinhttp_delayed.a

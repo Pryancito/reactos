@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libwin32ksys.a "CMakeFiles/win32ksys.dir/sys-stubs.S.obj"
+/usr/bin/x86_64-w64-mingw32-ranlib libwin32ksys.a

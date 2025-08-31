@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/moebius/reactos/output-posix-amd64/CMakeFiles/host-tools"
+		},
+		{
+			"file" : "/home/moebius/reactos/output-posix-amd64/CMakeFiles/host-tools.rule"
+		},
+		{
+			"file" : "/home/moebius/reactos/output-posix-amd64/CMakeFiles/host-tools-complete.rule"
+		},
+		{
+			"file" : "/home/moebius/reactos/output-posix-amd64/host-tools/src/host-tools-stamp/host-tools-build.rule"
+		},
+		{
+			"file" : "/home/moebius/reactos/output-posix-amd64/host-tools/src/host-tools-stamp/host-tools-configure.rule"
+		},
+		{
+			"file" : "/home/moebius/reactos/output-posix-amd64/host-tools/src/host-tools-stamp/host-tools-download.rule"
+		},
+		{
+			"file" : "/home/moebius/reactos/output-posix-amd64/host-tools/src/host-tools-stamp/host-tools-install.rule"
+		},
+		{
+			"file" : "/home/moebius/reactos/output-posix-amd64/host-tools/src/host-tools-stamp/host-tools-mkdir.rule"
+		},
+		{
+			"file" : "/home/moebius/reactos/output-posix-amd64/host-tools/src/host-tools-stamp/host-tools-patch.rule"
+		},
+		{
+			"file" : "/home/moebius/reactos/output-posix-amd64/host-tools/src/host-tools-stamp/host-tools-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"host-tools"
+		],
+		"name" : "host-tools"
+	}
+}

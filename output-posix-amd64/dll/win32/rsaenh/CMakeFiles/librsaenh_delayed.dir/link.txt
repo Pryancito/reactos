@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc librsaenh_delayed.a CMakeFiles/librsaenh_delayed.dir/librsaenh_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib librsaenh_delayed.a

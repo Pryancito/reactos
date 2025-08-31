@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libspoolsv.a CMakeFiles/libspoolsv.dir/libspoolsv.a
+/usr/bin/x86_64-w64-mingw32-ranlib libspoolsv.a

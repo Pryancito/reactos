@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libwininet_delayed.a CMakeFiles/libwininet_delayed.dir/libwininet_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libwininet_delayed.a

@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libxml_uuids.a CMakeFiles/xml_uuids.dir/msxml2_i.c.obj
+/usr/bin/x86_64-w64-mingw32-ranlib libxml_uuids.a

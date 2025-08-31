@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libmsvfw32_delayed.a CMakeFiles/libmsvfw32_delayed.dir/libmsvfw32_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libmsvfw32_delayed.a

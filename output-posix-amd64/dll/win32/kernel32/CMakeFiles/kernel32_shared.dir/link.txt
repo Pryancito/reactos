@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libkernel32_shared.a CMakeFiles/kernel32_shared.dir/client/shared_utils.c.obj CMakeFiles/kernel32_shared.dir/client/file/fileutils.c.obj
+/usr/bin/x86_64-w64-mingw32-ranlib libkernel32_shared.a

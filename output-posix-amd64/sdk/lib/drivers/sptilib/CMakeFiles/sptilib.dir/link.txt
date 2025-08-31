@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libsptilib.a CMakeFiles/sptilib.dir/sptilib.c.obj
+/usr/bin/x86_64-w64-mingw32-ranlib libsptilib.a

@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libmsacm32_delayed.a CMakeFiles/libmsacm32_delayed.dir/libmsacm32_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libmsacm32_delayed.a

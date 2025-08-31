@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libcryptlib.a CMakeFiles/cryptlib.dir/aes.c.obj CMakeFiles/cryptlib.dir/des.c.obj CMakeFiles/cryptlib.dir/md4.c.obj CMakeFiles/cryptlib.dir/md5.c.obj CMakeFiles/cryptlib.dir/mvAesAlg.c.obj CMakeFiles/cryptlib.dir/rc4.c.obj CMakeFiles/cryptlib.dir/sha1.c.obj CMakeFiles/cryptlib.dir/util.c.obj
+/usr/bin/x86_64-w64-mingw32-ranlib libcryptlib.a

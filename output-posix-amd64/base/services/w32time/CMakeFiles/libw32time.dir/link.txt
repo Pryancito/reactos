@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libw32time.a CMakeFiles/libw32time.dir/libw32time.a
+/usr/bin/x86_64-w64-mingw32-ranlib libw32time.a

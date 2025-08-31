@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libzipfldr.a CMakeFiles/libzipfldr.dir/libzipfldr.a
+/usr/bin/x86_64-w64-mingw32-ranlib libzipfldr.a

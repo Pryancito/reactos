@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libmspatcha_delayed.a CMakeFiles/libmspatcha_delayed.dir/libmspatcha_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libmspatcha_delayed.a

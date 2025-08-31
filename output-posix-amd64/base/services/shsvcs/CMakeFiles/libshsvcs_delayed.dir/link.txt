@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libshsvcs_delayed.a CMakeFiles/libshsvcs_delayed.dir/libshsvcs_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libshsvcs_delayed.a

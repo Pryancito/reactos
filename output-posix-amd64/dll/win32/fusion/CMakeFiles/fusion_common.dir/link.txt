@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libfusion_common.a CMakeFiles/fusion_common.dir/asmcache.c.obj CMakeFiles/fusion_common.dir/asmenum.c.obj CMakeFiles/fusion_common.dir/asmname.c.obj CMakeFiles/fusion_common.dir/assembly.c.obj CMakeFiles/fusion_common.dir/fusion.c.obj CMakeFiles/fusion_common.dir/fusion_stubs.c.obj
+/usr/bin/x86_64-w64-mingw32-ranlib libfusion_common.a

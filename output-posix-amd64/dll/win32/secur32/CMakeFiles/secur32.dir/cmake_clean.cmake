@@ -1,0 +1,40 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/secur32.dir/dllmain.c.obj"
+  "CMakeFiles/secur32.dir/dllmain.c.obj.d"
+  "CMakeFiles/secur32.dir/lsalpc.c.obj"
+  "CMakeFiles/secur32.dir/lsalpc.c.obj.d"
+  "CMakeFiles/secur32.dir/secur32.rc.res"
+  "CMakeFiles/secur32.dir/secur32_stubs.c.obj"
+  "CMakeFiles/secur32.dir/secur32_stubs.c.obj.d"
+  "CMakeFiles/secur32.dir/sspi.c.obj"
+  "CMakeFiles/secur32.dir/sspi.c.obj.d"
+  "CMakeFiles/secur32.dir/stubs.c.obj"
+  "CMakeFiles/secur32.dir/stubs.c.obj.d"
+  "CMakeFiles/secur32.dir/thunks.c.obj"
+  "CMakeFiles/secur32.dir/thunks.c.obj.d"
+  "CMakeFiles/secur32.dir/wine/base64_codec.c.obj"
+  "CMakeFiles/secur32.dir/wine/base64_codec.c.obj.d"
+  "CMakeFiles/secur32.dir/wine/dispatcher.c.obj"
+  "CMakeFiles/secur32.dir/wine/dispatcher.c.obj.d"
+  "CMakeFiles/secur32.dir/wine/hmac_md5.c.obj"
+  "CMakeFiles/secur32.dir/wine/hmac_md5.c.obj.d"
+  "CMakeFiles/secur32.dir/wine/kerberos.c.obj"
+  "CMakeFiles/secur32.dir/wine/kerberos.c.obj.d"
+  "CMakeFiles/secur32.dir/wine/negotiate.c.obj"
+  "CMakeFiles/secur32.dir/wine/negotiate.c.obj.d"
+  "CMakeFiles/secur32.dir/wine/ntlm.c.obj"
+  "CMakeFiles/secur32.dir/wine/ntlm.c.obj.d"
+  "CMakeFiles/secur32.dir/wine/util.c.obj"
+  "CMakeFiles/secur32.dir/wine/util.c.obj.d"
+  "CMakeFiles/secur32.dir/wrapper.c.obj"
+  "CMakeFiles/secur32.dir/wrapper.c.obj.d"
+  "secur32.def"
+  "secur32.dll"
+  "secur32.pdb"
+  "secur32_stubs.c"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C RC)
+  include(CMakeFiles/secur32.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

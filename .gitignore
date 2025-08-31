@@ -1,15 +1,48 @@
-compile_commands.json
-output-*
-modules/optional
-modules/bootcd_extras
-modules/livecd_extras
-modules/hybridcd_extras
-modules/3rdparty
-modules/[Aa][Hh][Kk]_[Tt]ests
-.cache
-.cproject
+# Archivos temporales
+*.tmp
+*.temp
+*.log
+
+# Archivos de prueba
+test-uefi-usb.img
+*.iso
+
+# Directorios temporales
+/tmp/
+/temp/
+
+# Archivos de sistema
 .DS_Store
-.project
-.settings
-.vscode
-sdk/tools/winesync/winesync.cfg
+Thumbs.db
+
+# Archivos de backup
+*.bak
+*.backup
+*~
+
+# Archivos de configuración local
+.env
+config.local
+
+# Archivos de compilación
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Directorios de build
+build/
+dist/
+target/
+
+# Archivos de IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos de particionado
+*.part
+*.img

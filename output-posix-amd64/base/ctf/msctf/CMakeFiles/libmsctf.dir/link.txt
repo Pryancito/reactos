@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libmsctf.a CMakeFiles/libmsctf.dir/libmsctf.a
+/usr/bin/x86_64-w64-mingw32-ranlib libmsctf.a

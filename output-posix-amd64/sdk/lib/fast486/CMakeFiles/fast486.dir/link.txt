@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libfast486.a CMakeFiles/fast486.dir/debug.c.obj CMakeFiles/fast486.dir/fast486.c.obj CMakeFiles/fast486.dir/opcodes.c.obj CMakeFiles/fast486.dir/opgroups.c.obj CMakeFiles/fast486.dir/extraops.c.obj CMakeFiles/fast486.dir/common.c.obj CMakeFiles/fast486.dir/fpu.c.obj
+/usr/bin/x86_64-w64-mingw32-ranlib libfast486.a

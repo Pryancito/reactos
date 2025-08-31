@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc librxce.a CMakeFiles/rxce.dir/rxce.c.obj
+/usr/bin/x86_64-w64-mingw32-ranlib librxce.a

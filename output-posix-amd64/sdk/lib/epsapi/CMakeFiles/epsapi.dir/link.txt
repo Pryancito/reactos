@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libepsapi.a CMakeFiles/epsapi.dir/enum/drivers.c.obj CMakeFiles/epsapi.dir/enum/modules.c.obj CMakeFiles/epsapi.dir/enum/processes.c.obj
+/usr/bin/x86_64-w64-mingw32-ranlib libepsapi.a

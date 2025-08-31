@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libxinput1_3_delayed.a CMakeFiles/libxinput1_3_delayed.dir/libxinput1_3_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libxinput1_3_delayed.a

@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libcsrlib.a CMakeFiles/csrlib.dir/api.c.obj CMakeFiles/csrlib.dir/capture.c.obj CMakeFiles/csrlib.dir/connect.c.obj
+/usr/bin/x86_64-w64-mingw32-ranlib libcsrlib.a

@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libhidparser_km.a CMakeFiles/hidparser_km.dir/context.c.obj CMakeFiles/hidparser_km.dir/hidparser.c.obj CMakeFiles/hidparser_km.dir/parser.c.obj CMakeFiles/hidparser_km.dir/api.c.obj CMakeFiles/hidparser_km.dir/hidp.c.obj
+/usr/bin/x86_64-w64-mingw32-ranlib libhidparser_km.a

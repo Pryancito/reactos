@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libcopysup.a CMakeFiles/copysup.dir/copysup.c.obj
+/usr/bin/x86_64-w64-mingw32-ranlib libcopysup.a

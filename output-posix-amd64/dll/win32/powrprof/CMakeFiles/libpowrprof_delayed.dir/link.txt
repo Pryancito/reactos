@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libpowrprof_delayed.a CMakeFiles/libpowrprof_delayed.dir/libpowrprof_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libpowrprof_delayed.a

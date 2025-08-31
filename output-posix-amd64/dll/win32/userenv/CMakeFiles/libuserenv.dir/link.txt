@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libuserenv.a CMakeFiles/libuserenv.dir/libuserenv.a
+/usr/bin/x86_64-w64-mingw32-ranlib libuserenv.a

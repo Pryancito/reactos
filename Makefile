@@ -1,170 +1,58 @@
-# Makefile para Bootloader UEFI Nativo de ReactOS
-# Compatible con ASUS 10ª generación y sistemas UEFI estrictos
+# Makefile para ReactOS UEFI Installation
+# Uso: make <target>
 
-# ============================================================================
-# CONFIGURACIÓN
-# ============================================================================
+.PHONY: help install verify test clean
 
-# Compilador UEFI
-CC = x86_64-w64-mingw32-gcc-posix
-
-# Flags de compilación
-CFLAGS = -O2 -Wall -Wextra -std=c99 -DWIN32 -D_WIN32 -DUEFI_BUILD
-CFLAGS += -I./include -I./src
-
-# Flags de enlazado
-LDFLAGS = -static-libgcc -mconsole -Wl,--subsystem,10
-
-# Directorios
-SRC_DIR = src
-INCLUDE_DIR = include
-BUILD_DIR = build
-TOOLS_DIR = tools
+# Variables
+SCRIPTS_DIR = scripts
 DOCS_DIR = docs
+BUILD_DIR = build
 
-# Archivos fuente
-SOURCES = $(wildcard $(SRC_DIR)/*.c)
-OBJECTS = $(SOURCES:$(SRC_DIR)/%.c=$(BUILD_DIR)/%.o)
-
-# Target principal
-TARGET = $(BUILD_DIR)/reactos-uefi-bootloader.efi
-
-# ============================================================================
-# REGLAS PRINCIPALES
-# ============================================================================
-
-# Regla principal
-all: $(TARGET)
-
-# Crear directorios necesarios
-$(BUILD_DIR):
-	@echo "🔧 Creando directorios de build..."
-	@mkdir -p $(BUILD_DIR)
-	@mkdir -p $(TOOLS_DIR)
-	@mkdir -p $(DOCS_DIR)
-
-# Compilar el bootloader UEFI
-$(TARGET): $(BUILD_DIR) $(OBJECTS)
-	@echo "🔧 Enlazando bootloader UEFI nativo..."
-	$(CC) $(OBJECTS) -o $(TARGET) $(LDFLAGS)
-	@echo "✅ Bootloader UEFI compilado exitosamente: $(TARGET)"
-	@echo "📊 Tamaño: $(shell stat -c%s $(TARGET) 2>/dev/null || echo "N/A") bytes"
-
-# Compilar objetos
-$(BUILD_DIR)/%.o: $(SRC_DIR)/%.c
-	@echo "🔨 Compilando $<..."
-	@mkdir -p $(BUILD_DIR)
-	$(CC) $(CFLAGS) -c $< -o $@
-
-# ============================================================================
-# REGLAS ADICIONALES
-# ============================================================================
-
-# Instalar el bootloader
-install: $(TARGET)
-	@echo "📦 Instalando bootloader UEFI..."
-	@if [ -f "$(TARGET)" ]; then \
-		cp "$(TARGET)" "reactos-uefi-bootloader.efi"; \
-		echo "✅ Bootloader instalado como reactos-uefi-bootloader.efi"; \
-	else \
-		echo "❌ Error: No se encontró el archivo compilado"; \
-		exit 1; \
-	fi
-
-# Limpiar archivos de compilación
-clean:
-	@echo "🧹 Limpiando archivos de compilación..."
-	rm -rf $(BUILD_DIR)
-	rm -f reactos-uefi-bootloader.efi
-	@echo "✅ Limpieza completada"
-
-# Verificar dependencias
-check:
-	@echo "🔍 Verificando dependencias..."
-	@echo "CC: $(CC)"
-	@echo "CFLAGS: $(CFLAGS)"
-	@echo "LDFLAGS: $(LDFLAGS)"
-	@echo "Fuentes: $(SOURCES)"
-	@echo "Objetos: $(OBJECTS)"
-	@echo "Target: $(TARGET)"
-	@echo "Directorio de build: $(BUILD_DIR)"
-
-# Mostrar ayuda
+# Comandos por defecto
 help:
-	@echo "Makefile para Bootloader UEFI Nativo de ReactOS"
-	@echo ""
 	@echo "Comandos disponibles:"
-	@echo "  make        - Compilar bootloader UEFI nativo"
-	@echo "  make install- Instalar como reactos-uefi-bootloader.efi"
-	@echo "  make clean  - Limpiar archivos de compilación"
-	@echo "  make check  - Verificar dependencias"
-	@echo "  make help   - Mostrar esta ayuda"
-	@echo ""
-	@echo "Características:"
-	@echo "  ✅ Bootloader UEFI nativo para ReactOS"
-	@echo "  ✅ Compatible con ASUS 10ª generación"
-	@echo "  ✅ Cumple especificaciones UEFI 2.8+"
-	@echo "  ✅ Compatible con Secure Boot"
-	@echo "  ✅ Funciona en sistemas UEFI estrictos"
+	@echo "  make install <usb> <iso>  - Instalar ReactOS UEFI en USB"
+	@echo "  make verify <usb>         - Verificar configuración USB"
+	@echo "  make test <usb>           - Probar USB en QEMU"
+	@echo "  make clean                - Limpiar archivos temporales"
+	@echo "  make docs                 - Mostrar documentación"
 
-# ============================================================================
-# REGLAS ESPECIALES PARA UEFI
-# ============================================================================
-
-# Crear imagen UEFI booteable
-uefi-image: $(TARGET)
-	@echo "🔧 Creando imagen UEFI booteable..."
-	@if [ -f "$(TARGET)" ]; then \
-		echo "✅ Bootloader UEFI listo para integración"; \
-		echo "📋 Próximos pasos:"; \
-		echo "   1. Copiar .efi a partición EFI del sistema"; \
-		echo "   2. Configurar entrada de arranque UEFI"; \
-		echo "   3. Reiniciar y seleccionar ReactOS UEFI"; \
-	else \
-		echo "❌ Error: No se encontró el bootloader compilado"; \
+install:
+	@if [ -z "$(USB)" ] || [ -z "$(ISO)" ]; then \
+		echo "Uso: make install USB=/dev/sdb ISO=reactos-uefi.iso"; \
 		exit 1; \
 	fi
+	@echo "Instalando ReactOS UEFI en $(USB)..."
+	@sudo $(SCRIPTS_DIR)/quick-install.sh $(USB) $(ISO)
 
-# Verificar compatibilidad UEFI
-verify-uefi: $(TARGET)
-	@echo "🔍 Verificando compatibilidad UEFI..."
-	@if [ -f "$(TARGET)" ]; then \
-		echo "✅ Archivo .efi encontrado"; \
-		echo "📊 Verificando formato UEFI..."; \
-		file "$(TARGET)" || echo "⚠️  file command not available"; \
-		echo "🔒 Bootloader UEFI listo para sistemas estrictos"; \
-	else \
-		echo "❌ Error: No se encontró el bootloader"; \
+verify:
+	@if [ -z "$(USB)" ]; then \
+		echo "Uso: make verify USB=/dev/sdb"; \
 		exit 1; \
 	fi
+	@echo "Verificando configuración de $(USB)..."
+	@$(SCRIPTS_DIR)/verify-uefi-usb.sh $(USB)
 
-# ============================================================================
-# REGLAS DE DESARROLLO
-# ============================================================================
+test:
+	@if [ -z "$(USB)" ]; then \
+		echo "Uso: make test USB=/dev/sdb"; \
+		exit 1; \
+	fi
+	@echo "Probando $(USB) en QEMU..."
+	@$(SCRIPTS_DIR)/test-uefi-usb-qemu.sh $(USB)
 
-# Desarrollo continuo
-dev: $(TARGET)
-	@echo "🚀 Modo desarrollo activado..."
-	@echo "📁 Archivos fuente monitoreados: $(SOURCES)"
-	@echo "🔧 Ejecutar 'make' para recompilar automáticamente"
+clean:
+	@echo "Limpiando archivos temporales..."
+	@rm -f test-uefi-usb.img
+	@rm -rf /tmp/reactos-efi
+	@echo "Limpieza completada"
 
-# Testing del bootloader
-test: $(TARGET)
-	@echo "🧪 Testing del bootloader UEFI..."
-	@echo "📋 Verificaciones realizadas:"
-	@echo "   ✅ Compilación exitosa"
-	@echo "   ✅ Formato UEFI válido"
-	@echo "   ✅ Dependencias resueltas"
-	@echo "   ✅ Estructura de archivos correcta"
-	@echo "🎯 Bootloader listo para testing en hardware real"
+.PHONY: help install verify test clean docs
 
-# ============================================================================
-# FINALIZACIÓN
-# ============================================================================
+# ... existing code ...
 
-.PHONY: all install clean check help uefi-image verify-uefi dev test
-
-# El bootloader UEFI se compilará como aplicación .efi
-# que será reconocida automáticamente por sistemas UEFI modernos
-
-
+docs:
+	@echo "Documentación disponible:"
+	@echo "  docs/SOLUCION-USB-UEFI-ASUS-10GEN.md"
+	@echo "  docs/README-UEFI-BOOTLOADER.md"
+	@echo "  docs/README-2-ISOS-PRINCIPALES.md"

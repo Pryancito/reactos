@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libdinput8_delayed.a CMakeFiles/libdinput8_delayed.dir/libdinput8_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libdinput8_delayed.a

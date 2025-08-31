@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libnetapi32_delayed.a CMakeFiles/libnetapi32_delayed.dir/libnetapi32_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libnetapi32_delayed.a

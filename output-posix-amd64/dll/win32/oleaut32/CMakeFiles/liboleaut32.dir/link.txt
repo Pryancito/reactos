@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc liboleaut32.a CMakeFiles/liboleaut32.dir/liboleaut32.a
+/usr/bin/x86_64-w64-mingw32-ranlib liboleaut32.a

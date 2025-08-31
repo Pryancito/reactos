@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libadvapi32_vista.a CMakeFiles/libadvapi32_vista.dir/libadvapi32_vista.a
+/usr/bin/x86_64-w64-mingw32-ranlib libadvapi32_vista.a

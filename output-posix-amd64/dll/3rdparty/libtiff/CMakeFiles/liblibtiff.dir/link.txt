@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc liblibtiff.a CMakeFiles/liblibtiff.dir/liblibtiff.a
+/usr/bin/x86_64-w64-mingw32-ranlib liblibtiff.a

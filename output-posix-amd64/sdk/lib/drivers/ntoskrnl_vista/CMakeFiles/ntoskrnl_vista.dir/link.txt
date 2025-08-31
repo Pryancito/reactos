@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libntoskrnl_vista.a CMakeFiles/ntoskrnl_vista.dir/etw.c.obj CMakeFiles/ntoskrnl_vista.dir/fsrtl.c.obj CMakeFiles/ntoskrnl_vista.dir/io.c.obj CMakeFiles/ntoskrnl_vista.dir/po.c.obj CMakeFiles/ntoskrnl_vista.dir/ke.c.obj CMakeFiles/ntoskrnl_vista.dir/__/__/rtl/utf8.c.obj
+/usr/bin/x86_64-w64-mingw32-ranlib libntoskrnl_vista.a

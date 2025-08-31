@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libimagehlp_delayed.a CMakeFiles/libimagehlp_delayed.dir/libimagehlp_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libimagehlp_delayed.a

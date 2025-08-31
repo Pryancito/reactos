@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libshell32.a CMakeFiles/libshell32.dir/libshell32.a
+/usr/bin/x86_64-w64-mingw32-ranlib libshell32.a

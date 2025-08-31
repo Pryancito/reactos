@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libshlwapi.a CMakeFiles/libshlwapi.dir/libshlwapi.a
+/usr/bin/x86_64-w64-mingw32-ranlib libshlwapi.a

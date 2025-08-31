@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libconutils.a CMakeFiles/conutils.dir/outstream.c.obj CMakeFiles/conutils.dir/pager.c.obj CMakeFiles/conutils.dir/screen.c.obj CMakeFiles/conutils.dir/stream.c.obj CMakeFiles/conutils.dir/utils.c.obj
+/usr/bin/x86_64-w64-mingw32-ranlib libconutils.a

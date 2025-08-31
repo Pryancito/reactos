@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libd3dx9_34_delayed.a CMakeFiles/libd3dx9_34_delayed.dir/libd3dx9_34_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libd3dx9_34_delayed.a

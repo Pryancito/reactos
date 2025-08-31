@@ -1,0 +1,40 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/rapps.dir/appdb.cpp.obj"
+  "CMakeFiles/rapps.dir/appdb.cpp.obj.d"
+  "CMakeFiles/rapps.dir/appinfo.cpp.obj"
+  "CMakeFiles/rapps.dir/appinfo.cpp.obj.d"
+  "CMakeFiles/rapps.dir/appview.cpp.obj"
+  "CMakeFiles/rapps.dir/appview.cpp.obj.d"
+  "CMakeFiles/rapps.dir/asyncinet.cpp.obj"
+  "CMakeFiles/rapps.dir/asyncinet.cpp.obj.d"
+  "CMakeFiles/rapps.dir/cabinet.cpp.obj"
+  "CMakeFiles/rapps.dir/cabinet.cpp.obj.d"
+  "CMakeFiles/rapps.dir/configparser.cpp.obj"
+  "CMakeFiles/rapps.dir/configparser.cpp.obj.d"
+  "CMakeFiles/rapps.dir/geninst.cpp.obj"
+  "CMakeFiles/rapps.dir/geninst.cpp.obj.d"
+  "CMakeFiles/rapps.dir/gui.cpp.obj"
+  "CMakeFiles/rapps.dir/gui.cpp.obj.d"
+  "CMakeFiles/rapps.dir/integrity.cpp.obj"
+  "CMakeFiles/rapps.dir/integrity.cpp.obj.d"
+  "CMakeFiles/rapps.dir/loaddlg.cpp.obj"
+  "CMakeFiles/rapps.dir/loaddlg.cpp.obj.d"
+  "CMakeFiles/rapps.dir/misc.cpp.obj"
+  "CMakeFiles/rapps.dir/misc.cpp.obj.d"
+  "CMakeFiles/rapps.dir/rapps.rc.res"
+  "CMakeFiles/rapps.dir/settings.cpp.obj"
+  "CMakeFiles/rapps.dir/settings.cpp.obj.d"
+  "CMakeFiles/rapps.dir/settingsdlg.cpp.obj"
+  "CMakeFiles/rapps.dir/settingsdlg.cpp.obj.d"
+  "CMakeFiles/rapps.dir/unattended.cpp.obj"
+  "CMakeFiles/rapps.dir/unattended.cpp.obj.d"
+  "CMakeFiles/rapps.dir/winmain.cpp.obj"
+  "CMakeFiles/rapps.dir/winmain.cpp.obj.d"
+  "rapps.exe"
+  "rapps.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX RC)
+  include(CMakeFiles/rapps.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

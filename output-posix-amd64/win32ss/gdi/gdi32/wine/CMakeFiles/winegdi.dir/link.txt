@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libwinegdi.a CMakeFiles/winegdi.dir/emfdc.c.obj CMakeFiles/winegdi.dir/emfdrv.c.obj CMakeFiles/winegdi.dir/enhmetafile.c.obj CMakeFiles/winegdi.dir/metadc.c.obj CMakeFiles/winegdi.dir/metafile.c.obj CMakeFiles/winegdi.dir/rosglue.c.obj
+/usr/bin/x86_64-w64-mingw32-ranlib libwinegdi.a

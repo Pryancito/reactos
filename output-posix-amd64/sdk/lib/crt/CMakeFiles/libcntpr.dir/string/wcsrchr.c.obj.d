@@ -1,0 +1,19 @@
+sdk/lib/crt/CMakeFiles/libcntpr.dir/string/wcsrchr.c.obj: \
+ /home/moebius/reactos/sdk/lib/crt/string/wcsrchr.c \
+ /home/moebius/reactos/sdk/include/crt/wchar.h \
+ /home/moebius/reactos/sdk/include/crt/corecrt.h \
+ /home/moebius/reactos/sdk/include/vcruntime/crtdefs.h \
+ /home/moebius/reactos/sdk/include/vcruntime/vcruntime.h \
+ /home/moebius/reactos/sdk/include/vcruntime/_mingw.h \
+ /home/moebius/reactos/sdk/include/vcruntime/_mingw_mac.h \
+ /home/moebius/reactos/sdk/include/vcruntime/sal.h \
+ /home/moebius/reactos/sdk/include/vcruntime/ms_sal.h \
+ /home/moebius/reactos/sdk/include/vcruntime/gcc_sal.h \
+ /home/moebius/reactos/sdk/include/vcruntime/vadefs.h \
+ /home/moebius/reactos/sdk/include/psdk/specstrings.h \
+ /home/moebius/reactos/sdk/include/psdk/specstrings_strict.h \
+ /home/moebius/reactos/sdk/include/vcruntime/stdarg.h \
+ /home/moebius/reactos/sdk/include/crt/sec_api/wchar_s.h \
+ /home/moebius/reactos/sdk/lib/crt/string/tcsrchr.h \
+ /home/moebius/reactos/sdk/include/crt/tchar.h \
+ /home/moebius/reactos/sdk/include/crt/sec_api/tchar_s.h

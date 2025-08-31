@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libwlanapi_delayed.a CMakeFiles/libwlanapi_delayed.dir/libwlanapi_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libwlanapi_delayed.a

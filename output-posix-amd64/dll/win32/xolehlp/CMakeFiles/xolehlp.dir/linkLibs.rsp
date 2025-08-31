@@ -1,0 +1,1 @@
+ ../../../sdk/include/psdk/libadsiid.a ../../../sdk/lib/uuid/libuuid.a ../../../sdk/lib/3rdparty/libwine/libwine.a ../msvcrt/libmsvcrt.a ../kernel32/libkernel32.a ../../ntdll/libntdll.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

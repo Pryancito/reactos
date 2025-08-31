@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc liblz32_delayed.a CMakeFiles/liblz32_delayed.dir/liblz32_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib liblz32_delayed.a

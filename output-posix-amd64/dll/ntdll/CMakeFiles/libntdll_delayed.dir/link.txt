@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libntdll_delayed.a CMakeFiles/libntdll_delayed.dir/libntdll_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libntdll_delayed.a

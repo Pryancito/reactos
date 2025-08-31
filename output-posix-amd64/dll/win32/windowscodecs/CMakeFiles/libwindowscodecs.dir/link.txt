@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libwindowscodecs.a CMakeFiles/libwindowscodecs.dir/libwindowscodecs.a
+/usr/bin/x86_64-w64-mingw32-ranlib libwindowscodecs.a

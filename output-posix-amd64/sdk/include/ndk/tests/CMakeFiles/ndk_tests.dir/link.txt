@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libndk_tests.a CMakeFiles/ndk_tests.dir/win2003_x64.c.obj CMakeFiles/ndk_tests.dir/winvista_x64.c.obj CMakeFiles/ndk_tests.dir/win7_x64.c.obj CMakeFiles/ndk_tests.dir/win8_x64.c.obj CMakeFiles/ndk_tests.dir/win81_x64.c.obj CMakeFiles/ndk_tests.dir/win10_x64.c.obj
+/usr/bin/x86_64-w64-mingw32-ranlib libndk_tests.a

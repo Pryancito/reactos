@@ -1,0 +1,42 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/usbport.dir/debug.c.obj"
+  "CMakeFiles/usbport.dir/debug.c.obj.d"
+  "CMakeFiles/usbport.dir/device.c.obj"
+  "CMakeFiles/usbport.dir/device.c.obj.d"
+  "CMakeFiles/usbport.dir/endpoint.c.obj"
+  "CMakeFiles/usbport.dir/endpoint.c.obj.d"
+  "CMakeFiles/usbport.dir/guid.c.obj"
+  "CMakeFiles/usbport.dir/guid.c.obj.d"
+  "CMakeFiles/usbport.dir/iface.c.obj"
+  "CMakeFiles/usbport.dir/iface.c.obj.d"
+  "CMakeFiles/usbport.dir/ioctl.c.obj"
+  "CMakeFiles/usbport.dir/ioctl.c.obj.d"
+  "CMakeFiles/usbport.dir/iso.c.obj"
+  "CMakeFiles/usbport.dir/iso.c.obj.d"
+  "CMakeFiles/usbport.dir/pnp.c.obj"
+  "CMakeFiles/usbport.dir/pnp.c.obj.d"
+  "CMakeFiles/usbport.dir/power.c.obj"
+  "CMakeFiles/usbport.dir/power.c.obj.d"
+  "CMakeFiles/usbport.dir/queue.c.obj"
+  "CMakeFiles/usbport.dir/queue.c.obj.d"
+  "CMakeFiles/usbport.dir/roothub.c.obj"
+  "CMakeFiles/usbport.dir/roothub.c.obj.d"
+  "CMakeFiles/usbport.dir/trfsplit.c.obj"
+  "CMakeFiles/usbport.dir/trfsplit.c.obj.d"
+  "CMakeFiles/usbport.dir/urb.c.obj"
+  "CMakeFiles/usbport.dir/urb.c.obj.d"
+  "CMakeFiles/usbport.dir/usb2.c.obj"
+  "CMakeFiles/usbport.dir/usb2.c.obj.d"
+  "CMakeFiles/usbport.dir/usbport.c.obj"
+  "CMakeFiles/usbport.dir/usbport.c.obj.d"
+  "CMakeFiles/usbport.dir/usbport.rc.res"
+  "usbport.def"
+  "usbport.pdb"
+  "usbport.sys"
+  "usbport_stubs.c"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C RC)
+  include(CMakeFiles/usbport.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

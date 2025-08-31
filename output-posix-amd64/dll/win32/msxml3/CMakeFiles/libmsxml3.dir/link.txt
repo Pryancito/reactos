@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libmsxml3.a CMakeFiles/libmsxml3.dir/libmsxml3.a
+/usr/bin/x86_64-w64-mingw32-ranlib libmsxml3.a

@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libdelayimp.a CMakeFiles/delayimp.dir/delayimp.c.obj CMakeFiles/delayimp.dir/pfnDliFailureHook2.c.obj CMakeFiles/delayimp.dir/pfnDliNotifyHook2.c.obj
+/usr/bin/x86_64-w64-mingw32-ranlib libdelayimp.a

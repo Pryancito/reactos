@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libwlanapi.a CMakeFiles/libwlanapi.dir/libwlanapi.a
+/usr/bin/x86_64-w64-mingw32-ranlib libwlanapi.a

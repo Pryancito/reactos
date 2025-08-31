@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libsamsrv_delayed.a CMakeFiles/libsamsrv_delayed.dir/libsamsrv_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libsamsrv_delayed.a

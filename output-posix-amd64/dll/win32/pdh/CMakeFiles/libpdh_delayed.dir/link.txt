@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libpdh_delayed.a CMakeFiles/libpdh_delayed.dir/libpdh_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libpdh_delayed.a

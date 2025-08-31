@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libbasesrv_delayed.a CMakeFiles/libbasesrv_delayed.dir/libbasesrv_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libbasesrv_delayed.a

@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libmsdmo.a CMakeFiles/libmsdmo.dir/libmsdmo.a
+/usr/bin/x86_64-w64-mingw32-ranlib libmsdmo.a

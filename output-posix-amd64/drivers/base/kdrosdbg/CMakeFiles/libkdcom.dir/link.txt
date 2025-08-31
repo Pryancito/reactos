@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libkdcom.a CMakeFiles/libkdcom.dir/libkdcom.a
+/usr/bin/x86_64-w64-mingw32-ranlib libkdcom.a

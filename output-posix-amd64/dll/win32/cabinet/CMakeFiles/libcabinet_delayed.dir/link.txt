@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libcabinet_delayed.a CMakeFiles/libcabinet_delayed.dir/libcabinet_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libcabinet_delayed.a

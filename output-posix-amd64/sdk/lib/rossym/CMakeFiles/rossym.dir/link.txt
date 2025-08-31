@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc librossym.a CMakeFiles/rossym.dir/delete.c.obj CMakeFiles/rossym.dir/find.c.obj CMakeFiles/rossym.dir/fromfile.c.obj CMakeFiles/rossym.dir/frommem.c.obj CMakeFiles/rossym.dir/fromraw.c.obj CMakeFiles/rossym.dir/getraw.c.obj CMakeFiles/rossym.dir/init.c.obj CMakeFiles/rossym.dir/initkm.c.obj CMakeFiles/rossym.dir/initum.c.obj CMakeFiles/rossym.dir/zwfile.c.obj
+/usr/bin/x86_64-w64-mingw32-ranlib librossym.a

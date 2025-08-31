@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libhidparse.a CMakeFiles/libhidparse.dir/libhidparse.a
+/usr/bin/x86_64-w64-mingw32-ranlib libhidparse.a

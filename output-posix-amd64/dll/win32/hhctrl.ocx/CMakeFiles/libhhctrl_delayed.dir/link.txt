@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libhhctrl_delayed.a CMakeFiles/libhhctrl_delayed.dir/libhhctrl_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libhhctrl_delayed.a

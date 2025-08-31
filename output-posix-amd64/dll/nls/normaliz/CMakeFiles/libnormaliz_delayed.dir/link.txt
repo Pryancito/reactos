@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libnormaliz_delayed.a CMakeFiles/libnormaliz_delayed.dir/libnormaliz_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libnormaliz_delayed.a

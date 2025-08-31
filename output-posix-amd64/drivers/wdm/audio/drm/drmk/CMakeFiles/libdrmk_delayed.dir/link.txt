@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libdrmk_delayed.a CMakeFiles/libdrmk_delayed.dir/libdrmk_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libdrmk_delayed.a

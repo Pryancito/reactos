@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/rosload.dir/__/__/__/ntoskrnl/config/cmboot.c.obj"
+  "CMakeFiles/rosload.dir/__/__/__/ntoskrnl/config/cmboot.c.obj.d"
+  "CMakeFiles/rosload.dir/bootmgr.c.obj"
+  "CMakeFiles/rosload.dir/bootmgr.c.obj.d"
+  "CMakeFiles/rosload.dir/custom.c.obj"
+  "CMakeFiles/rosload.dir/custom.c.obj.d"
+  "CMakeFiles/rosload.dir/lib/rtl/libsupp.c.obj"
+  "CMakeFiles/rosload.dir/lib/rtl/libsupp.c.obj.d"
+  "CMakeFiles/rosload.dir/linuxboot.c.obj"
+  "CMakeFiles/rosload.dir/linuxboot.c.obj.d"
+  "CMakeFiles/rosload.dir/miscboot.c.obj"
+  "CMakeFiles/rosload.dir/miscboot.c.obj.d"
+  "CMakeFiles/rosload.dir/ntldr/arch/amd64/winldr.c.obj"
+  "CMakeFiles/rosload.dir/ntldr/arch/amd64/winldr.c.obj.d"
+  "CMakeFiles/rosload.dir/ntldr/conversion.c.obj"
+  "CMakeFiles/rosload.dir/ntldr/conversion.c.obj.d"
+  "CMakeFiles/rosload.dir/ntldr/inffile.c.obj"
+  "CMakeFiles/rosload.dir/ntldr/inffile.c.obj.d"
+  "CMakeFiles/rosload.dir/ntldr/registry.c.obj"
+  "CMakeFiles/rosload.dir/ntldr/registry.c.obj.d"
+  "CMakeFiles/rosload.dir/ntldr/setupldr.c.obj"
+  "CMakeFiles/rosload.dir/ntldr/setupldr.c.obj.d"
+  "CMakeFiles/rosload.dir/ntldr/winldr.c.obj"
+  "CMakeFiles/rosload.dir/ntldr/winldr.c.obj.d"
+  "CMakeFiles/rosload.dir/ntldr/wlmemory.c.obj"
+  "CMakeFiles/rosload.dir/ntldr/wlmemory.c.obj.d"
+  "CMakeFiles/rosload.dir/ntldr/wlregistry.c.obj"
+  "CMakeFiles/rosload.dir/ntldr/wlregistry.c.obj.d"
+  "CMakeFiles/rosload.dir/options.c.obj"
+  "CMakeFiles/rosload.dir/options.c.obj.d"
+  "CMakeFiles/rosload.dir/oslist.c.obj"
+  "CMakeFiles/rosload.dir/oslist.c.obj.d"
+  "rosload.def"
+  "rosload.exe"
+  "rosload.pdb"
+  "rosload_stubs.c"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C)
+  include(CMakeFiles/rosload.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

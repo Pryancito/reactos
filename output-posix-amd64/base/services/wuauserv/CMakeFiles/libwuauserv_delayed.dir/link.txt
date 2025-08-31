@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libwuauserv_delayed.a CMakeFiles/libwuauserv_delayed.dir/libwuauserv_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libwuauserv_delayed.a

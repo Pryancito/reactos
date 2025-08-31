@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libcpprt.a CMakeFiles/cpprt.dir/__cxa_pure_virtual.cpp.obj
+/usr/bin/x86_64-w64-mingw32-ranlib libcpprt.a

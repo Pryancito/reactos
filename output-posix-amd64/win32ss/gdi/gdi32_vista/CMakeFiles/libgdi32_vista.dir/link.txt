@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libgdi32_vista.a CMakeFiles/libgdi32_vista.dir/libgdi32_vista.a
+/usr/bin/x86_64-w64-mingw32-ranlib libgdi32_vista.a

@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libnfs41_np_delayed.a CMakeFiles/libnfs41_np_delayed.dir/libnfs41_np_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libnfs41_np_delayed.a

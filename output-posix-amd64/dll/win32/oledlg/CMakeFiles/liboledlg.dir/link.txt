@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc liboledlg.a CMakeFiles/liboledlg.dir/liboledlg.a
+/usr/bin/x86_64-w64-mingw32-ranlib liboledlg.a

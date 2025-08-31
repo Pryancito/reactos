@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libksuser_delayed.a CMakeFiles/libksuser_delayed.dir/libksuser_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libksuser_delayed.a

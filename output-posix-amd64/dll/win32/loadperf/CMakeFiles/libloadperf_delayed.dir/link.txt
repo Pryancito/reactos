@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libloadperf_delayed.a CMakeFiles/libloadperf_delayed.dir/libloadperf_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libloadperf_delayed.a

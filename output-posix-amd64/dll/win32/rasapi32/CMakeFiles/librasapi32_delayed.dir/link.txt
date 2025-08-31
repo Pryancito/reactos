@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc librasapi32_delayed.a CMakeFiles/librasapi32_delayed.dir/librasapi32_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib librasapi32_delayed.a

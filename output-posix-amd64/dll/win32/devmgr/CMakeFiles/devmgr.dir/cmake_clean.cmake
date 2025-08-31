@@ -1,0 +1,40 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/devmgr.dir/api.cpp.obj"
+  "CMakeFiles/devmgr.dir/api.cpp.obj.d"
+  "CMakeFiles/devmgr.dir/devmgmt/ClassNode.cpp.obj"
+  "CMakeFiles/devmgr.dir/devmgmt/ClassNode.cpp.obj.d"
+  "CMakeFiles/devmgr.dir/devmgmt/DeviceNode.cpp.obj"
+  "CMakeFiles/devmgr.dir/devmgmt/DeviceNode.cpp.obj.d"
+  "CMakeFiles/devmgr.dir/devmgmt/DeviceView.cpp.obj"
+  "CMakeFiles/devmgr.dir/devmgmt/DeviceView.cpp.obj.d"
+  "CMakeFiles/devmgr.dir/devmgmt/MainWindow.cpp.obj"
+  "CMakeFiles/devmgr.dir/devmgmt/MainWindow.cpp.obj.d"
+  "CMakeFiles/devmgr.dir/devmgmt/Node.cpp.obj"
+  "CMakeFiles/devmgr.dir/devmgmt/Node.cpp.obj.d"
+  "CMakeFiles/devmgr.dir/devmgmt/ResourceNode.cpp.obj"
+  "CMakeFiles/devmgr.dir/devmgmt/ResourceNode.cpp.obj.d"
+  "CMakeFiles/devmgr.dir/devmgmt/ResourceTypeNode.cpp.obj"
+  "CMakeFiles/devmgr.dir/devmgmt/ResourceTypeNode.cpp.obj.d"
+  "CMakeFiles/devmgr.dir/devmgmt/RootNode.cpp.obj"
+  "CMakeFiles/devmgr.dir/devmgmt/RootNode.cpp.obj.d"
+  "CMakeFiles/devmgr.dir/devmgr.rc.res"
+  "CMakeFiles/devmgr.dir/properties/advprop.cpp.obj"
+  "CMakeFiles/devmgr.dir/properties/advprop.cpp.obj.d"
+  "CMakeFiles/devmgr.dir/properties/devprblm.cpp.obj"
+  "CMakeFiles/devmgr.dir/properties/devprblm.cpp.obj.d"
+  "CMakeFiles/devmgr.dir/properties/hwpage.cpp.obj"
+  "CMakeFiles/devmgr.dir/properties/hwpage.cpp.obj.d"
+  "CMakeFiles/devmgr.dir/properties/hwresource.cpp.obj"
+  "CMakeFiles/devmgr.dir/properties/hwresource.cpp.obj.d"
+  "CMakeFiles/devmgr.dir/properties/misc.cpp.obj"
+  "CMakeFiles/devmgr.dir/properties/misc.cpp.obj.d"
+  "devmgr.def"
+  "devmgr.dll"
+  "devmgr.pdb"
+  "devmgr_stubs.c"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX RC)
+  include(CMakeFiles/devmgr.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

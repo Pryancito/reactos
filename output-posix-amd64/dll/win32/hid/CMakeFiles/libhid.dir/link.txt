@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libhid.a CMakeFiles/libhid.dir/libhid.a
+/usr/bin/x86_64-w64-mingw32-ranlib libhid.a

@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libarbiter.a CMakeFiles/arbiter.dir/arbiter.c.obj
+/usr/bin/x86_64-w64-mingw32-ranlib libarbiter.a

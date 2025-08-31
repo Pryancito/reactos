@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc librecyclebin.a CMakeFiles/recyclebin.dir/recyclebin.c.obj CMakeFiles/recyclebin.dir/recyclebin_generic.cpp.obj CMakeFiles/recyclebin.dir/recyclebin_generic_enumerator.cpp.obj CMakeFiles/recyclebin.dir/recyclebin_v5.cpp.obj CMakeFiles/recyclebin.dir/recyclebin_v5_enumerator.cpp.obj CMakeFiles/recyclebin.dir/guid.c.obj
+/usr/bin/x86_64-w64-mingw32-ranlib librecyclebin.a

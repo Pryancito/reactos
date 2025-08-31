@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libpowrprof.a CMakeFiles/libpowrprof.dir/libpowrprof.a
+/usr/bin/x86_64-w64-mingw32-ranlib libpowrprof.a

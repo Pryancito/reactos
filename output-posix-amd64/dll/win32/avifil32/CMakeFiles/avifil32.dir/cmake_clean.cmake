@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/avifil32.dir/acmstream.c.obj"
+  "CMakeFiles/avifil32.dir/acmstream.c.obj.d"
+  "CMakeFiles/avifil32.dir/api.c.obj"
+  "CMakeFiles/avifil32.dir/api.c.obj.d"
+  "CMakeFiles/avifil32.dir/avifil32_p.c.obj"
+  "CMakeFiles/avifil32.dir/avifil32_p.c.obj.d"
+  "CMakeFiles/avifil32.dir/avifile.c.obj"
+  "CMakeFiles/avifil32.dir/avifile.c.obj.d"
+  "CMakeFiles/avifil32.dir/editstream.c.obj"
+  "CMakeFiles/avifil32.dir/editstream.c.obj.d"
+  "CMakeFiles/avifil32.dir/extrachunk.c.obj"
+  "CMakeFiles/avifil32.dir/extrachunk.c.obj.d"
+  "CMakeFiles/avifil32.dir/factory.c.obj"
+  "CMakeFiles/avifil32.dir/factory.c.obj.d"
+  "CMakeFiles/avifil32.dir/getframe.c.obj"
+  "CMakeFiles/avifil32.dir/getframe.c.obj.d"
+  "CMakeFiles/avifil32.dir/guid.c.obj"
+  "CMakeFiles/avifil32.dir/guid.c.obj.d"
+  "CMakeFiles/avifil32.dir/icmstream.c.obj"
+  "CMakeFiles/avifil32.dir/icmstream.c.obj.d"
+  "CMakeFiles/avifil32.dir/proxy.dlldata.c.obj"
+  "CMakeFiles/avifil32.dir/proxy.dlldata.c.obj.d"
+  "CMakeFiles/avifil32.dir/rsrc.rc.res"
+  "CMakeFiles/avifil32.dir/tmpfile.c.obj"
+  "CMakeFiles/avifil32.dir/tmpfile.c.obj.d"
+  "CMakeFiles/avifil32.dir/wavfile.c.obj"
+  "CMakeFiles/avifil32.dir/wavfile.c.obj.d"
+  "avifil32.def"
+  "avifil32.dll"
+  "avifil32.pdb"
+  "avifil32_p.c"
+  "avifil32_p.h"
+  "avifil32_stubs.c"
+  "proxy.dlldata.c"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C RC)
+  include(CMakeFiles/avifil32.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

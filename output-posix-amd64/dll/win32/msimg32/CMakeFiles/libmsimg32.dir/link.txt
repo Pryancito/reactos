@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libmsimg32.a CMakeFiles/libmsimg32.dir/libmsimg32.a
+/usr/bin/x86_64-w64-mingw32-ranlib libmsimg32.a

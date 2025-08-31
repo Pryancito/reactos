@@ -1,0 +1,42 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/imm32.dir/candidate.c.obj"
+  "CMakeFiles/imm32.dir/candidate.c.obj.d"
+  "CMakeFiles/imm32.dir/compstr.c.obj"
+  "CMakeFiles/imm32.dir/compstr.c.obj.d"
+  "CMakeFiles/imm32.dir/ctf.c.obj"
+  "CMakeFiles/imm32.dir/ctf.c.obj.d"
+  "CMakeFiles/imm32.dir/guideline.c.obj"
+  "CMakeFiles/imm32.dir/guideline.c.obj.d"
+  "CMakeFiles/imm32.dir/ime.c.obj"
+  "CMakeFiles/imm32.dir/ime.c.obj.d"
+  "CMakeFiles/imm32.dir/imemenu.c.obj"
+  "CMakeFiles/imm32.dir/imemenu.c.obj.d"
+  "CMakeFiles/imm32.dir/imepro.c.obj"
+  "CMakeFiles/imm32.dir/imepro.c.obj.d"
+  "CMakeFiles/imm32.dir/imm.c.obj"
+  "CMakeFiles/imm32.dir/imm.c.obj.d"
+  "CMakeFiles/imm32.dir/imm32.rc.res"
+  "CMakeFiles/imm32.dir/imm32_stubs.c.obj"
+  "CMakeFiles/imm32.dir/imm32_stubs.c.obj.d"
+  "CMakeFiles/imm32.dir/install.c.obj"
+  "CMakeFiles/imm32.dir/install.c.obj.d"
+  "CMakeFiles/imm32.dir/keymsg.c.obj"
+  "CMakeFiles/imm32.dir/keymsg.c.obj.d"
+  "CMakeFiles/imm32.dir/regword.c.obj"
+  "CMakeFiles/imm32.dir/regword.c.obj.d"
+  "CMakeFiles/imm32.dir/softkbd.c.obj"
+  "CMakeFiles/imm32.dir/softkbd.c.obj.d"
+  "CMakeFiles/imm32.dir/utils.c.obj"
+  "CMakeFiles/imm32.dir/utils.c.obj.d"
+  "CMakeFiles/imm32.dir/win3.c.obj"
+  "CMakeFiles/imm32.dir/win3.c.obj.d"
+  "imm32.def"
+  "imm32.dll"
+  "imm32.pdb"
+  "imm32_stubs.c"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C RC)
+  include(CMakeFiles/imm32.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

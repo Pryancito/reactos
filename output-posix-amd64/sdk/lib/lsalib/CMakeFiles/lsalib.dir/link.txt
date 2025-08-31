@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc liblsalib.a CMakeFiles/lsalib.dir/lsa.c.obj
+/usr/bin/x86_64-w64-mingw32-ranlib liblsalib.a

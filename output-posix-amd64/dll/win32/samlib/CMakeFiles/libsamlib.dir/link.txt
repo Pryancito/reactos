@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libsamlib.a CMakeFiles/libsamlib.dir/libsamlib.a
+/usr/bin/x86_64-w64-mingw32-ranlib libsamlib.a

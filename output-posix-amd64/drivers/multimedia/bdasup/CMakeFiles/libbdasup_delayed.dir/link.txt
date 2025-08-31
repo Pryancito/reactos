@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libbdasup_delayed.a CMakeFiles/libbdasup_delayed.dir/libbdasup_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libbdasup_delayed.a

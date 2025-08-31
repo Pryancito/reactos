@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libfaultrep_delayed.a CMakeFiles/libfaultrep_delayed.dir/libfaultrep_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libfaultrep_delayed.a

@@ -1,0 +1,1 @@
+ ../../../sdk/lib/3rdparty/libwine/libwine.a ../msxml3/libmsxml3.a ../msvcrt/libmsvcrt.a ../kernel32/libkernel32.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libblcmlib.a CMakeFiles/blcmlib.dir/cmcheck.c.obj CMakeFiles/blcmlib.dir/cminit.c.obj CMakeFiles/blcmlib.dir/cmheal.c.obj CMakeFiles/blcmlib.dir/cmindex.c.obj CMakeFiles/blcmlib.dir/cmkeydel.c.obj CMakeFiles/blcmlib.dir/cmname.c.obj CMakeFiles/blcmlib.dir/cmse.c.obj CMakeFiles/blcmlib.dir/cmvalue.c.obj CMakeFiles/blcmlib.dir/hivebin.c.obj CMakeFiles/blcmlib.dir/hivecell.c.obj CMakeFiles/blcmlib.dir/hiveinit.c.obj CMakeFiles/blcmlib.dir/hivesum.c.obj CMakeFiles/blcmlib.dir/hivewrt.c.obj
+/usr/bin/x86_64-w64-mingw32-ranlib libblcmlib.a

@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libapphelp.a CMakeFiles/libapphelp.dir/libapphelp.a
+/usr/bin/x86_64-w64-mingw32-ranlib libapphelp.a

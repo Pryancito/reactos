@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libcportlib.a CMakeFiles/cportlib.dir/cport.c.obj
+/usr/bin/x86_64-w64-mingw32-ranlib libcportlib.a

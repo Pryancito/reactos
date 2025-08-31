@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libwin32k_delayed.a CMakeFiles/libwin32k_delayed.dir/libwin32k_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libwin32k_delayed.a

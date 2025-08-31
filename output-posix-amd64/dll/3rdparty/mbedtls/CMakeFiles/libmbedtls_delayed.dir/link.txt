@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libmbedtls_delayed.a CMakeFiles/libmbedtls_delayed.dir/libmbedtls_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libmbedtls_delayed.a

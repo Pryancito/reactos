@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libvideoprt.a CMakeFiles/libvideoprt.dir/libvideoprt.a
+/usr/bin/x86_64-w64-mingw32-ranlib libvideoprt.a

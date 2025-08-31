@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libsnmpapi.a CMakeFiles/libsnmpapi.dir/libsnmpapi.a
+/usr/bin/x86_64-w64-mingw32-ranlib libsnmpapi.a

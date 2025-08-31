@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libntdsapi.a CMakeFiles/libntdsapi.dir/libntdsapi.a
+/usr/bin/x86_64-w64-mingw32-ranlib libntdsapi.a

@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc liblz32.a CMakeFiles/liblz32.dir/liblz32.a
+/usr/bin/x86_64-w64-mingw32-ranlib liblz32.a

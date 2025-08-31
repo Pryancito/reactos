@@ -1,0 +1,2 @@
+# Empty dependencies file for libopengl32.
+# This may be replaced when dependencies are built.

@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libext2lib.a CMakeFiles/ext2lib.dir/Badblock.c.obj CMakeFiles/ext2lib.dir/Bitmap.c.obj CMakeFiles/ext2lib.dir/Disk.c.obj CMakeFiles/ext2lib.dir/Group.c.obj CMakeFiles/ext2lib.dir/Inode.c.obj CMakeFiles/ext2lib.dir/Memory.c.obj CMakeFiles/ext2lib.dir/Mke2fs.c.obj CMakeFiles/ext2lib.dir/Super.c.obj CMakeFiles/ext2lib.dir/Uuid.c.obj
+/usr/bin/x86_64-w64-mingw32-ranlib libext2lib.a

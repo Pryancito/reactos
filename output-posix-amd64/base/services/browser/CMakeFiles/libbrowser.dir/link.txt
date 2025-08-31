@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libbrowser.a CMakeFiles/libbrowser.dir/libbrowser.a
+/usr/bin/x86_64-w64-mingw32-ranlib libbrowser.a

@@ -1,0 +1,42 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/samsrv.dir/alias.c.obj"
+  "CMakeFiles/samsrv.dir/alias.c.obj.d"
+  "CMakeFiles/samsrv.dir/database.c.obj"
+  "CMakeFiles/samsrv.dir/database.c.obj.d"
+  "CMakeFiles/samsrv.dir/display.c.obj"
+  "CMakeFiles/samsrv.dir/display.c.obj.d"
+  "CMakeFiles/samsrv.dir/domain.c.obj"
+  "CMakeFiles/samsrv.dir/domain.c.obj.d"
+  "CMakeFiles/samsrv.dir/group.c.obj"
+  "CMakeFiles/samsrv.dir/group.c.obj.d"
+  "CMakeFiles/samsrv.dir/registry.c.obj"
+  "CMakeFiles/samsrv.dir/registry.c.obj.d"
+  "CMakeFiles/samsrv.dir/sam_s.c.obj"
+  "CMakeFiles/samsrv.dir/sam_s.c.obj.d"
+  "CMakeFiles/samsrv.dir/samrpc.c.obj"
+  "CMakeFiles/samsrv.dir/samrpc.c.obj.d"
+  "CMakeFiles/samsrv.dir/samsrv.c.obj"
+  "CMakeFiles/samsrv.dir/samsrv.c.obj.d"
+  "CMakeFiles/samsrv.dir/samsrv.rc.res"
+  "CMakeFiles/samsrv.dir/samsrv_stubs.c.obj"
+  "CMakeFiles/samsrv.dir/samsrv_stubs.c.obj.d"
+  "CMakeFiles/samsrv.dir/security.c.obj"
+  "CMakeFiles/samsrv.dir/security.c.obj.d"
+  "CMakeFiles/samsrv.dir/setup.c.obj"
+  "CMakeFiles/samsrv.dir/setup.c.obj.d"
+  "CMakeFiles/samsrv.dir/user.c.obj"
+  "CMakeFiles/samsrv.dir/user.c.obj.d"
+  "CMakeFiles/samsrv.dir/utils.c.obj"
+  "CMakeFiles/samsrv.dir/utils.c.obj.d"
+  "sam_s.c"
+  "sam_s.h"
+  "samsrv.def"
+  "samsrv.dll"
+  "samsrv.pdb"
+  "samsrv_stubs.c"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C RC)
+  include(CMakeFiles/samsrv.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

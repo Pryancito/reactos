@@ -1,0 +1,67 @@
+; File generated automatically, do not edit!
+
+NAME hal.dll
+
+EXPORTS
+ HalAcquireDisplayOwnership
+ HalAdjustResourceList
+ HalAllProcessorsStarted
+ HalAllocateAdapterChannel
+ HalAllocateCommonBuffer
+ HalAllocateCrashDumpRegisters
+ HalAssignSlotResources
+ HalCalibratePerformanceCounter
+ HalClearSoftwareInterrupt
+ HalDisableSystemInterrupt
+ HalDisplayString
+ HalEnableSystemInterrupt
+ HalFlushCommonBuffer
+ HalFreeCommonBuffer
+ HalGetAdapter
+ HalGetBusData
+ HalGetBusDataByOffset
+ HalGetEnvironmentVariable
+ HalGetInterruptVector
+ HalHandleNMI
+ HalInitSystem
+ HalInitializeProcessor
+ HalMakeBeep
+ HalProcessorIdle
+ HalQueryDisplayParameters
+ HalQueryRealTimeClock
+ HalReadDmaCounter
+ HalReportResourceUsage
+ HalRequestIpi
+ HalRequestSoftwareInterrupt
+ HalReturnToFirmware
+ HalSendNMI
+ HalSendSoftwareInterrupt
+ HalSetBusData
+ HalSetBusDataByOffset
+ HalSetDisplayParameters
+ HalSetEnvironmentVariable
+ HalSetProfileInterval
+ HalSetRealTimeClock
+ HalSetTimeIncrement
+ HalStartNextProcessor
+ HalStartProfileInterrupt
+ HalStopProfileInterrupt
+ HalSystemVectorDispatchEntry
+ HalTranslateBusAddress
+ IoAssignDriveLetters=HalpAssignDriveLetters
+ IoFlushAdapterBuffers
+ IoFreeAdapterChannel
+ IoFreeMapRegisters
+ IoMapTransfer
+ IoReadPartitionTable=HalpReadPartitionTable
+ IoSetPartitionInformation=HalpSetPartitionInformation
+ IoWritePartitionTable=HalpWritePartitionTable
+ KdComPortInUse DATA
+ KeFlushWriteBuffer
+ KeQueryPerformanceCounter
+ KeStallExecutionProcessor
+ x86BiosAllocateBuffer
+ x86BiosCall
+ x86BiosFreeBuffer
+ x86BiosReadMemory
+ x86BiosWriteMemory

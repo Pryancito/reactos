@@ -1,0 +1,40 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/usetup.dir/cmdcons.c.obj"
+  "CMakeFiles/usetup.dir/cmdcons.c.obj.d"
+  "CMakeFiles/usetup.dir/console.c.obj"
+  "CMakeFiles/usetup.dir/console.c.obj.d"
+  "CMakeFiles/usetup.dir/consup.c.obj"
+  "CMakeFiles/usetup.dir/consup.c.obj.d"
+  "CMakeFiles/usetup.dir/devinst.c.obj"
+  "CMakeFiles/usetup.dir/devinst.c.obj.d"
+  "CMakeFiles/usetup.dir/fmtchk.c.obj"
+  "CMakeFiles/usetup.dir/fmtchk.c.obj.d"
+  "CMakeFiles/usetup.dir/fslist.c.obj"
+  "CMakeFiles/usetup.dir/fslist.c.obj.d"
+  "CMakeFiles/usetup.dir/genlist.c.obj"
+  "CMakeFiles/usetup.dir/genlist.c.obj.d"
+  "CMakeFiles/usetup.dir/keytrans.c.obj"
+  "CMakeFiles/usetup.dir/keytrans.c.obj.d"
+  "CMakeFiles/usetup.dir/mui.c.obj"
+  "CMakeFiles/usetup.dir/mui.c.obj.d"
+  "CMakeFiles/usetup.dir/partlist.c.obj"
+  "CMakeFiles/usetup.dir/partlist.c.obj.d"
+  "CMakeFiles/usetup.dir/progress.c.obj"
+  "CMakeFiles/usetup.dir/progress.c.obj.d"
+  "CMakeFiles/usetup.dir/spapisup/cabinet.c.obj"
+  "CMakeFiles/usetup.dir/spapisup/cabinet.c.obj.d"
+  "CMakeFiles/usetup.dir/spapisup/fileqsup.c.obj"
+  "CMakeFiles/usetup.dir/spapisup/fileqsup.c.obj.d"
+  "CMakeFiles/usetup.dir/spapisup/infsupp.c.obj"
+  "CMakeFiles/usetup.dir/spapisup/infsupp.c.obj.d"
+  "CMakeFiles/usetup.dir/usetup.c.obj"
+  "CMakeFiles/usetup.dir/usetup.c.obj.d"
+  "CMakeFiles/usetup.dir/usetup.rc.res"
+  "usetup.exe"
+  "usetup.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C RC)
+  include(CMakeFiles/usetup.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

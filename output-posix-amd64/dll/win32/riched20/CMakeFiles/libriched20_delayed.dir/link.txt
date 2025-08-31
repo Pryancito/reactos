@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libriched20_delayed.a CMakeFiles/libriched20_delayed.dir/libriched20_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libriched20_delayed.a

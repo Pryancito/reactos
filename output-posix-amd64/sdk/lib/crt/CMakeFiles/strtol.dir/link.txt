@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libstrtol.a CMakeFiles/strtol.dir/string/ctype.c.obj CMakeFiles/strtol.dir/string/iswctype.c.obj CMakeFiles/strtol.dir/string/strtoi64.c.obj CMakeFiles/strtol.dir/string/strtol.c.obj CMakeFiles/strtol.dir/string/strtoul.c.obj CMakeFiles/strtol.dir/string/strtoull.c.obj CMakeFiles/strtol.dir/string/wctype.c.obj
+/usr/bin/x86_64-w64-mingw32-ranlib libstrtol.a

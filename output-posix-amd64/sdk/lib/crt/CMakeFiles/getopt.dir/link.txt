@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libgetopt.a CMakeFiles/getopt.dir/misc/getopt.c.obj
+/usr/bin/x86_64-w64-mingw32-ranlib libgetopt.a

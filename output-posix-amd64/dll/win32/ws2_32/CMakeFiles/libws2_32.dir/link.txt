@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libws2_32.a CMakeFiles/libws2_32.dir/libws2_32.a
+/usr/bin/x86_64-w64-mingw32-ranlib libws2_32.a

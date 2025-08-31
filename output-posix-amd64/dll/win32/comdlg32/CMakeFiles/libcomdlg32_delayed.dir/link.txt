@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libcomdlg32_delayed.a CMakeFiles/libcomdlg32_delayed.dir/libcomdlg32_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libcomdlg32_delayed.a

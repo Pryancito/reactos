@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libwin32k.a CMakeFiles/libwin32k.dir/libwin32k.a
+/usr/bin/x86_64-w64-mingw32-ranlib libwin32k.a

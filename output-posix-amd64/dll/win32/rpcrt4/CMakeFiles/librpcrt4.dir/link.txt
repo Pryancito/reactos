@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc librpcrt4.a CMakeFiles/librpcrt4.dir/librpcrt4.a
+/usr/bin/x86_64-w64-mingw32-ranlib librpcrt4.a

@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc librpcrt4_delayed.a CMakeFiles/librpcrt4_delayed.dir/librpcrt4_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib librpcrt4_delayed.a

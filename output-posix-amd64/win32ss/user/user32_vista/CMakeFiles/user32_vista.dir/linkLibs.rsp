@@ -1,0 +1,1 @@
+ ../user32/libuser32.a ../../gdi/gdi32/libgdi32.a ../../../dll/ntdll/libntdll.a libuser32_vista_static.a ../../libwin32ksys.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

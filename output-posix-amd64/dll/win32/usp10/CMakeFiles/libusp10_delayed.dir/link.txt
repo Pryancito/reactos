@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libusp10_delayed.a CMakeFiles/libusp10_delayed.dir/libusp10_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libusp10_delayed.a

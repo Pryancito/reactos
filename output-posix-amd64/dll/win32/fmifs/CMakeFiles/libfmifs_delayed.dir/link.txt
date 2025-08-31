@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libfmifs_delayed.a CMakeFiles/libfmifs_delayed.dir/libfmifs_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libfmifs_delayed.a

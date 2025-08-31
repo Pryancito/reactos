@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libmsi_delayed.a CMakeFiles/libmsi_delayed.dir/libmsi_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libmsi_delayed.a

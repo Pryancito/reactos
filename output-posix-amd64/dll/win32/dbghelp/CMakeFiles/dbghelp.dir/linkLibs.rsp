@@ -1,0 +1,1 @@
+ ../../../sdk/lib/3rdparty/libwine/libwine.a ../../../sdk/lib/crt/liboldnames.a ../version/libversion_delayed.a ../../../sdk/lib/delayimp/libdelayimp.a ../psapi/libpsapi.a ../msvcrt/libmsvcrt.a ../kernel32/libkernel32.a ../../ntdll/libntdll.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

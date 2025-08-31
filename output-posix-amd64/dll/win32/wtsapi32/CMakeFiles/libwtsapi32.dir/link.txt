@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libwtsapi32.a CMakeFiles/libwtsapi32.dir/libwtsapi32.a
+/usr/bin/x86_64-w64-mingw32-ranlib libwtsapi32.a

@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libmswsock_delayed.a CMakeFiles/libmswsock_delayed.dir/libmswsock_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libmswsock_delayed.a

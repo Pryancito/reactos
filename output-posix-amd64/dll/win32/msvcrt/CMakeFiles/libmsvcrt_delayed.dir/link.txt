@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libmsvcrt_delayed.a CMakeFiles/libmsvcrt_delayed.dir/libmsvcrt_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libmsvcrt_delayed.a

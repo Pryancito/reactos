@@ -1,0 +1,1 @@
+ ../msvcrt/libmsvcrt.a ../kernel32/libkernel32.a ../../ntdll/libntdll.a ../../../sdk/lib/drivers/hidparser/libhidparser_um.a ../../ntdll/libntdll.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

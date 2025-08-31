@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libntoskrnl.a CMakeFiles/libntoskrnl.dir/libntoskrnl.a
+/usr/bin/x86_64-w64-mingw32-ranlib libntoskrnl.a

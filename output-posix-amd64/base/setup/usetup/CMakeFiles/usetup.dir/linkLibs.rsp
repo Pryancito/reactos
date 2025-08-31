@@ -1,0 +1,1 @@
+ ../../../sdk/lib/inflib/libinflib.a ../../../sdk/lib/3rdparty/zlib/libzlib_solo.a ../../../sdk/lib/crt/libchkstk.a ../lib/libsetuplib.a ../../../dll/ntdll/libntdll.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

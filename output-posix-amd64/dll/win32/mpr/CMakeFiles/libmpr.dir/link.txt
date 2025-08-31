@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libmpr.a CMakeFiles/libmpr.dir/libmpr.a
+/usr/bin/x86_64-w64-mingw32-ranlib libmpr.a

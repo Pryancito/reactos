@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libxmllite.a CMakeFiles/libxmllite.dir/libxmllite.a
+/usr/bin/x86_64-w64-mingw32-ranlib libxmllite.a

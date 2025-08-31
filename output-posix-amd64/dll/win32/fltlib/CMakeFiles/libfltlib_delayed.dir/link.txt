@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libfltlib_delayed.a CMakeFiles/libfltlib_delayed.dir/libfltlib_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libfltlib_delayed.a

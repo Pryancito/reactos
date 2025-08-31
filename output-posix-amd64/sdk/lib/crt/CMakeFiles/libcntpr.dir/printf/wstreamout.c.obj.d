@@ -1,0 +1,27 @@
+sdk/lib/crt/CMakeFiles/libcntpr.dir/printf/wstreamout.c.obj: \
+ /home/moebius/reactos/sdk/lib/crt/printf/wstreamout.c \
+ /home/moebius/reactos/sdk/lib/crt/printf/streamout.c \
+ /home/moebius/reactos/sdk/include/crt/stdio.h \
+ /home/moebius/reactos/sdk/include/crt/corecrt.h \
+ /home/moebius/reactos/sdk/include/vcruntime/crtdefs.h \
+ /home/moebius/reactos/sdk/include/vcruntime/vcruntime.h \
+ /home/moebius/reactos/sdk/include/vcruntime/_mingw.h \
+ /home/moebius/reactos/sdk/include/vcruntime/_mingw_mac.h \
+ /home/moebius/reactos/sdk/include/vcruntime/sal.h \
+ /home/moebius/reactos/sdk/include/vcruntime/ms_sal.h \
+ /home/moebius/reactos/sdk/include/vcruntime/gcc_sal.h \
+ /home/moebius/reactos/sdk/include/vcruntime/vadefs.h \
+ /home/moebius/reactos/sdk/include/psdk/specstrings.h \
+ /home/moebius/reactos/sdk/include/psdk/specstrings_strict.h \
+ /home/moebius/reactos/sdk/include/vcruntime/stdarg.h \
+ /home/moebius/reactos/sdk/include/crt/sec_api/stdio_s.h \
+ /home/moebius/reactos/sdk/include/crt/tchar.h \
+ /home/moebius/reactos/sdk/include/crt/wchar.h \
+ /home/moebius/reactos/sdk/include/crt/sec_api/wchar_s.h \
+ /home/moebius/reactos/sdk/include/crt/sec_api/tchar_s.h \
+ /home/moebius/reactos/sdk/include/crt/strings.h \
+ /home/moebius/reactos/sdk/include/crt/string.h \
+ /home/moebius/reactos/sdk/include/crt/sec_api/string_s.h \
+ /home/moebius/reactos/sdk/include/crt/math.h \
+ /home/moebius/reactos/sdk/include/crt/float.h \
+ /home/moebius/reactos/sdk/include/vcruntime/mingw32/gcc_float.h

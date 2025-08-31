@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libucrtbase_delayed.a CMakeFiles/libucrtbase_delayed.dir/libucrtbase_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libucrtbase_delayed.a

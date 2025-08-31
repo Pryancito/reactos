@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libole32_delayed.a CMakeFiles/libole32_delayed.dir/libole32_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libole32_delayed.a

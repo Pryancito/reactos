@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libcicero.a CMakeFiles/cicero.dir/cicarray.cpp.obj CMakeFiles/cicero.dir/cicbase.cpp.obj CMakeFiles/cicero.dir/ciccaret.cpp.obj CMakeFiles/cicero.dir/cicfmap.cpp.obj CMakeFiles/cicero.dir/cicimc.cpp.obj CMakeFiles/cicero.dir/cicreg.cpp.obj CMakeFiles/cicero.dir/cicuif.cpp.obj
+/usr/bin/x86_64-w64-mingw32-ranlib libcicero.a

@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libskiplist16.a CMakeFiles/skiplist16.dir/skiplist.c.obj
+/usr/bin/x86_64-w64-mingw32-ranlib libskiplist16.a

@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libcrypt32_delayed.a CMakeFiles/libcrypt32_delayed.dir/libcrypt32_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libcrypt32_delayed.a

@@ -1,0 +1,1 @@
+ ../../../sdk/lib/uuid/libuuid.a ../../../win32ss/user/user32/libuser32.a ../../../win32ss/gdi/gdi32/libgdi32.a ../../win32/comctl32/libcomctl32.a ../../win32/ole32/libole32.a ../../win32/msvcrt/libmsvcrt.a ../../win32/kernel32/libkernel32.a ../../ntdll/libntdll.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

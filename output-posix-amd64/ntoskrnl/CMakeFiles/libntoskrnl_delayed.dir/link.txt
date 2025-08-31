@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libntoskrnl_delayed.a CMakeFiles/libntoskrnl_delayed.dir/libntoskrnl_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libntoskrnl_delayed.a

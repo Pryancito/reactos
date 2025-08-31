@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libpsapi_static.a CMakeFiles/psapi_static.dir/psapi.c.obj
+/usr/bin/x86_64-w64-mingw32-ranlib libpsapi_static.a

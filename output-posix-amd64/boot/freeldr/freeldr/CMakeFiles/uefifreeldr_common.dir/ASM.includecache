@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/moebius/reactos/boot/freeldr/freeldr/arch/amd64/misc.S
+asm.inc
+-
+
+/home/moebius/reactos/boot/freeldr/freeldr/arch/uefi/amd64/uefiasm.S
+asm.inc
+-
+arch/pc/x86common.h
+-
+arch/pc/pcbios.h
+-
+
+/home/moebius/reactos/boot/freeldr/freeldr/include/arch/pc/pcbios.h
+pshpack1.h
+-
+poppack.h
+-
+
+/home/moebius/reactos/boot/freeldr/freeldr/include/arch/pc/x86common.h
+
+/home/moebius/reactos/sdk/include/psdk/poppack.h
+
+/home/moebius/reactos/sdk/include/psdk/pshpack1.h
+

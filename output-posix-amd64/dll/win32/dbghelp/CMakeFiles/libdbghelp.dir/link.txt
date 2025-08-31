@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libdbghelp.a CMakeFiles/libdbghelp.dir/libdbghelp.a
+/usr/bin/x86_64-w64-mingw32-ranlib libdbghelp.a

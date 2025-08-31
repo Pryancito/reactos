@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libhal.a CMakeFiles/libhal.dir/libhal.a
+/usr/bin/x86_64-w64-mingw32-ranlib libhal.a

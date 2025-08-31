@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc pathcch_kernelbase_delayed.a CMakeFiles/pathcch_kernelbase_delayed.dir/pathcch_kernelbase_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib pathcch_kernelbase_delayed.a

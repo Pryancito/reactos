@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc liblibpng.a CMakeFiles/liblibpng.dir/liblibpng.a
+/usr/bin/x86_64-w64-mingw32-ranlib liblibpng.a

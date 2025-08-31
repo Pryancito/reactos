@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libmmixer.a CMakeFiles/mmixer.dir/controls.c.obj CMakeFiles/mmixer.dir/filter.c.obj CMakeFiles/mmixer.dir/midi.c.obj CMakeFiles/mmixer.dir/mixer.c.obj CMakeFiles/mmixer.dir/sup.c.obj CMakeFiles/mmixer.dir/wave.c.obj CMakeFiles/mmixer.dir/topology.c.obj
+/usr/bin/x86_64-w64-mingw32-ranlib libmmixer.a

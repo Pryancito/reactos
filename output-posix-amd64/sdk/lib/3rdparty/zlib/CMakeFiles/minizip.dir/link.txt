@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libminizip.a CMakeFiles/minizip.dir/contrib/minizip/ioapi.c.obj CMakeFiles/minizip.dir/contrib/minizip/iowin32.c.obj CMakeFiles/minizip.dir/contrib/minizip/unzip.c.obj CMakeFiles/minizip.dir/contrib/minizip/zip.c.obj
+/usr/bin/x86_64-w64-mingw32-ranlib libminizip.a

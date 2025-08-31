@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libntdsapi_delayed.a CMakeFiles/libntdsapi_delayed.dir/libntdsapi_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libntdsapi_delayed.a

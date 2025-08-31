@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libdinput8.a CMakeFiles/libdinput8.dir/libdinput8.a
+/usr/bin/x86_64-w64-mingw32-ranlib libdinput8.a

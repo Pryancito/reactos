@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libsfc_os.a CMakeFiles/libsfc_os.dir/libsfc_os.a
+/usr/bin/x86_64-w64-mingw32-ranlib libsfc_os.a

@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libhal_delayed.a CMakeFiles/libhal_delayed.dir/libhal_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libhal_delayed.a

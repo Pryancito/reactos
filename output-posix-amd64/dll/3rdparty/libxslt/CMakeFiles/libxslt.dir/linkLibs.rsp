@@ -1,0 +1,1 @@
+ ../../../sdk/lib/3rdparty/libxml2/liblibxml2.a "../../../sdk/lib/3rdparty/libwin-iconv/libiconv.a" ../../../sdk/lib/3rdparty/zlib/libzlib.a ../../win32/msvcrt/libmsvcrt.a ../../win32/ws2_32/libws2_32.a ../../win32/kernel32/libkernel32.a ../../../sdk/lib/crt/liboldnames.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

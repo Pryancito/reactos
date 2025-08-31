@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc librsaenh.a CMakeFiles/librsaenh.dir/librsaenh.a
+/usr/bin/x86_64-w64-mingw32-ranlib librsaenh.a

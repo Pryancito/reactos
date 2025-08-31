@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libbtrfslib.a "CMakeFiles/btrfslib.dir/__/__/__/__/drivers/filesystems/btrfs/blake2b-ref.c.obj" CMakeFiles/btrfslib.dir/__/__/__/__/drivers/filesystems/btrfs/crc32c.c.obj CMakeFiles/btrfslib.dir/__/__/__/__/drivers/filesystems/btrfs/sha256.c.obj CMakeFiles/btrfslib.dir/__/__/__/__/drivers/filesystems/btrfs/xxhash.c.obj CMakeFiles/btrfslib.dir/btrfslib.c.obj CMakeFiles/btrfslib.dir/__/__/__/__/drivers/filesystems/btrfs/crc32c.S.obj
+/usr/bin/x86_64-w64-mingw32-ranlib libbtrfslib.a

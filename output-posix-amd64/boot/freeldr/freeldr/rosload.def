@@ -1,0 +1,6 @@
+; File generated automatically, do not edit!
+
+NAME rosload.exe
+
+EXPORTS
+ RtlAssert @1

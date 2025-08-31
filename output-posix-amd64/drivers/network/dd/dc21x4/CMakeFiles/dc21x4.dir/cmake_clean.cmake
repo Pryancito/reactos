@@ -1,0 +1,42 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/dc21x4.dir/dc21x4.c.obj"
+  "CMakeFiles/dc21x4.dir/dc21x4.c.obj.d"
+  "CMakeFiles/dc21x4.dir/dc21x4.rc.res"
+  "CMakeFiles/dc21x4.dir/debug.c.obj"
+  "CMakeFiles/dc21x4.dir/debug.c.obj.d"
+  "CMakeFiles/dc21x4.dir/eeprom.c.obj"
+  "CMakeFiles/dc21x4.dir/eeprom.c.obj.d"
+  "CMakeFiles/dc21x4.dir/eeprom_data.c.obj"
+  "CMakeFiles/dc21x4.dir/eeprom_data.c.obj.d"
+  "CMakeFiles/dc21x4.dir/hardware.c.obj"
+  "CMakeFiles/dc21x4.dir/hardware.c.obj.d"
+  "CMakeFiles/dc21x4.dir/init.c.obj"
+  "CMakeFiles/dc21x4.dir/init.c.obj.d"
+  "CMakeFiles/dc21x4.dir/interrupt.c.obj"
+  "CMakeFiles/dc21x4.dir/interrupt.c.obj.d"
+  "CMakeFiles/dc21x4.dir/media.c.obj"
+  "CMakeFiles/dc21x4.dir/media.c.obj.d"
+  "CMakeFiles/dc21x4.dir/media040.c.obj"
+  "CMakeFiles/dc21x4.dir/media040.c.obj.d"
+  "CMakeFiles/dc21x4.dir/media041.c.obj"
+  "CMakeFiles/dc21x4.dir/media041.c.obj.d"
+  "CMakeFiles/dc21x4.dir/media140.c.obj"
+  "CMakeFiles/dc21x4.dir/media140.c.obj.d"
+  "CMakeFiles/dc21x4.dir/media143.c.obj"
+  "CMakeFiles/dc21x4.dir/media143.c.obj.d"
+  "CMakeFiles/dc21x4.dir/phy.c.obj"
+  "CMakeFiles/dc21x4.dir/phy.c.obj.d"
+  "CMakeFiles/dc21x4.dir/power.c.obj"
+  "CMakeFiles/dc21x4.dir/power.c.obj.d"
+  "CMakeFiles/dc21x4.dir/requests.c.obj"
+  "CMakeFiles/dc21x4.dir/requests.c.obj.d"
+  "CMakeFiles/dc21x4.dir/send.c.obj"
+  "CMakeFiles/dc21x4.dir/send.c.obj.d"
+  "dc21x4.pdb"
+  "dc21x4.sys"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C RC)
+  include(CMakeFiles/dc21x4.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libntdllsys.a CMakeFiles/ntdllsys.dir/ntdll.S.obj
+/usr/bin/x86_64-w64-mingw32-ranlib libntdllsys.a

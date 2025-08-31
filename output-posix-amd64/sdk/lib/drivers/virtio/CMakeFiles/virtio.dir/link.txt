@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libvirtio.a CMakeFiles/virtio.dir/VirtIOPCICommon.c.obj CMakeFiles/virtio.dir/VirtIOPCILegacy.c.obj CMakeFiles/virtio.dir/VirtIOPCIModern.c.obj CMakeFiles/virtio.dir/VirtIORing.c.obj "CMakeFiles/virtio.dir/VirtIORing-Packed.c.obj"
+/usr/bin/x86_64-w64-mingw32-ranlib libvirtio.a

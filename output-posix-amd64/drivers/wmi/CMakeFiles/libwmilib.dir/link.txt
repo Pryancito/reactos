@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libwmilib.a CMakeFiles/libwmilib.dir/libwmilib.a
+/usr/bin/x86_64-w64-mingw32-ranlib libwmilib.a

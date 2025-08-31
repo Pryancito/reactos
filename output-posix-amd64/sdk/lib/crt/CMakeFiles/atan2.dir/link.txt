@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libatan2.a CMakeFiles/atan2.dir/math/_invoke_matherr.c.obj CMakeFiles/atan2.dir/math/amd64/_set_statfp.c.obj CMakeFiles/atan2.dir/math/libm_sse2/_handle_error.c.obj CMakeFiles/atan2.dir/math/libm_sse2/atan2.c.obj
+/usr/bin/x86_64-w64-mingw32-ranlib libatan2.a

@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libnewdev_delayed.a CMakeFiles/libnewdev_delayed.dir/libnewdev_delayed.a
+/usr/bin/x86_64-w64-mingw32-ranlib libnewdev_delayed.a

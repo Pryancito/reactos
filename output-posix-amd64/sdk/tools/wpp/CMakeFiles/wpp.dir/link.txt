@@ -1,0 +1,2 @@
+/usr/bin/x86_64-w64-mingw32-ar qc libwpp.a CMakeFiles/wpp.dir/preproc.c.obj CMakeFiles/wpp.dir/wpp.c.obj CMakeFiles/wpp.dir/ppy.tab.c.obj
+/usr/bin/x86_64-w64-mingw32-ranlib libwpp.a
