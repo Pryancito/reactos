@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libd3d9.a CMakeFiles/libd3d9.dir/libd3d9.a
-/usr/bin/x86_64-w64-mingw32-ranlib libd3d9.a

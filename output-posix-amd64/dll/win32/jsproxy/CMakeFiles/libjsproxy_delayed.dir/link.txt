@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libjsproxy_delayed.a CMakeFiles/libjsproxy_delayed.dir/libjsproxy_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libjsproxy_delayed.a

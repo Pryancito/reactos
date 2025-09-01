@@ -1,8 +1,0 @@
-file(REMOVE_RECURSE
-  "CMakeFiles/olecli32_clean"
-)
-
-# Per-language clean rules from dependency scanning.
-foreach(lang )
-  include(CMakeFiles/olecli32_clean.dir/cmake_clean_${lang}.cmake OPTIONAL)
-endforeach()

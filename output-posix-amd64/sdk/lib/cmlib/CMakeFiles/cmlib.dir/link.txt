@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libcmlib.a CMakeFiles/cmlib.dir/cmcheck.c.obj CMakeFiles/cmlib.dir/cminit.c.obj CMakeFiles/cmlib.dir/cmheal.c.obj CMakeFiles/cmlib.dir/cmindex.c.obj CMakeFiles/cmlib.dir/cmkeydel.c.obj CMakeFiles/cmlib.dir/cmname.c.obj CMakeFiles/cmlib.dir/cmse.c.obj CMakeFiles/cmlib.dir/cmvalue.c.obj CMakeFiles/cmlib.dir/hivebin.c.obj CMakeFiles/cmlib.dir/hivecell.c.obj CMakeFiles/cmlib.dir/hiveinit.c.obj CMakeFiles/cmlib.dir/hivesum.c.obj CMakeFiles/cmlib.dir/hivewrt.c.obj
-/usr/bin/x86_64-w64-mingw32-ranlib libcmlib.a

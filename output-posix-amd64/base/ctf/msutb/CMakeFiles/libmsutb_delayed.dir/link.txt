@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libmsutb_delayed.a CMakeFiles/libmsutb_delayed.dir/libmsutb_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libmsutb_delayed.a

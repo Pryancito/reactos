@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libpropsys_delayed.a CMakeFiles/libpropsys_delayed.dir/libpropsys_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libpropsys_delayed.a

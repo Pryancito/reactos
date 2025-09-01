@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libhalmp.a CMakeFiles/libhalmp.dir/libhalmp.a
-/usr/bin/x86_64-w64-mingw32-ranlib libhalmp.a

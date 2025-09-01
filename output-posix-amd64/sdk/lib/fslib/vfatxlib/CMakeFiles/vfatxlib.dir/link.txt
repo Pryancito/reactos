@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libvfatxlib.a CMakeFiles/vfatxlib.dir/fatx.c.obj CMakeFiles/vfatxlib.dir/vfatxlib.c.obj
-/usr/bin/x86_64-w64-mingw32-ranlib libvfatxlib.a

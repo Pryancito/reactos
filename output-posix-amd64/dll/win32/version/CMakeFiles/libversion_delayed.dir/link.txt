@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libversion_delayed.a CMakeFiles/libversion_delayed.dir/libversion_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libversion_delayed.a

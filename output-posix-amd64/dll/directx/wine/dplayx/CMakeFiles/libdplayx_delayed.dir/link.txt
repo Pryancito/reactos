@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libdplayx_delayed.a CMakeFiles/libdplayx_delayed.dir/libdplayx_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libdplayx_delayed.a

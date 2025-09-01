@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libavifil32_delayed.a CMakeFiles/libavifil32_delayed.dir/libavifil32_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libavifil32_delayed.a

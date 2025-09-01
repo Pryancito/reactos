@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libspoolss_delayed.a CMakeFiles/libspoolss_delayed.dir/libspoolss_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libspoolss_delayed.a

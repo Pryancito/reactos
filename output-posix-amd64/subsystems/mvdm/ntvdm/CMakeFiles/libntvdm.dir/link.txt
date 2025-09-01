@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libntvdm.a CMakeFiles/libntvdm.dir/libntvdm.a
-/usr/bin/x86_64-w64-mingw32-ranlib libntvdm.a

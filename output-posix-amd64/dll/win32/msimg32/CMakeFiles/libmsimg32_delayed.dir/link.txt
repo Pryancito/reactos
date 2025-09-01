@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libmsimg32_delayed.a CMakeFiles/libmsimg32_delayed.dir/libmsimg32_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libmsimg32_delayed.a

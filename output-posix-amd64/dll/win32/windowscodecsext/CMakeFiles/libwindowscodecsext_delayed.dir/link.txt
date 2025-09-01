@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libwindowscodecsext_delayed.a CMakeFiles/libwindowscodecsext_delayed.dir/libwindowscodecsext_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libwindowscodecsext_delayed.a

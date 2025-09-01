@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libopengl32_delayed.a CMakeFiles/libopengl32_delayed.dir/libopengl32_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libopengl32_delayed.a

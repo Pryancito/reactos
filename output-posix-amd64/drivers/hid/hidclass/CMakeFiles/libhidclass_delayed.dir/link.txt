@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libhidclass_delayed.a CMakeFiles/libhidclass_delayed.dir/libhidclass_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libhidclass_delayed.a

@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libatl100.a CMakeFiles/libatl100.dir/libatl100.a
-/usr/bin/x86_64-w64-mingw32-ranlib libatl100.a

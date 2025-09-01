@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libbootvid_delayed.a CMakeFiles/libbootvid_delayed.dir/libbootvid_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libbootvid_delayed.a

@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libmshtml_delayed.a CMakeFiles/libmshtml_delayed.dir/libmshtml_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libmshtml_delayed.a

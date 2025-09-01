@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libodbccp32.a CMakeFiles/libodbccp32.dir/libodbccp32.a
-/usr/bin/x86_64-w64-mingw32-ranlib libodbccp32.a

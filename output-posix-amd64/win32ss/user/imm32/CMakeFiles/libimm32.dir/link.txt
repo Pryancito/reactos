@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libimm32.a CMakeFiles/libimm32.dir/libimm32.a
-/usr/bin/x86_64-w64-mingw32-ranlib libimm32.a

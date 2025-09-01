@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libusbport.a CMakeFiles/libusbport.dir/libusbport.a
-/usr/bin/x86_64-w64-mingw32-ranlib libusbport.a

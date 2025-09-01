@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libwine.a CMakeFiles/wine.dir/config.c.obj CMakeFiles/wine.dir/debug_ros.c.obj CMakeFiles/wine.dir/isinf.c.obj CMakeFiles/wine.dir/isfinite.c.obj CMakeFiles/wine.dir/isnan.c.obj CMakeFiles/wine.dir/loader.c.obj CMakeFiles/wine.dir/__/__/crt/string/wctype.c.obj CMakeFiles/wine.dir/path.c.obj CMakeFiles/wine.dir/register.c.obj
-/usr/bin/x86_64-w64-mingw32-ranlib libwine.a

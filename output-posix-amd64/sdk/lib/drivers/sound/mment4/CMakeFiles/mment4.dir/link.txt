@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libmment4.a CMakeFiles/mment4.dir/detect.c.obj CMakeFiles/mment4.dir/registry.c.obj CMakeFiles/mment4.dir/control.c.obj
-/usr/bin/x86_64-w64-mingw32-ranlib libmment4.a

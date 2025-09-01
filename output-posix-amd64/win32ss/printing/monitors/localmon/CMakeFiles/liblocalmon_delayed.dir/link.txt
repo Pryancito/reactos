@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc liblocalmon_delayed.a CMakeFiles/liblocalmon_delayed.dir/liblocalmon_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib liblocalmon_delayed.a

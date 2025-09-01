@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libwkssvc_delayed.a CMakeFiles/libwkssvc_delayed.dir/libwkssvc_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libwkssvc_delayed.a

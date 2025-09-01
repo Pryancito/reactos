@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libwldap32.a CMakeFiles/libwldap32.dir/libwldap32.a
-/usr/bin/x86_64-w64-mingw32-ranlib libwldap32.a

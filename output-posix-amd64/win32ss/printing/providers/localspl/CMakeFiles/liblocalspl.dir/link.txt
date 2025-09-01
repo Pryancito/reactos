@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc liblocalspl.a CMakeFiles/liblocalspl.dir/liblocalspl.a
-/usr/bin/x86_64-w64-mingw32-ranlib liblocalspl.a

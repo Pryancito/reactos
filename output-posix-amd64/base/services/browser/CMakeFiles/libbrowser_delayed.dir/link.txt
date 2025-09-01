@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libbrowser_delayed.a CMakeFiles/libbrowser_delayed.dir/libbrowser_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libbrowser_delayed.a

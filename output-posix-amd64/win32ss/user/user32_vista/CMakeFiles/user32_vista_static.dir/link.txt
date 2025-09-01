@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libuser32_vista_static.a CMakeFiles/user32_vista_static.dir/dpi.c.obj
-/usr/bin/x86_64-w64-mingw32-ranlib libuser32_vista_static.a

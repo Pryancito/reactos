@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libcomdlg32.a CMakeFiles/libcomdlg32.dir/libcomdlg32.a
-/usr/bin/x86_64-w64-mingw32-ranlib libcomdlg32.a

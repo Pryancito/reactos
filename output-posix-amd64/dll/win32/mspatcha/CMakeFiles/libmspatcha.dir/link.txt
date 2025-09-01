@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libmspatcha.a CMakeFiles/libmspatcha.dir/libmspatcha.a
-/usr/bin/x86_64-w64-mingw32-ranlib libmspatcha.a

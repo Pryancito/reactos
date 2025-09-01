@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libstorport_delayed.a CMakeFiles/libstorport_delayed.dir/libstorport_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libstorport_delayed.a

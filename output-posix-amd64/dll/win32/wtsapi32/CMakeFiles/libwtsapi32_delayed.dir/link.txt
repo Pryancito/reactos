@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libwtsapi32_delayed.a CMakeFiles/libwtsapi32_delayed.dir/libwtsapi32_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libwtsapi32_delayed.a

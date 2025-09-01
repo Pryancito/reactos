@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libapisets.a CMakeFiles/apisets.dir/apisets.c.obj CMakeFiles/apisets.dir/apisets.table.c.obj
-/usr/bin/x86_64-w64-mingw32-ranlib libapisets.a

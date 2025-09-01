@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libdxgthk_delayed.a CMakeFiles/libdxgthk_delayed.dir/libdxgthk_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libdxgthk_delayed.a

@@ -1,1 +1,0 @@
- ../../../../sdk/lib/3rdparty/freetype/libfreetype.a ../../../../sdk/lib/crt/liblibcntpr.a ../../../../sdk/lib/vcruntime/libsetjmp.a ../../../libwin32k.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

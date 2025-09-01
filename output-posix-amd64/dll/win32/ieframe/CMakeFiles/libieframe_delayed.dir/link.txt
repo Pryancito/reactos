@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libieframe_delayed.a CMakeFiles/libieframe_delayed.dir/libieframe_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libieframe_delayed.a

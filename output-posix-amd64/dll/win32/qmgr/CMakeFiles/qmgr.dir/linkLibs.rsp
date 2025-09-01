@@ -1,1 +1,0 @@
- ../../../sdk/lib/uuid/libuuid.a ../../../sdk/lib/3rdparty/libwine/libwine.a ../winhttp/libwinhttp.a ../ole32/libole32.a ../advapi32/libadvapi32.a ../msvcrt/libmsvcrt.a ../kernel32/libkernel32.a ../../ntdll/libntdll.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc liblibtiff_delayed.a CMakeFiles/liblibtiff_delayed.dir/liblibtiff_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib liblibtiff_delayed.a

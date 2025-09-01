@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libuser32_optional_vista.a CMakeFiles/user32_optional_vista.dir/wine/input.c.obj CMakeFiles/user32_optional_vista.dir/wine/misc.c.obj CMakeFiles/user32_optional_vista.dir/wine/sysparams.c.obj CMakeFiles/user32_optional_vista.dir/wine/win.c.obj
-/usr/bin/x86_64-w64-mingw32-ranlib libuser32_optional_vista.a

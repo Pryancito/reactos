@@ -1,1 +1,0 @@
- ../../../../sdk/lib/crt/liboldnames.a ../../../../dll/win32/ws2_32/libws2_32.a ../../../../dll/win32/iphlpapi/libiphlpapi.a ../../../../dll/win32/msvcrt/libmsvcrt.a ../../../../dll/win32/kernel32/libkernel32.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

@@ -1,1 +1,0 @@
- ../../../sdk/lib/3rdparty/adns/libadns.a ../advapi32/libadvapi32.a ../rpcrt4/librpcrt4.a ../../../win32ss/user/user32/libuser32.a ../ws2_32/libws2_32.a ../iphlpapi/libiphlpapi.a ../msvcrt/libmsvcrt.a ../kernel32/libkernel32.a ../../ntdll/libntdll.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

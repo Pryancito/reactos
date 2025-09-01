@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libusbport_delayed.a CMakeFiles/libusbport_delayed.dir/libusbport_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libusbport_delayed.a

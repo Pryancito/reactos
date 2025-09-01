@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc liboldnames.a CMakeFiles/oldnames.dir/oldnames.a
-/usr/bin/x86_64-w64-mingw32-ranlib liboldnames.a

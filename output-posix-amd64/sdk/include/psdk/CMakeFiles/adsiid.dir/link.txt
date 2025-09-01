@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libadsiid.a CMakeFiles/adsiid.dir/iads_i.c.obj CMakeFiles/adsiid.dir/transact_i.c.obj
-/usr/bin/x86_64-w64-mingw32-ranlib libadsiid.a

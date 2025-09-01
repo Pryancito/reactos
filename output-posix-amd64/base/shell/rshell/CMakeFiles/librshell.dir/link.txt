@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc librshell.a CMakeFiles/librshell.dir/librshell.a
-/usr/bin/x86_64-w64-mingw32-ranlib librshell.a

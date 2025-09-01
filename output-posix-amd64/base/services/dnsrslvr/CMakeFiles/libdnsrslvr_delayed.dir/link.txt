@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libdnsrslvr_delayed.a CMakeFiles/libdnsrslvr_delayed.dir/libdnsrslvr_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libdnsrslvr_delayed.a

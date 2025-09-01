@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libhlink.a CMakeFiles/libhlink.dir/libhlink.a
-/usr/bin/x86_64-w64-mingw32-ranlib libhlink.a

@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libusp10.a CMakeFiles/libusp10.dir/libusp10.a
-/usr/bin/x86_64-w64-mingw32-ranlib libusp10.a

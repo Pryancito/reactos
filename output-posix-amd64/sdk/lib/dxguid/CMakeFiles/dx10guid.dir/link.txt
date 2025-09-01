@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libdx10guid.a CMakeFiles/dx10guid.dir/dx10guid.c.obj
-/usr/bin/x86_64-w64-mingw32-ranlib libdx10guid.a

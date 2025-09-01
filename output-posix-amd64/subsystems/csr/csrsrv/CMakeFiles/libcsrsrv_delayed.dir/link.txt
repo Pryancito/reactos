@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libcsrsrv_delayed.a CMakeFiles/libcsrsrv_delayed.dir/libcsrsrv_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libcsrsrv_delayed.a

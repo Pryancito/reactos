@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libmsacm32.a CMakeFiles/libmsacm32.dir/libmsacm32.a
-/usr/bin/x86_64-w64-mingw32-ranlib libmsacm32.a

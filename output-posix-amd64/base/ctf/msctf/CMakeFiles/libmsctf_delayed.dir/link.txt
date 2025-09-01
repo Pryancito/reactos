@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libmsctf_delayed.a CMakeFiles/libmsctf_delayed.dir/libmsctf_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libmsctf_delayed.a

@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libntdll_vista_static.a CMakeFiles/ntdll_vista_static.dir/ldr/ldrinit.c.obj CMakeFiles/ntdll_vista_static.dir/ldr/ldrnotify.c.obj
-/usr/bin/x86_64-w64-mingw32-ranlib libntdll_vista_static.a

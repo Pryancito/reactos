@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libodbccp32_delayed.a CMakeFiles/libodbccp32_delayed.dir/libodbccp32_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libodbccp32_delayed.a

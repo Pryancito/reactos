@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libmsdmo_delayed.a CMakeFiles/libmsdmo_delayed.dir/libmsdmo_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libmsdmo_delayed.a

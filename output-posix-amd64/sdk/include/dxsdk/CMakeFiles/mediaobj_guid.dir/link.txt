@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libmediaobj_guid.a CMakeFiles/mediaobj_guid.dir/mediaobj_i.c.obj
-/usr/bin/x86_64-w64-mingw32-ranlib libmediaobj_guid.a

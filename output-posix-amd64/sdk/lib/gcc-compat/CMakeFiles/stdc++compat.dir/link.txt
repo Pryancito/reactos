@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libstdc++compat.a CMakeFiles/stdc++compat.dir/__mingw_vsprintf.c.obj CMakeFiles/stdc++compat.dir/__throw_out_of_range_fmt.cpp.obj CMakeFiles/stdc++compat.dir/StringCchCopyNA.c.obj
-/usr/bin/x86_64-w64-mingw32-ranlib libstdc++compat.a

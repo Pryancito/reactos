@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libucrtbase.a CMakeFiles/libucrtbase.dir/libucrtbase.a
-/usr/bin/x86_64-w64-mingw32-ranlib libucrtbase.a

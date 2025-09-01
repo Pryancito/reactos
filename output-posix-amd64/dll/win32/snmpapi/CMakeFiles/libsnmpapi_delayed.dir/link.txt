@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libsnmpapi_delayed.a CMakeFiles/libsnmpapi_delayed.dir/libsnmpapi_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libsnmpapi_delayed.a

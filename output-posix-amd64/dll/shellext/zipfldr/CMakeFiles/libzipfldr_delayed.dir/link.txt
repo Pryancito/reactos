@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libzipfldr_delayed.a CMakeFiles/libzipfldr_delayed.dir/libzipfldr_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libzipfldr_delayed.a

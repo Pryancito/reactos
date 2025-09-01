@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libdbghelp_delayed.a CMakeFiles/libdbghelp_delayed.dir/libdbghelp_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libdbghelp_delayed.a

@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc liblibjpeg_delayed.a CMakeFiles/liblibjpeg_delayed.dir/liblibjpeg_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib liblibjpeg_delayed.a

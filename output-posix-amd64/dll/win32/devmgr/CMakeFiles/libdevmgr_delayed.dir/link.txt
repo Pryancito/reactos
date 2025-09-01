@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libdevmgr_delayed.a CMakeFiles/libdevmgr_delayed.dir/libdevmgr_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libdevmgr_delayed.a

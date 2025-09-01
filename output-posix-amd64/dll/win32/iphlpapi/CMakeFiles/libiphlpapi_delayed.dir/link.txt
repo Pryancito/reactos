@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libiphlpapi_delayed.a CMakeFiles/libiphlpapi_delayed.dir/libiphlpapi_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libiphlpapi_delayed.a

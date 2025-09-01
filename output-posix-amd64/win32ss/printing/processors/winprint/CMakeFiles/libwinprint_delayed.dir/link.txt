@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libwinprint_delayed.a CMakeFiles/libwinprint_delayed.dir/libwinprint_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libwinprint_delayed.a

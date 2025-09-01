@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc librtl_vista.a CMakeFiles/rtl_vista.dir/condvar.c.obj CMakeFiles/rtl_vista.dir/locale.c.obj CMakeFiles/rtl_vista.dir/runonce.c.obj CMakeFiles/rtl_vista.dir/srw.c.obj CMakeFiles/rtl_vista.dir/utf8.c.obj
-/usr/bin/x86_64-w64-mingw32-ranlib librtl_vista.a

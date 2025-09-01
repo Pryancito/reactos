@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libbattc_delayed.a CMakeFiles/libbattc_delayed.dir/libbattc_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libbattc_delayed.a

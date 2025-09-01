@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc liboleacc_delayed.a CMakeFiles/liboleacc_delayed.dir/liboleacc_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib liboleacc_delayed.a

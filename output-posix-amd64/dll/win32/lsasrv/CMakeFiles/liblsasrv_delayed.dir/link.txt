@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc liblsasrv_delayed.a CMakeFiles/liblsasrv_delayed.dir/liblsasrv_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib liblsasrv_delayed.a

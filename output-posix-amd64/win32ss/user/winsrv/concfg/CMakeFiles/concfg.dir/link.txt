@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libconcfg.a CMakeFiles/concfg.dir/font.c.obj CMakeFiles/concfg.dir/settings.c.obj
-/usr/bin/x86_64-w64-mingw32-ranlib libconcfg.a

@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libatl100_delayed.a CMakeFiles/libatl100_delayed.dir/libatl100_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libatl100_delayed.a

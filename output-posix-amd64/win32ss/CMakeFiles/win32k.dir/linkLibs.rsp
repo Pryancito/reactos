@@ -1,1 +1,0 @@
- ../sdk/lib/dxguid/libdxguid.a ../sdk/lib/crt/liblibcntpr.a ../ntoskrnl/libntoskrnl.a ../hal/halx86/libhal.a drivers/font/ftfd/libftfd.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

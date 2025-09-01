@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libuser32_delayed.a CMakeFiles/libuser32_delayed.dir/libuser32_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libuser32_delayed.a

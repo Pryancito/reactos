@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libcabinet.a CMakeFiles/libcabinet.dir/libcabinet.a
-/usr/bin/x86_64-w64-mingw32-ranlib libcabinet.a

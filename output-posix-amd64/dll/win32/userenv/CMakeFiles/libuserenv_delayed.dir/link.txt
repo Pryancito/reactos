@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libuserenv_delayed.a CMakeFiles/libuserenv_delayed.dir/libuserenv_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libuserenv_delayed.a

@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libsecur32.a CMakeFiles/libsecur32.dir/libsecur32.a
-/usr/bin/x86_64-w64-mingw32-ranlib libsecur32.a

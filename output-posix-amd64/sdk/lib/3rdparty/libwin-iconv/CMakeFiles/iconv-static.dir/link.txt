@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libiconv.a "CMakeFiles/iconv-static.dir/win_iconv.c.obj"
-/usr/bin/x86_64-w64-mingw32-ranlib libiconv.a

@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc liblibtirpc_delayed.a CMakeFiles/liblibtirpc_delayed.dir/liblibtirpc_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib liblibtirpc_delayed.a

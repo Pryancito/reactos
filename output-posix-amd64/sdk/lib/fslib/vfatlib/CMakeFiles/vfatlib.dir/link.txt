@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libvfatlib.a CMakeFiles/vfatlib.dir/check/boot.c.obj CMakeFiles/vfatlib.dir/check/check.c.obj CMakeFiles/vfatlib.dir/check/common.c.obj CMakeFiles/vfatlib.dir/check/fat.c.obj CMakeFiles/vfatlib.dir/check/file.c.obj CMakeFiles/vfatlib.dir/check/io.c.obj CMakeFiles/vfatlib.dir/check/lfn.c.obj CMakeFiles/vfatlib.dir/common.c.obj CMakeFiles/vfatlib.dir/fat12.c.obj CMakeFiles/vfatlib.dir/fat16.c.obj CMakeFiles/vfatlib.dir/fat32.c.obj CMakeFiles/vfatlib.dir/vfatlib.c.obj
-/usr/bin/x86_64-w64-mingw32-ranlib libvfatlib.a

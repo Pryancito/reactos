@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libwlnotify_delayed.a CMakeFiles/libwlnotify_delayed.dir/libwlnotify_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libwlnotify_delayed.a

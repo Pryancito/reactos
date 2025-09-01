@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libacppage_delayed.a CMakeFiles/libacppage_delayed.dir/libacppage_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libacppage_delayed.a

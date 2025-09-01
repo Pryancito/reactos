@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libkernel32.a CMakeFiles/libkernel32.dir/libkernel32.a
-/usr/bin/x86_64-w64-mingw32-ranlib libkernel32.a

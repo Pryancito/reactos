@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libwkssvc.a CMakeFiles/libwkssvc.dir/libwkssvc.a
-/usr/bin/x86_64-w64-mingw32-ranlib libwkssvc.a

@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libsetjmp.a CMakeFiles/setjmp.dir/amd64/longjmp.c.obj CMakeFiles/setjmp.dir/amd64/__longjmp_noframe.s.obj CMakeFiles/setjmp.dir/amd64/_setjmp.s.obj
-/usr/bin/x86_64-w64-mingw32-ranlib libsetjmp.a

@@ -1,1 +1,0 @@
- ../../../sdk/lib/3rdparty/zlib/libzlib.a ../../../sdk/lib/crt/libgetopt.a ../../../win32ss/user/user32/libuser32.a ../../win32/msvcrt/libmsvcrt.a ../../win32/kernel32/libkernel32.a ../../ntdll/libntdll.a ../../../sdk/lib/crt/liboldnames.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

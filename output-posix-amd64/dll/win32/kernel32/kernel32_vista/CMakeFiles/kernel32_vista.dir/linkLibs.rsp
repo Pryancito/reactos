@@ -1,1 +1,0 @@
- libkernel32_vista_static.a ../libkernel32_shared.a ../libkernel32.a ../../../ntdll/nt_0600/libntdll_vista.a ../../../ntdll/libntdll.a ../../../ntdll/nt_0600/libntdll_vista_delayed.a ../../../../sdk/lib/delayimp/libdelayimp.a ../libkernel32.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

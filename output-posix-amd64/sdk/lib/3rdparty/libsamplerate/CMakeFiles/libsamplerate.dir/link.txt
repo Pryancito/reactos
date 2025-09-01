@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc liblibsamplerate.a CMakeFiles/libsamplerate.dir/samplerate.c.obj CMakeFiles/libsamplerate.dir/src_linear.c.obj CMakeFiles/libsamplerate.dir/src_sinc.c.obj CMakeFiles/libsamplerate.dir/src_zoh.c.obj
-/usr/bin/x86_64-w64-mingw32-ranlib liblibsamplerate.a

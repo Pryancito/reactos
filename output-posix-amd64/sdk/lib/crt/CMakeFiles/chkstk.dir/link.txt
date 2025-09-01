@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libchkstk.a CMakeFiles/chkstk.dir/except/amd64/chkstk_ms.s.obj
-/usr/bin/x86_64-w64-mingw32-ranlib libchkstk.a

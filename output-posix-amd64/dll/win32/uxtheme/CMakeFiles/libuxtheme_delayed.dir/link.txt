@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libuxtheme_delayed.a CMakeFiles/libuxtheme_delayed.dir/libuxtheme_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libuxtheme_delayed.a

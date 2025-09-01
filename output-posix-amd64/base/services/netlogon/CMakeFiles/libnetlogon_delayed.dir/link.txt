@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libnetlogon_delayed.a CMakeFiles/libnetlogon_delayed.dir/libnetlogon_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libnetlogon_delayed.a

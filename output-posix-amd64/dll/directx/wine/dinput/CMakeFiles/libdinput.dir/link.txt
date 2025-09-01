@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libdinput.a CMakeFiles/libdinput.dir/libdinput.a
-/usr/bin/x86_64-w64-mingw32-ranlib libdinput.a

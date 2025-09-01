@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libinetcomm_delayed.a CMakeFiles/libinetcomm_delayed.dir/libinetcomm_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libinetcomm_delayed.a

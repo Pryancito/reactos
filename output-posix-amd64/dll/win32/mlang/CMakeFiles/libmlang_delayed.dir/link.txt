@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libmlang_delayed.a CMakeFiles/libmlang_delayed.dir/libmlang_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libmlang_delayed.a

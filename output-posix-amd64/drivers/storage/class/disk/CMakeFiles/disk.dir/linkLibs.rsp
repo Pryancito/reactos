@@ -1,1 +1,0 @@
- ../../../../sdk/lib/drivers/ntoskrnl_vista/libntoskrnl_vista.a ../../../../sdk/lib/crt/liblibcntpr.a ../../../../sdk/lib/wdmguid/libwdmguid.a ../classpnp/libclasspnp.a ../../../../ntoskrnl/libntoskrnl.a ../../../../hal/halx86/libhal.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

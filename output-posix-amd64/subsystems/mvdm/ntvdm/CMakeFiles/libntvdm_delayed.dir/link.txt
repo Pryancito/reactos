@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libntvdm_delayed.a CMakeFiles/libntvdm_delayed.dir/libntvdm_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libntvdm_delayed.a

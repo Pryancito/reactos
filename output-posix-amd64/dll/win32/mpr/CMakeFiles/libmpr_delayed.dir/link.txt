@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libmpr_delayed.a CMakeFiles/libmpr_delayed.dir/libmpr_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libmpr_delayed.a

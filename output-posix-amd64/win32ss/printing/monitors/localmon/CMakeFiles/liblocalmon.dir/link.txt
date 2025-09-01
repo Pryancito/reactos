@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc liblocalmon.a CMakeFiles/liblocalmon.dir/liblocalmon.a
-/usr/bin/x86_64-w64-mingw32-ranlib liblocalmon.a

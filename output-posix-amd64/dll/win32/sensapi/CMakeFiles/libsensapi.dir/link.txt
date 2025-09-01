@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libsensapi.a CMakeFiles/libsensapi.dir/libsensapi.a
-/usr/bin/x86_64-w64-mingw32-ranlib libsensapi.a

@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libinflib.a CMakeFiles/inflib.dir/infcore.c.obj CMakeFiles/inflib.dir/infget.c.obj CMakeFiles/inflib.dir/infput.c.obj CMakeFiles/inflib.dir/infrosgen.c.obj CMakeFiles/inflib.dir/infrosget.c.obj CMakeFiles/inflib.dir/infrosput.c.obj
-/usr/bin/x86_64-w64-mingw32-ranlib libinflib.a

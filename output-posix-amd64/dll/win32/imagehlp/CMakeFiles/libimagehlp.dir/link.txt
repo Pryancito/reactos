@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libimagehlp.a CMakeFiles/libimagehlp.dir/libimagehlp.a
-/usr/bin/x86_64-w64-mingw32-ranlib libimagehlp.a

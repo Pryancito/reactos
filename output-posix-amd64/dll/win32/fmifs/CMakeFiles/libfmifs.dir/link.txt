@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libfmifs.a CMakeFiles/libfmifs.dir/libfmifs.a
-/usr/bin/x86_64-w64-mingw32-ranlib libfmifs.a

@@ -1,1 +1,0 @@
- ../../../win32ss/user/user32/libuser32.a ../../../win32ss/gdi/gdi32/libgdi32.a ../comctl32/libcomctl32.a ../ole32/libole32.a ../oleaut32/liboleaut32.a ../advapi32/libadvapi32.a ../uxtheme/libuxtheme.a ../msvcrt/libmsvcrt.a ../kernel32/libkernel32.a ../../ntdll/libntdll.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

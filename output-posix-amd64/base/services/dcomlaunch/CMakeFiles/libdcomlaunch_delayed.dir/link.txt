@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libdcomlaunch_delayed.a CMakeFiles/libdcomlaunch_delayed.dir/libdcomlaunch_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libdcomlaunch_delayed.a

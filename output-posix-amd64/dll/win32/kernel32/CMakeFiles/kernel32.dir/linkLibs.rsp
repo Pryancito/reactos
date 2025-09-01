@@ -1,1 +1,0 @@
- ../psapi/libpsapi_static.a kernel32_vista/libkernel32_vista_static.a libkernel32_shared.a ../../../sdk/lib/3rdparty/libwine/libwine.a ../../../sdk/lib/crt/libchkstk.a ../../ntdll/libntdll.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

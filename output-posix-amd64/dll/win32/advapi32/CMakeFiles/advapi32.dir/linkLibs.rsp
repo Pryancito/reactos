@@ -1,1 +1,0 @@
- ../../../sdk/lib/cryptlib/libcryptlib.a ../../../sdk/lib/3rdparty/libwine/libwine.a ../secur32/libsecur32_delayed.a ../../../sdk/lib/delayimp/libdelayimp.a ../advapi32_vista/libadvapi32_vista.a ../rpcrt4/librpcrt4.a ../kernel32/libkernel32.a ../../ntdll/libntdll.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

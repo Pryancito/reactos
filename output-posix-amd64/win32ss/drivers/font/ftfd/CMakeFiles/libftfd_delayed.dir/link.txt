@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libftfd_delayed.a CMakeFiles/libftfd_delayed.dir/libftfd_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libftfd_delayed.a

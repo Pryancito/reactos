@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libopengl32.a CMakeFiles/libopengl32.dir/libopengl32.a
-/usr/bin/x86_64-w64-mingw32-ranlib libopengl32.a

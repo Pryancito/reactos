@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc liblibtirpc.a CMakeFiles/liblibtirpc.dir/liblibtirpc.a
-/usr/bin/x86_64-w64-mingw32-ranlib liblibtirpc.a

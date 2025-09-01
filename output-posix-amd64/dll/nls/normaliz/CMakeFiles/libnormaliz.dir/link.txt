@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libnormaliz.a CMakeFiles/libnormaliz.dir/libnormaliz.a
-/usr/bin/x86_64-w64-mingw32-ranlib libnormaliz.a

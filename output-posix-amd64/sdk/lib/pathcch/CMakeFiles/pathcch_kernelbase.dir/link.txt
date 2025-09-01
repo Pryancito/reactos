@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc pathcch_kernelbase.a CMakeFiles/pathcch_kernelbase.dir/pathcch_kernelbase.a
-/usr/bin/x86_64-w64-mingw32-ranlib pathcch_kernelbase.a

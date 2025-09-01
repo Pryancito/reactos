@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libcardlib.a CMakeFiles/cardlib.dir/cardbitmaps.cpp.obj CMakeFiles/cardlib.dir/cardbutton.cpp.obj CMakeFiles/cardlib.dir/cardcolor.cpp.obj CMakeFiles/cardlib.dir/cardcount.cpp.obj CMakeFiles/cardlib.dir/cardlib.cpp.obj CMakeFiles/cardlib.dir/cardregion.cpp.obj CMakeFiles/cardlib.dir/cardrgndraw.cpp.obj CMakeFiles/cardlib.dir/cardrgnmouse.cpp.obj CMakeFiles/cardlib.dir/cardstack.cpp.obj CMakeFiles/cardlib.dir/cardwindow.cpp.obj CMakeFiles/cardlib.dir/dropzone.cpp.obj
-/usr/bin/x86_64-w64-mingw32-ranlib libcardlib.a

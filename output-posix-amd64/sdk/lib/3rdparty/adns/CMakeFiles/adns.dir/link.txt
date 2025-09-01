@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libadns.a CMakeFiles/adns.dir/adns_win32/adns_unix_calls.c.obj CMakeFiles/adns.dir/src/check.c.obj CMakeFiles/adns.dir/src/event.c.obj CMakeFiles/adns.dir/src/general.c.obj CMakeFiles/adns.dir/src/parse.c.obj CMakeFiles/adns.dir/src/poll.c.obj CMakeFiles/adns.dir/src/query.c.obj CMakeFiles/adns.dir/src/reply.c.obj CMakeFiles/adns.dir/src/setup.c.obj CMakeFiles/adns.dir/src/transmit.c.obj CMakeFiles/adns.dir/src/types.c.obj
-/usr/bin/x86_64-w64-mingw32-ranlib libadns.a

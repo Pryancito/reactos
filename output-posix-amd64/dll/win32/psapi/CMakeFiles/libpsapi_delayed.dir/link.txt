@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libpsapi_delayed.a CMakeFiles/libpsapi_delayed.dir/libpsapi_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libpsapi_delayed.a

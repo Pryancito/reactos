@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libadvapi32_delayed.a CMakeFiles/libadvapi32_delayed.dir/libadvapi32_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libadvapi32_delayed.a

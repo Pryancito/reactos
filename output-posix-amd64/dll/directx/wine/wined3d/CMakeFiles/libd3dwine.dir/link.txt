@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libd3dwine.a CMakeFiles/libd3dwine.dir/libd3dwine.a
-/usr/bin/x86_64-w64-mingw32-ranlib libd3dwine.a

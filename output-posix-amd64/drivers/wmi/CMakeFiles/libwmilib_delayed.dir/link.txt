@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libwmilib_delayed.a CMakeFiles/libwmilib_delayed.dir/libwmilib_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libwmilib_delayed.a

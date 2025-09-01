@@ -1,1 +1,0 @@
- ../../../win32ss/user/user32/libuser32.a ../advapi32/libadvapi32.a ../ws2help/libws2help.a ../msvcrt/libmsvcrt.a ../kernel32/libkernel32.a ../../ntdll/libntdll.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

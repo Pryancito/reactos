@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libwinmm_delayed.a CMakeFiles/libwinmm_delayed.dir/libwinmm_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libwinmm_delayed.a

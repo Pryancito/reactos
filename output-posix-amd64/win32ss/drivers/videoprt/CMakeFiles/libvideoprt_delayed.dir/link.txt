@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libvideoprt_delayed.a CMakeFiles/libvideoprt_delayed.dir/libvideoprt_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libvideoprt_delayed.a

@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libimm32_delayed.a CMakeFiles/libimm32_delayed.dir/libimm32_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libimm32_delayed.a

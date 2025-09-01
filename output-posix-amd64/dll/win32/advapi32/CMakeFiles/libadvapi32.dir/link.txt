@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libadvapi32.a CMakeFiles/libadvapi32.dir/libadvapi32.a
-/usr/bin/x86_64-w64-mingw32-ranlib libadvapi32.a

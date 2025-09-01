@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libsrvsvc_delayed.a CMakeFiles/libsrvsvc_delayed.dir/libsrvsvc_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libsrvsvc_delayed.a

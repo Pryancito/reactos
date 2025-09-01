@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libstrmiids.a CMakeFiles/strmiids.dir/strmiids.c.obj
-/usr/bin/x86_64-w64-mingw32-ranlib libstrmiids.a

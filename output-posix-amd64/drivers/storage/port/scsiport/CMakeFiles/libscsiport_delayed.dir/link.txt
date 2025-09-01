@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libscsiport_delayed.a CMakeFiles/libscsiport_delayed.dir/libscsiport_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libscsiport_delayed.a

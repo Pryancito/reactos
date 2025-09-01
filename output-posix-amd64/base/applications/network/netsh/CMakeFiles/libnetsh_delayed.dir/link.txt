@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libnetsh_delayed.a CMakeFiles/libnetsh_delayed.dir/libnetsh_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libnetsh_delayed.a

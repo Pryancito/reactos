@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libfreeldr_delayed.a CMakeFiles/libfreeldr_delayed.dir/libfreeldr_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libfreeldr_delayed.a

@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libsxs_delayed.a CMakeFiles/libsxs_delayed.dir/libsxs_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libsxs_delayed.a

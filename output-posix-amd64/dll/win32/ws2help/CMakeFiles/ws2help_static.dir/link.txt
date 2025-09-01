@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libws2help_static.a CMakeFiles/ws2help_static.dir/apc.c.obj CMakeFiles/ws2help_static.dir/context.c.obj CMakeFiles/ws2help_static.dir/dllmain.c.obj CMakeFiles/ws2help_static.dir/handle.c.obj CMakeFiles/ws2help_static.dir/notify.c.obj
-/usr/bin/x86_64-w64-mingw32-ranlib libws2help_static.a

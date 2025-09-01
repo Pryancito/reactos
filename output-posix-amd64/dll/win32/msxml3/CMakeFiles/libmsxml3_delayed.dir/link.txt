@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libmsxml3_delayed.a CMakeFiles/libmsxml3_delayed.dir/libmsxml3_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libmsxml3_delayed.a

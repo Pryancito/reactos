@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libriched20.a CMakeFiles/libriched20.dir/libriched20.a
-/usr/bin/x86_64-w64-mingw32-ranlib libriched20.a

@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libglu32_delayed.a CMakeFiles/libglu32_delayed.dir/libglu32_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libglu32_delayed.a

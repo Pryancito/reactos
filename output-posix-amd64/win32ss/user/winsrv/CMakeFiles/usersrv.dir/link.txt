@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libusersrv.a CMakeFiles/usersrv.dir/usersrv/harderror.c.obj CMakeFiles/usersrv.dir/usersrv/init.c.obj CMakeFiles/usersrv.dir/usersrv/register.c.obj CMakeFiles/usersrv.dir/usersrv/shutdown.c.obj
-/usr/bin/x86_64-w64-mingw32-ranlib libusersrv.a

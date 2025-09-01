@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libhidparse_delayed.a CMakeFiles/libhidparse_delayed.dir/libhidparse_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libhidparse_delayed.a

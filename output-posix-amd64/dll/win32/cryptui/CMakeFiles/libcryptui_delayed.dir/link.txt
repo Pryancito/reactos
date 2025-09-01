@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libcryptui_delayed.a CMakeFiles/libcryptui_delayed.dir/libcryptui_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libcryptui_delayed.a

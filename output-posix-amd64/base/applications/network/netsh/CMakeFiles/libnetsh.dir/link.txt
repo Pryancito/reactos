@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libnetsh.a CMakeFiles/libnetsh.dir/libnetsh.a
-/usr/bin/x86_64-w64-mingw32-ranlib libnetsh.a

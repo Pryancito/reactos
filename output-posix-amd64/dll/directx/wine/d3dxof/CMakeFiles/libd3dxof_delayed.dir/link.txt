@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libd3dxof_delayed.a CMakeFiles/libd3dxof_delayed.dir/libd3dxof_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libd3dxof_delayed.a

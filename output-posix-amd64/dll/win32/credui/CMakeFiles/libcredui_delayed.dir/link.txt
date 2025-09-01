@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libcredui_delayed.a CMakeFiles/libcredui_delayed.dir/libcredui_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libcredui_delayed.a

@@ -1,2 +1,0 @@
-# Empty dependencies file for libwkssvc.
-# This may be replaced when dependencies are built.

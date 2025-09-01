@@ -1,1 +1,0 @@
- ../../../../sdk/lib/crt/liblibcntpr.a ../../../../ntoskrnl/libntoskrnl.a ../../../ksfilter/ks/libks.a ../../../../hal/halx86/libhal.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

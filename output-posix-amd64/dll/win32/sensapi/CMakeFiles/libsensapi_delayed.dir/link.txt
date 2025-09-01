@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libsensapi_delayed.a CMakeFiles/libsensapi_delayed.dir/libsensapi_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libsensapi_delayed.a

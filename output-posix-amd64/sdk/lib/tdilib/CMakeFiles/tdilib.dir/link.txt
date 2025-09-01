@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libtdilib.a CMakeFiles/tdilib.dir/enum.c.obj CMakeFiles/tdilib.dir/handle.c.obj
-/usr/bin/x86_64-w64-mingw32-ranlib libtdilib.a

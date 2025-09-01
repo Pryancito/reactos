@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libpciidex_delayed.a CMakeFiles/libpciidex_delayed.dir/libpciidex_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libpciidex_delayed.a

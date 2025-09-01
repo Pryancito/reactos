@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libdmilib.a CMakeFiles/dmilib.dir/dmilib.c.obj
-/usr/bin/x86_64-w64-mingw32-ranlib libdmilib.a

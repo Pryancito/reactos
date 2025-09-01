@@ -1,2 +1,0 @@
-/usr/bin/x86_64-w64-mingw32-ar qc libwmisvc_delayed.a CMakeFiles/libwmisvc_delayed.dir/libwmisvc_delayed.a
-/usr/bin/x86_64-w64-mingw32-ranlib libwmisvc_delayed.a
