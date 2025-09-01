@@ -300,10 +300,23 @@ FUNC KiInvalidOpcodeFault
 
 KiInvalidOpcodeKernel:
     /* Kernel mode fault */
-
-    /* Dispatch the exception */
+    
+    /* Check if this is a known problematic instruction */
+    mov rax, [rbp + KTRAP_FRAME_Rip]
+    sub rax, 1  /* Point to the instruction that caused the fault */
+    
+    /* Try to handle common x64 compatibility issues */
+    mov rcx, rbp
+    call KiHandleInvalidOpcodeCompat
+    
+    /* If handled, return normally */
+    test eax, eax
+    jnz KiInvalidOpcodeKernelExit
+    
+    /* Otherwise, dispatch the exception */
     DispatchException STATUS_ILLEGAL_INSTRUCTION, 0, 0, 0, 0
 
+KiInvalidOpcodeKernelExit:
     /* Return */
     ExitTrap TF_SAVE_ALL
 ENDFUNC
@@ -1355,3 +1368,52 @@ __swapgs:
 #endif
 
 END
+
+/* ===== KERNEL RUST INTEGRATION ===== */
+/* Este parche integra el manejo de excepciones de Rust */
+
+/* Incluir el header del kernel Rust */
+#include "reactos_rust_kernel.h"
+
+/* Función para manejar Invalid Opcode con Rust */
+PUBLIC KiHandleInvalidOpcodeRust
+FUNC KiHandleInvalidOpcodeRust
+    /* Guardar registros */
+    push rax
+    push rcx
+    push rdx
+    push r8
+    push r9
+    push r10
+    push r11
+    
+    /* Llamar a la función Rust */
+    mov rcx, rbp  /* trap_frame */
+    call KiHandleInvalidOpcodeCompat
+    
+    /* Verificar resultado */
+    test eax, eax
+    jz KiInvalidOpcodeRustFailed
+    
+    /* Éxito - restaurar registros y retornar */
+    pop r11
+    pop r10
+    pop r9
+    pop r8
+    pop rdx
+    pop rcx
+    pop rax
+    ret
+    
+KiInvalidOpcodeRustFailed:
+    /* Fallo - restaurar registros y continuar con manejo normal */
+    pop r11
+    pop r10
+    pop r9
+    pop r8
+    pop rdx
+    pop rcx
+    pop rax
+    jmp KiInvalidOpcodeKernel
+ENDFUNC
+

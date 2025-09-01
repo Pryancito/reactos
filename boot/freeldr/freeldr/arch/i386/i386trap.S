@@ -21,6 +21,7 @@
 #include <arch/pc/x86common.h>
 
 EXTERN _i386PrintExceptionText@12:PROC
+EXTERN _PrintText:PROC
 
 .code32
 
@@ -55,6 +56,39 @@ MACRO(SAVE_CPU_REGS)
 
     /* push KSPECIAL_REGISTERS */
     /* Gdtr, Idtr, Tr, Ldtr, Reserved */
+
+MACRO(RESTORE_CPU_REGS)
+    /* restore KSPECIAL_REGISTERS */
+    add esp, 6 * 4
+    
+    /* restore debug registers */
+    pop eax
+    mov dr0, eax
+    pop eax
+    mov dr1, eax
+    pop eax
+    mov dr2, eax
+    pop eax
+    mov dr3, eax
+    pop eax
+    mov dr6, eax
+    pop eax
+    mov dr7, eax
+    
+    /* restore segment registers */
+    pop gs
+    pop es
+    pop ds
+    pop edx
+    pop ecx
+    pop eax
+    pop eax // PreviousPreviousMode
+    pop eax // ExceptionList
+    pop fs
+    pop edi
+    pop esi
+    pop ebx
+    pop ebp
     sub esp, 44
     sgdt [esp]
     sidt [esp + 8]
@@ -97,12 +131,30 @@ i386CommonExceptionHandler:
     push dword ptr ds:[i386ExceptionIndex]
     call _i386PrintExceptionText@12
 
-    cli
+    // Check if this is an Invalid Opcode exception (index 6)
+    cmp dword ptr ds:[i386ExceptionIndex], 6
+    jne i386ExceptionHandlerHang
+    
+    // For Invalid Opcode, try to continue instead of hanging
+    push offset szContinueMsg
+    call _PrintText
+    add esp, 4
+    
+    // Skip the problematic instruction by incrementing EIP/RIP
+#ifdef _M_IX86
+    inc dword ptr [eax + 0x68] // EIP offset in KTRAP_FRAME
+#else
+    inc qword ptr [eax + 0x80] // RIP offset in KTRAP_FRAME
+#endif
+    
+    // Restore registers and continue
+    RESTORE_CPU_REGS
+    iret
+
 i386ExceptionHandlerHang:
+    cli
     hlt
     jmp i386ExceptionHandlerHang
-
-    iret
 
 MACRO(TRAP_STUB, function, index)
     PUBLIC VAL(function)
@@ -178,5 +230,8 @@ BREAKPOINT_TEMPLATE _INSTRUCTION_BREAKPOINT4, HEX(00fffffff), HEX(0000003c0)
 BREAKPOINT_TEMPLATE _MEMORY_READWRITE_BREAKPOINT4, HEX(00fffffff), HEX(0300003c0)
 BREAKPOINT_TEMPLATE _MEMORY_WRITE_BREAKPOINT4, HEX(00fffffff), HEX(0100003c0)
 #endif // DBG
+
+.data
+szContinueMsg db 0Ah, "Attempting to continue execution...", 0Ah, 0
 
 END
