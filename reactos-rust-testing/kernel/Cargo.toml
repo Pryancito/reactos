@@ -1,0 +1,41 @@
+[package]
+name = "reactos-rust-kernel"
+version = "1.0.0"
+edition = "2021"
+authors = ["ReactOS Rust Team"]
+description = "Kernel principal de ReactOS Rust OS para testing"
+
+[[bin]]
+name = "reactos-rust-kernel"
+path = "src/main_bare_metal.rs"
+
+[lib]
+name = "reactos_rust_kernel"
+path = "src/lib.rs"
+
+[dependencies]
+# Dependencias del kernel
+bitflags = "2.0"
+volatile = "0.4"
+spin = "0.9"
+
+[dependencies.lazy_static]
+version = "1.4"
+features = ["spin_no_std"]
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+strip = true
+overflow-checks = false
+
+[profile.dev]
+opt-level = "s"
+debug = true
+panic = "abort"
+
+# Configuración para multiboot
+[target.x86_64-unknown-none]
+rustflags = ["-C", "link-arg=-Tmultiboot.ld"]

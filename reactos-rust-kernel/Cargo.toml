@@ -3,22 +3,39 @@ name = "reactos-rust-kernel"
 version = "0.1.0"
 edition = "2021"
 
-[lib]
-crate-type = ["staticlib"]
+# [lib]
+# crate-type = ["staticlib"]
+
+[[bin]]
+name = "reactos-rust-kernel"
+path = "src/main.rs"
 
 [dependencies]
 # Core kernel dependencies (minimal)
 bitflags = "2.4"
 
+# Dependencias para VGA
+volatile = "0.4"
+spin = "0.9"
+
+[dependencies.lazy_static]
+version = "1.4"
+features = ["spin_no_std"]
+
 [profile.release]
-opt-level = 3        # Maximum optimization
+opt-level = "z"      # Optimize for size (better for kernel)
 lto = "fat"          # Aggressive link-time optimization
 codegen-units = 1    # Single codegen unit for better optimization
 panic = "abort"      # Smaller binary size
 strip = true         # Remove debug symbols
 overflow-checks = false  # Disable for performance (safe in kernel context)
+debug = false        # No debug info in release
 
 [profile.dev]
 opt-level = 1        # Some optimization for development
 debug = true         # Keep debug info for development
 panic = "abort"
+
+# Configuración para kernel híbrido
+[target.x86_64-unknown-none]
+rustflags = ["-C", "link-arg=-Trust_kernel.ld", "-C", "link-arg=-nostdlib", "-C", "link-arg=-static"]

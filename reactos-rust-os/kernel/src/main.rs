@@ -1,327 +1,268 @@
+//! ReactOS Rust Kernel - Main Entry Point
+//! 
+//! Punto de entrada principal para el kernel de ReactOS Rust
+//! Versión con VGA integrado
+
 #![no_std]
 #![no_main]
-#![feature(asm_const)]
 
-//! ReactOS Rust Kernel
-//! 
-//! Kernel principal de ReactOS Rust OS
-//! Sistema operativo moderno y seguro en Rust
+extern crate alloc;
 
 use core::panic::PanicInfo;
+use core::arch::asm;
+// Removed unused imports
 
-// Módulos del kernel
+// Incluir header multiboot
+mod multiboot_header;
+mod vga;
+mod keyboard;
+mod mouse;
+mod interrupts;
 mod memory;
+mod shell;
 mod process;
-mod scheduler;
-mod interrupt;
-mod io;
-mod security;
-mod power;
-mod x86_64;
-mod graphics;
-mod audio;
-mod usb;
-mod virtualization;
-mod monitoring;
-mod advanced_security;
-mod storage;
-mod hal;
-mod time;
-mod services;
-mod caching;
-mod resource_management;
-mod system_calls;
-mod networking;
+mod filesystem;
 
-/// Punto de entrada del kernel
+// Usar el allocator del sistema de memoria
+#[global_allocator]
+static ALLOCATOR: memory::KernelAllocator = memory::KernelAllocator::new();
+
+/// Punto de entrada del kernel (llamado por el bootloader)
 #[no_mangle]
-pub extern "C" fn kernel_main() -> ! {
-    // Inicializar el kernel
-    kernel_init();
+pub extern "C" fn _start() -> ! {
+    // Inicializar VGA primero
+    vga::init();
     
-    // Inicializar componentes
-    init_components();
+    // Mostrar mensaje de bienvenida
+    vga_println!("🚀 ReactOS Rust Kernel 1 iniciado!");
+    vga_println!("📊 Kernel principal con VGA integrado");
+    vga_println!("🔧 Inicializando componentes del kernel...");
     
-    // Inicializar drivers
-    init_drivers();
+    // Inicializar componentes básicos del kernel
+    initialize_kernel_components();
     
-    // Inicializar servicios
-    init_services();
+    vga_println!("✅ Kernel inicializado correctamente");
+    vga_println!("💡 Presiona Ctrl+Alt+Q para salir de QEMU");
+    vga_println!("");
+    vga_println!("🐚 Shell interactivo disponible!");
+    vga_println!("💡 Escribe 'help' para ver comandos disponibles");
+    vga_println!("");
     
-    // Inicializar userland
-    init_userland();
+    // Mostrar prompt del shell
+    if let Some(shell_guard) = shell::get_shell() {
+        let shell = shell_guard.lock();
+        if let Some(ref shell) = *shell {
+            shell.print_prompt();
+        }
+    }
     
-    // Loop principal del kernel
+    // Bucle principal del kernel
     kernel_loop();
 }
 
-/// Inicializar el kernel
-fn kernel_init() {
-    // Configurar memoria
-    memory::init();
-    
-    // Configurar interrupciones
-    interrupt::init();
-    
-    // Configurar HAL
-    hal::init();
-    
-    // Mostrar mensaje de bienvenida
-    print_kernel_message();
+/// Punto de entrada alternativo para multiboot
+#[no_mangle]
+pub extern "C" fn kernel_main() -> ! {
+    _start()
 }
 
-/// Inicializar componentes del kernel
-fn init_components() {
-    // Inicializar process manager
-    process::init();
+/// Inicializar componentes básicos del kernel
+fn initialize_kernel_components() {
+    vga_println!("   • Inicializando arquitectura...");
+    // TODO: arch::init();
     
-    // Inicializar scheduler
-    scheduler::init();
+    vga_println!("   • Inicializando kernel executive...");
+    // TODO: ke::init();
     
-    // Inicializar I/O system
-    io::init();
+    vga_println!("   • Inicializando gestor de memoria...");
+    if memory::init_memory_system() {
+        vga_println!("     ✅ Sistema de memoria inicializado");
+    } else {
+        vga_println!("     ❌ Error al inicializar memoria");
+    }
     
-    // Inicializar security manager
-    security::init();
+    vga_println!("   • Inicializando I/O manager...");
+    // TODO: io::init();
     
-    // Inicializar power management
-    power::init();
+    vga_println!("   • Inicializando sistema de archivos...");
+    if filesystem::init_filesystem() {
+        vga_println!("     ✅ Sistema de archivos inicializado");
+    } else {
+        vga_println!("     ❌ Error al inicializar sistema de archivos");
+    }
     
-    // Inicializar x86_64 support
-    x86_64::init();
+    vga_println!("   • Inicializando gestor de procesos...");
+    if process::init_process_system() {
+        vga_println!("     ✅ Sistema de procesos inicializado");
+    } else {
+        vga_println!("     ❌ Error al inicializar procesos");
+    }
     
-    // Inicializar system calls
-    system_calls::init();
+    vga_println!("   • Inicializando core del kernel...");
+    // TODO: kernel_core::init();
     
-    // Inicializar networking
-    networking::init();
+    vga_println!("   • Inicializando sistema de interrupciones...");
+    if interrupts::init_interrupts() {
+        vga_println!("     ✅ Sistema de interrupciones inicializado");
+    } else {
+        vga_println!("     ❌ Error al inicializar interrupciones");
+    }
     
-    // Inicializar storage system
-    storage::init();
+    vga_println!("   • Inicializando driver de teclado...");
+    keyboard::init_keyboard();
     
-    // Inicializar time & synchronization
-    time::init();
+    vga_println!("   • Inicializando driver de mouse...");
+    if mouse::init_mouse() {
+        vga_println!("     ✅ Mouse inicializado correctamente");
+    } else {
+        vga_println!("     ❌ Error al inicializar mouse");
+    }
     
-    // Inicializar services
-    services::init();
+    vga_println!("   • Inicializando shell interactivo...");
+    if shell::init_shell() {
+        vga_println!("     ✅ Shell inicializado correctamente");
+    } else {
+        vga_println!("     ❌ Error al inicializar shell");
+    }
     
-    // Inicializar caching & buffering
-    caching::init();
-    
-    // Inicializar resource management
-    resource_management::init();
+    // Mostrar información del sistema
+    show_system_info();
 }
 
-/// Inicializar drivers
-fn init_drivers() {
-    // Inicializar graphics drivers
-    graphics::init();
-    
-    // Inicializar audio drivers
-    audio::init();
-    
-    // Inicializar USB drivers
-    usb::init();
-    
-    // Inicializar virtualization
-    virtualization::init();
-    
-    // Inicializar monitoring
-    monitoring::init();
-    
-    // Inicializar advanced security
-    advanced_security::init();
+/// Mostrar información del sistema
+fn show_system_info() {
+    vga_println!("");
+    vga_println!("📊 Información del Sistema:");
+    vga_println!("   • Arquitectura: x86_64");
+    vga_println!("   • Kernel: ReactOS Rust v0.1.0");
+    vga_println!("   • Modo: Bare Metal");
+    vga_println!("   • Bootloader: GRUB Multiboot");
+    vga_println!("   • Memoria: {}", memory::get_memory_info());
+    vga_println!("   • Procesos: 1 (kernel)");
+    vga_println!("   • Teclado: {}", keyboard::get_keyboard_driver().map(|d| d.get_status()).unwrap_or("No disponible"));
+    vga_println!("   • Mouse: {}", mouse::get_mouse_driver().map(|d| d.get_status()).unwrap_or("No disponible"));
+    vga_println!("   • Interrupciones: {}", if interrupts::is_interrupt_system_available() { "Activo" } else { "No disponible" });
+    vga_println!("   • Procesos: {}", if process::is_process_system_available() { "Activo" } else { "No disponible" });
+    vga_println!("   • Sistema de archivos: {}", if filesystem::is_filesystem_available() { "Activo" } else { "No disponible" });
+    vga_println!("   • Shell: {}", if shell::is_shell_available() { "Activo" } else { "No disponible" });
+    vga_println!("   • Detalles: {}", keyboard::get_keyboard_info());
+    vga_println!("   • Mouse Info: {}", mouse::get_mouse_info());
+    vga_println!("   • Interrupt Info: {}", interrupts::get_interrupt_info());
+    vga_println!("   • Shell Info: {}", shell::get_shell_info());
+    vga_println!("   • Estado: Funcionando");
 }
 
-/// Inicializar servicios del sistema
-fn init_services() {
-    // Inicializar servicios del sistema
-    services::init_system_services();
+/// Probar asignación de memoria dinámica
+fn test_dynamic_allocation() {
+    // Crear un vector dinámico para probar el allocator
+    let mut test_vector: alloc::vec::Vec<u32> = alloc::vec::Vec::new();
     
-    // Inicializar servicios de red
-    services::init_network_services();
+    // Agregar algunos elementos
+    for i in 0..10 {
+        test_vector.push(i * 42);
+    }
     
-    // Inicializar servicios de almacenamiento
-    services::init_storage_services();
+    // Mostrar información de la asignación
+    vga_println!("🧪 Prueba de memoria: Vector de {} elementos creado", test_vector.len());
     
-    // Inicializar servicios de seguridad
-    services::init_security_services();
+    // El vector se libera automáticamente al salir del scope
 }
 
-/// Inicializar userland
-fn init_userland() {
-    // Crear proceso init
-    process::create_init_process();
-    
-    // Cargar userland services
-    services::load_userland_services();
-    
-    // Inicializar GUI system
-    // gui::init();
-}
-
-/// Loop principal del kernel
+/// Bucle principal del kernel optimizado
 fn kernel_loop() -> ! {
+    let mut counter = 0u64;
+    let mut last_status_time = 0u64;
+    let mut _last_keyboard_check = 0u64;
+    const STATUS_INTERVAL: u64 = 1000; // Mostrar estado cada 1000 iteraciones
+    const STATS_INTERVAL: u64 = 10;    // Mostrar estadísticas cada 10 ciclos
+    const KEYBOARD_CHECK_INTERVAL: u64 = 100; // Verificar teclado cada 100 iteraciones
+
     loop {
-        // Procesar interrupciones
-        interrupt::process_interrupts();
-        
-        // Ejecutar scheduler
-        scheduler::schedule();
-        
-        // Procesar I/O
-        io::process_io();
-        
-        // Procesar networking
-        networking::process_network();
-        
-        // Procesar storage
-        storage::process_storage();
-        
-        // Procesar servicios
-        services::process_services();
-        
-        // Procesar monitoring
-        monitoring::process_monitoring();
-        
-        // Procesar security
-        security::process_security();
-        
-        // Procesar power management
-        power::process_power();
-        
-        // Halt del CPU
-        halt_cpu();
-    }
-}
+        // Simular trabajo del kernel
+        counter += 1;
 
-/// Mostrar mensaje del kernel
-fn print_kernel_message() {
-    // Mostrar mensaje de bienvenida
-    // Usar VGA text mode
-    // Colores y formato
-}
+        // Ejecutar scheduler de procesos cada 100 iteraciones
+        if counter % 100 == 0 {
+            if let Some(_current_pid) = process::schedule() {
+                // Proceso actual ejecutándose
+            }
+        }
 
-/// Halt del CPU
-fn halt_cpu() {
-    unsafe {
-        core::arch::asm!("hlt");
-    }
-}
+        // Prueba de asignación de memoria dinámica cada 5000 iteraciones
+        if counter % 5000 == 0 {
+            test_dynamic_allocation();
+        }
 
-/// Handler de pánico
-#[panic_handler]
-fn panic(info: &PanicInfo) -> ! {
-    // Mostrar mensaje de error
-    // Log del error
-    // Halt del sistema
-    loop {
+        // Verificar entrada del teclado periódicamente
+        if counter % KEYBOARD_CHECK_INTERVAL == 0 {
+            _last_keyboard_check += 1;
+            if let Some(ch) = keyboard::process_keyboard_input() {
+                // Procesar entrada del shell
+                if shell::process_shell_input(ch) {
+                    // El shell procesó la entrada
+                } else {
+                    // Mostrar entrada no procesada por el shell
+                    match ch {
+                        '\n' => vga_println!(""),
+                        '\x08' => vga_println!("[BACKSPACE]"),
+                        '\x1B' => vga_println!("[ESC]"),
+                        '\t' => vga_println!("[TAB]"),
+                        ' ' => vga_println!("[SPACE]"),
+                        _ => vga_println!("Tecla presionada: '{}'", ch),
+                    }
+                }
+            }
+        }
+
+        // Verificar entrada del mouse periódicamente
+        if counter % KEYBOARD_CHECK_INTERVAL == 0 {
+            if mouse::process_mouse_input() {
+                if let Some(ref driver) = mouse::get_mouse_driver() {
+                    let pos = driver.get_position();
+                    let buttons = driver.get_buttons();
+                    vga_println!("🖱️  Mouse: Pos({}, {}) L:{} R:{} M:{}", 
+                        pos.x, pos.y,
+                        if buttons.left { "ON" } else { "OFF" },
+                        if buttons.right { "ON" } else { "OFF" },
+                        if buttons.middle { "ON" } else { "OFF" }
+                    );
+                }
+            }
+        }
+
+        // Optimización: Solo verificar condiciones cuando sea necesario
+        if counter % STATUS_INTERVAL == 0 {
+            last_status_time += 1;
+            vga_println!("🔄 Kernel funcionando... ciclo: {}", last_status_time);
+            
+            // Mostrar estadísticas cada 10 ciclos
+            if last_status_time % STATS_INTERVAL == 0 {
+                vga_println!("📈 Estadísticas: {} iteraciones completadas", counter);
+                vga_println!("⌨️  Teclado: {}", keyboard::get_keyboard_info());
+                vga_println!("🖱️  Mouse: {}", mouse::get_mouse_info());
+                vga_println!("⚡ Interrupciones: {}", interrupts::get_interrupt_stats());
+                vga_println!("💾 Memoria: {}", memory::get_memory_stats());
+                vga_println!("🔄 Procesos: {}", process::get_process_info());
+                vga_println!("📁 Sistema de archivos: {}", filesystem::get_filesystem_info());
+                vga_println!("🐚 Shell: {}", shell::get_shell_stats());
+            }
+        }
+
+        // Halt del procesador para ahorrar energía
+        // Optimización: Usar halt en lugar de busy wait
         unsafe {
-            core::arch::asm!("hlt");
+            asm!("hlt", options(nomem, nostack));
         }
     }
 }
 
-// Placeholder modules - estos serán implementados
-mod memory {
-    pub fn init() {}
-}
-
-mod process {
-    pub fn init() {}
-    pub fn create_init_process() {}
-}
-
-mod scheduler {
-    pub fn init() {}
-    pub fn schedule() {}
-}
-
-mod interrupt {
-    pub fn init() {}
-    pub fn process_interrupts() {}
-}
-
-mod io {
-    pub fn init() {}
-    pub fn process_io() {}
-}
-
-mod security {
-    pub fn init() {}
-    pub fn process_security() {}
-}
-
-mod power {
-    pub fn init() {}
-    pub fn process_power() {}
-}
-
-mod x86_64 {
-    pub fn init() {}
-}
-
-mod graphics {
-    pub fn init() {}
-}
-
-mod audio {
-    pub fn init() {}
-}
-
-mod usb {
-    pub fn init() {}
-}
-
-mod virtualization {
-    pub fn init() {}
-}
-
-mod monitoring {
-    pub fn init() {}
-    pub fn process_monitoring() {}
-}
-
-mod advanced_security {
-    pub fn init() {}
-}
-
-mod storage {
-    pub fn init() {}
-    pub fn process_storage() {}
-}
-
-mod hal {
-    pub fn init() {}
-}
-
-mod time {
-    pub fn init() {}
-}
-
-mod services {
-    pub fn init() {}
-    pub fn init_system_services() {}
-    pub fn init_network_services() {}
-    pub fn init_storage_services() {}
-    pub fn init_security_services() {}
-    pub fn load_userland_services() {}
-    pub fn process_services() {}
-}
-
-mod caching {
-    pub fn init() {}
-}
-
-mod resource_management {
-    pub fn init() {}
-}
-
-mod system_calls {
-    pub fn init() {}
-}
-
-mod networking {
-    pub fn init() {}
-    pub fn process_network() {}
+/// Panic handler para el kernel
+#[panic_handler]
+fn panic(_info: &core::panic::PanicInfo) -> ! {
+    loop {
+        // Halt del procesador
+        unsafe {
+            core::arch::asm!("hlt");
+        }
+    }
 }

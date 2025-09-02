@@ -1,0 +1,28 @@
+[package]
+name = "reactos-rust-kernel"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["staticlib"]
+
+[[bin]]
+name = "reactos-rust-kernel"
+path = "src/main.rs"
+
+[dependencies]
+# Core kernel dependencies (minimal)
+bitflags = "2.4"
+
+[profile.release]
+opt-level = 3        # Maximum optimization
+lto = "fat"          # Aggressive link-time optimization
+codegen-units = 1    # Single codegen unit for better optimization
+panic = "abort"      # Smaller binary size
+strip = true         # Remove debug symbols
+overflow-checks = false  # Disable for performance (safe in kernel context)
+
+[profile.dev]
+opt-level = 1        # Some optimization for development
+debug = true         # Keep debug info for development
+panic = "abort"

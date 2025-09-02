@@ -1,0 +1,19 @@
+[package]
+name = "simple-kernel"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "simple-kernel"
+path = "src/main.rs"
+
+[dependencies]
+
+[profile.release]
+opt-level = "s"  # Optimize for size
+lto = true
+codegen-units = 1
+panic = "abort"
+
+[profile.dev]
+panic = "abort"
