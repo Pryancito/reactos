@@ -2,21 +2,8 @@
 #include <stdint.h>
 #include <stddef.h>
 
-// Multiboot header
-struct multiboot_header {
-    uint32_t magic;
-    uint32_t flags;
-    uint32_t checksum;
-} __attribute__((packed));
-
-// Header de Multiboot
-__attribute__((section(".multiboot")))
-__attribute__((aligned(4)))
-const struct multiboot_header mb_header = {
-    .magic = 0x1BADB002,
-    .flags = 0x00000000,
-    .checksum = -(0x1BADB002 + 0x00000000)
-};
+// Kernel para GRUB comando "linux"
+// Kernel ELF estándar sin headers especiales
 
 // Estructura para información de hardware
 struct hardware_info {

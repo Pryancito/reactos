@@ -10,6 +10,10 @@ echo ""
 rm -rf real-hardware-iso
 mkdir -p real-hardware-iso/boot/grub
 
+# Compilar el kernel primero
+echo "🔧 Compilando kernel para hardware real..."
+./compile-real-hardware-kernel.sh
+
 # Copiar el kernel para hardware real
 if [ -f "real-hardware-kernel.elf" ]; then
     cp real-hardware-kernel.elf real-hardware-iso/boot/vmlinuz-eclipse

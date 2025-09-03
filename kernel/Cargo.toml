@@ -1,26 +1,19 @@
 [package]
-name = "eclipse-kernel"
+name = "reactos-kernel"
 version = "0.1.0"
 edition = "2021"
-authors = ["Eclipse OS Team"]
-description = "Kernel de Eclipse OS compatible con Multiboot"
+authors = ["ReactOS Rust Team"]
+description = "Kernel de ReactOS en Rust"
 
-[[bin]]
-name = "eclipse-kernel"
-path = "src.rs"
+[lib]
+name = "reactos_kernel"
+crate-type = ["lib"]
 
 [dependencies]
+# Dependencias básicas para no_std
+libc = "0.2"
+anyhow = "1.0"
 
-[target.'cfg(target_os = "none")'.dependencies]
-
-[profile.dev]
-opt-level = 0
-debug = true
-overflow-checks = false
-panic = "abort"
-
-[profile.release]
-opt-level = 2
-debug = false
-lto = false
-panic = "abort"
+[features]
+default = []
+no_std = []
