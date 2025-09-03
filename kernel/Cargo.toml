@@ -1,0 +1,26 @@
+[package]
+name = "eclipse-kernel"
+version = "0.1.0"
+edition = "2021"
+authors = ["Eclipse OS Team"]
+description = "Kernel de Eclipse OS compatible con Multiboot"
+
+[[bin]]
+name = "eclipse-kernel"
+path = "src.rs"
+
+[dependencies]
+
+[target.'cfg(target_os = "none")'.dependencies]
+
+[profile.dev]
+opt-level = 0
+debug = true
+overflow-checks = false
+panic = "abort"
+
+[profile.release]
+opt-level = 2
+debug = false
+lto = false
+panic = "abort"

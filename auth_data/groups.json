@@ -1,0 +1,26 @@
+{
+  "users": {
+    "name": "users",
+    "description": "Usuarios regulares",
+    "permissions": [
+      "file_access",
+      "network_access"
+    ],
+    "members": [
+      "guest"
+    ]
+  },
+  "administrators": {
+    "name": "administrators",
+    "description": "Administradores del sistema",
+    "permissions": [
+      "user_management",
+      "system_config",
+      "file_access",
+      "network_access"
+    ],
+    "members": [
+      "admin"
+    ]
+  }
+}

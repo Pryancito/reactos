@@ -1,153 +1,212 @@
-# 🚀 ReactOS UEFI Bootloader para ASUS 10ª Generación
+# 🌙 Eclipse OS en Rust
 
-## 🎯 **Descripción**
+Sistema operativo Windows-compatible implementado completamente en Rust con kernel nativo, GUI, y shell interactivo.
 
-Este proyecto proporciona una solución completa para bootear ReactOS en sistemas UEFI estrictos como ASUS 10ª generación, sin necesidad de modo Legacy/CSM.
+## ✨ Características
 
-## ✅ **Características**
+- **Kernel Rust nativo** - Compatible con Multiboot, sin dependencias de `std`
+- **Shell interactivo completo** - Más de 50 comandos implementados
+- **GUI nativa** - Interfaz gráfica con eframe/egui
+- **APIs de Windows** - Compatibilidad con APIs nativas de Windows
+- **Sistema de archivos** - Operaciones completas de archivos y directorios
+- **Red** - Servicios de red, ping, HTTP, Echo
+- **Autenticación** - Sistema de usuarios y grupos
+- **Modular** - Arquitectura de plugins extensible
 
-- ✅ **Bootloader UEFI nativo** para ReactOS
-- ✅ **Compatible con UEFI 2.8+** y sistemas modernos
-- ✅ **Funciona en ASUS 10ª generación** y hardware similar
-- ✅ **No requiere modo Legacy/CSM**
-- ✅ **Compatible con Secure Boot** (con configuración)
-- ✅ **Scripts automatizados** para instalación y verificación
+## 🚀 Instalación y Uso
 
-## 🚀 **Instalación Rápida**
+### Requisitos
 
-### **Opción 1: Script automático**
+```bash
+# Rust (última versión estable)
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# Dependencias del sistema
+sudo apt update
+sudo apt install grub-pc-bin genisoimage cpio gzip qemu-system-x86
+```
+
+### Compilación
+
 ```bash
 # Clonar el repositorio
-git clone <tu-repositorio>
-cd reactos-uefi-bootloader
+git clone https://github.com/tu-usuario/eclipse-os-rust.git
+cd eclipse-os-rust
 
-# Instalar en USB
-sudo make install USB=/dev/sdb ISO=output-posix-amd64/reactos-uefi-2015-plus.iso
+# Compilar y crear ISO
+./build.sh
 ```
 
-### **Opción 2: Script manual**
-```bash
-# Crear USB UEFI
-sudo ./scripts/quick-install.sh /dev/sdb output-posix-amd64/reactos-uefi-2015-plus.iso
-
-# Verificar configuración
-./scripts/verify-uefi-usb.sh /dev/sdb
-
-# Probar en QEMU (opcional)
-./scripts/test-uefi-usb-qemu.sh /dev/sdb
-```
-
-## 📋 **Requisitos**
-
-- **Sistema Linux** (Ubuntu/Debian recomendado)
-- **USB de 4GB+** (formateado)
-- **ISO de ReactOS UEFI** (`reactos-uefi-2015-plus.iso`)
-- **Privilegios de root** para particionado
-
-## 🔧 **Uso**
-
-### **1. Preparar USB**
-```bash
-# Insertar USB y verificar dispositivo
-lsblk
-
-# Instalar ReactOS UEFI
-sudo make install USB=/dev/sdb ISO=reactos-uefi-2015-plus.iso
-```
-
-### **2. Verificar instalación**
-```bash
-# Verificar configuración
-make verify USB=/dev/sdb
-
-# Probar en QEMU (opcional)
-make test USB=/dev/sdb
-```
-
-### **3. Bootear en hardware**
-1. Insertar USB en puerto USB 3.0
-2. Reiniciar y acceder a BIOS (F2/Del)
-3. Verificar configuración UEFI (no Legacy)
-4. Presionar F8 para menú de arranque
-5. Seleccionar "UEFI USB" o "ReactOS UEFI"
-
-## 📁 **Estructura del Proyecto**
-
-```
-reactos-uefi-bootloader/
-├── scripts/                    # Scripts de instalación
-│   ├── quick-install.sh       # Instalación rápida
-│   ├── verify-uefi-usb.sh     # Verificación USB
-│   └── test-uefi-usb-qemu.sh  # Pruebas en QEMU
-├── docs/                       # Documentación
-│   ├── SOLUCION-USB-UEFI-ASUS-10GEN.md
-│   ├── README-UEFI-BOOTLOADER.md
-│   └── README-2-ISOS-PRINCIPALES.md
-├── build/                      # Archivos de compilación
-├── Makefile                    # Comandos principales
-└── README.md                   # Este archivo
-```
-
-## 🎯 **Comandos Principales**
+### Ejecución
 
 ```bash
-# Ver ayuda
-make help
+# Con QEMU
+qemu-system-x86_64 -cdrom eclipse-os.iso -m 512M -display gtk
 
-# Instalar en USB
-make install USB=/dev/sdb ISO=reactos-uefi-2015-plus.iso
+# Con VirtualBox
+# Crear nueva VM y seleccionar eclipse-os.iso como CD de arranque
 
-# Verificar configuración
-make verify USB=/dev/sdb
-
-# Probar en QEMU
-make test USB=/dev/sdb
-
-# Limpiar archivos temporales
-make clean
-
-# Ver documentación
-make docs
+# En hardware real
+sudo dd if=eclipse-os.iso of=/dev/sdX bs=4M status=progress
 ```
 
-## 🔍 **Solución de Problemas**
+## 📁 Estructura del Proyecto
 
-### **USB no reconocido por BIOS**
-1. Verificar configuración UEFI (no Legacy/CSM)
-2. Deshabilitar Secure Boot temporalmente
-3. Usar puerto USB 3.0
-4. Verificar estructura EFI: `make verify USB=/dev/sdb`
+```
+eclipse-os-rust/
+├── src/
+│   ├── main.rs          # Sistema operativo principal
+│   ├── kernel.rs        # Kernel Rust no_std
+│   ├── gui/             # Interfaz gráfica
+│   ├── auth/            # Sistema de autenticación
+│   ├── network/         # Servicios de red
+│   └── apps/            # Aplicaciones nativas
+├── docs/                # Documentación
+├── scripts/             # Scripts de utilidad
+├── build.sh             # Script de construcción
+└── Cargo.toml           # Configuración del proyecto
+```
 
-### **Error de instalación**
-1. Verificar permisos de root
-2. Verificar que el USB no esté montado
-3. Verificar que el ISO existe
-4. Revisar logs de error
+## 🎯 Comandos Disponibles
 
-## 📚 **Documentación Adicional**
+### Sistema
+- `info` - Información del sistema
+- `ver` - Versión del sistema
+- `date` - Fecha actual
+- `time` - Hora actual
+- `whoami` - Usuario actual
+- `hostname` - Nombre del equipo
 
-- [Solución Completa ASUS 10ª Gen](docs/SOLUCION-USB-UEFI-ASUS-10GEN.md)
-- [Bootloader UEFI Nativo](docs/README-UEFI-BOOTLOADER.md)
-- [ISOs Principales](docs/README-2-ISOS-PRINCIPALES.md)
+### Archivos
+- `dir` / `ls` - Listar directorios
+- `cd` - Cambiar directorio
+- `pwd` - Directorio actual
+- `type` / `cat` - Mostrar archivo
+- `copy` / `cp` - Copiar archivo
+- `mkdir` / `md` - Crear directorio
+- `del` / `rm` - Eliminar archivo
+- `move` / `mv` - Mover archivo
+- `ren` / `rename` - Renombrar archivo
 
-## 🤝 **Contribuir**
+### Red
+- `ping` - Hacer ping
+- `ipconfig` / `ifconfig` - Configuración de red
+- `netstat` - Conexiones de red
+- `http` - Servidor HTTP
+- `echo` - Servidor Echo
 
-1. Fork el repositorio
-2. Crear rama para feature (`git checkout -b feature/nueva-funcionalidad`)
-3. Commit cambios (`git commit -am 'Agregar nueva funcionalidad'`)
-4. Push a la rama (`git push origin feature/nueva-funcionalidad`)
-5. Crear Pull Request
+### GUI
+- `gui` / `desktop` - Abrir interfaz gráfica
+- `notepad` / `edit` - Editor de texto
+- `calculator` / `calc` - Calculadora
+- `filemanager` / `explorer` - Explorador de archivos
+- `taskmanager` / `tasks` - Administrador de tareas
 
-## 📄 **Licencia**
+### Windows API
+- `getenv` - Variable de entorno
+- `setenv` - Establecer variable
+- `getpid` - ID del proceso
+- `getsysteminfo` - Información del sistema
+- `getcomputername` - Nombre del equipo
+- `getusername` - Usuario actual
+- `getcurrentdirectory` - Directorio actual
+- `getsystemtime` - Tiempo del sistema
+- `getmemoryinfo` - Información de memoria
 
-Este proyecto está bajo la licencia MIT. Ver [LICENSE](LICENSE) para más detalles.
+### Autenticación
+- `login` - Iniciar sesión
+- `logout` - Cerrar sesión
+- `adduser` / `useradd` - Agregar usuario
+- `passwd` - Cambiar contraseña
+- `listusers` / `users` - Listar usuarios
+- `groups` - Listar grupos
 
-## 🙏 **Agradecimientos**
+## 🔧 Desarrollo
 
-- **ReactOS Project** por el sistema operativo
-- **UEFI Forum** por las especificaciones UEFI
-- **Comunidad Linux** por las herramientas de desarrollo
+### Compilar solo el kernel
+
+```bash
+cargo build --release --bin eclipse-kernel
+```
+
+### Compilar solo el sistema
+
+```bash
+cargo build --release --bin eclipse-os
+```
+
+### Ejecutar en modo debug
+
+```bash
+cargo run --release --bin eclipse-os
+```
+
+## 📊 Arquitectura
+
+### Kernel
+- **Multiboot compatible** - Carga con GRUB
+- **VGA driver** - Consola de texto
+- **Serial driver** - Consola por puerto serie
+- **VESA/VBE** - Soporte para hardware moderno
+- **Fallback VGA** - Compatibilidad con hardware antiguo
+
+### Sistema
+- **Plugin architecture** - Sistema modular extensible
+- **Windows API compatibility** - APIs nativas de Windows
+- **Real file system** - Operaciones reales de archivos
+- **Network services** - Servicios de red completos
+- **GUI framework** - Interfaz gráfica nativa
+
+## 🐛 Solución de Problemas
+
+### Errores de Hardware Real
+
+Si encuentras estos errores en hardware real:
+- `WARNING: no console will be available to OS`
+- `error: no suitable video mode found`
+
+El kernel incluye:
+- ✅ Driver VGA básico
+- ✅ Driver Serial
+- ✅ Detección VESA/VBE
+- ✅ Fallback VGA
+
+### Problemas de Compilación
+
+```bash
+# Limpiar compilaciones anteriores
+cargo clean
+rm -rf target/ iso/ *.iso
+
+# Recompilar
+./build.sh
+```
+
+## 🤝 Contribuir
+
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver `LICENSE` para más detalles.
+
+## 🙏 Agradecimientos
+
+- **Rust Community** - Por el excelente lenguaje de programación
+- **GRUB** - Por el bootloader
+- **QEMU** - Por la emulación
+- **egui/eframe** - Por el framework GUI
+
+## 📞 Contacto
+
+- **Proyecto**: [Eclipse OS en Rust](https://github.com/tu-usuario/eclipse-os-rust)
+- **Issues**: [GitHub Issues](https://github.com/tu-usuario/eclipse-os-rust/issues)
+- **Discusiones**: [GitHub Discussions](https://github.com/tu-usuario/eclipse-os-rust/discussions)
 
 ---
 
-**¡ReactOS ahora funciona perfectamente en sistemas UEFI modernos!** 🎉
+**🌙 Eclipse OS en Rust** - Sistema operativo Windows-compatible implementado en Rust

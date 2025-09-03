@@ -1,0 +1,30 @@
+{
+  "admin": {
+    "username": "admin",
+    "password_hash": "69232a00f511d65a",
+    "full_name": "Administrator",
+    "email": "admin@reactos-rust.local",
+    "groups": [
+      "administrators"
+    ],
+    "is_admin": true,
+    "is_active": true,
+    "created_at": 1756874496,
+    "last_login": 1756874496,
+    "login_count": 1
+  },
+  "guest": {
+    "username": "guest",
+    "password_hash": "6c741025343781a9",
+    "full_name": "Guest User",
+    "email": "guest@reactos-rust.local",
+    "groups": [
+      "users"
+    ],
+    "is_admin": false,
+    "is_active": true,
+    "created_at": 1756874496,
+    "last_login": null,
+    "login_count": 0
+  }
+}

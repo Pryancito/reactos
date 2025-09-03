@@ -1,0 +1,8 @@
+[package]
+name = "reactos-windows-minimal"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "reactos-windows-minimal"
+path = "src/main_minimal.rs"

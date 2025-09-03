@@ -1,48 +1,59 @@
+# Rust
+target/
+Cargo.lock
+**/*.rs.bk
+
+# ISO y archivos de construcción
+*.iso
+iso/
+initrd-temp/
+initrd.img
+
+# Archivos de kernel compilados
+*.o
+*.elf
+eclipse-kernel
+simple-eclipse-kernel
+working-eclipse-kernel
+fixed-eclipse-kernel
+serial-eclipse-kernel
+real-hardware-kernel
+
 # Archivos temporales
 *.tmp
 *.temp
 *.log
-
-# Archivos de prueba
-test-uefi-usb.img
-*.iso
-
-# Directorios temporales
-/tmp/
-/temp/
-
-# Archivos de sistema
-.DS_Store
-Thumbs.db
-
-# Archivos de backup
-*.bak
-*.backup
+*.swp
+*.swo
 *~
+
+# Directorios de backup
+backup/
+backup_info.txt
 
 # Archivos de configuración local
 .env
+.env.local
 config.local
 
-# Archivos de compilación
-*.o
-*.obj
-*.exe
-*.dll
-*.so
-*.dylib
-
-# Directorios de build
-build/
-dist/
-target/
-
-# Archivos de IDE
+# IDE
 .vscode/
 .idea/
-*.swp
-*.swo
+*.sublime-*
 
-# Archivos de particionado
-*.part
+# OS
+.DS_Store
+Thumbs.db
+
+# QEMU
+*.qcow2
 *.img
+
+# Logs
+*.log
+logs/
+
+# Archivos de prueba
+test-*.iso
+debug-*.iso
+*-test.iso

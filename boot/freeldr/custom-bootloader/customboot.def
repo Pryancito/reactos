@@ -1,9 +1,0 @@
-; Custom Bootloader - Archivo de definición
-; Compatible con MinGW-w64 POSIX
-
-NAME customboot.exe
-
-EXPORTS
-    RunLoader @1
-    InitializeBootloader @2
-    BootReactOS @3

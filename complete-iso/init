@@ -1,0 +1,9 @@
+#!/bin/sh
+echo "🌙 Eclipse OS: Iniciando sistema completo..."
+if [ -x /eclipse-os ]; then
+    echo "🚀 Ejecutando Eclipse OS completo..."
+    exec /eclipse-os
+else
+    echo "❌ /eclipse-os no encontrado"
+    exit 1
+fi
