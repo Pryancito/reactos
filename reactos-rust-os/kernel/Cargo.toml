@@ -1,39 +1,19 @@
 [package]
-name = "reactos-rust-kernel"
-version = "1.0.0"
+name = "reactos-kernel"
+version = "0.1.0"
 edition = "2021"
 authors = ["ReactOS Rust Team"]
-description = "Kernel principal de ReactOS Rust OS"
-
-[[bin]]
-name = "reactos-rust-kernel"
-path = "src/main.rs"
-
-[[bin]]
-name = "reactos-rust-kernel-unified"
-path = "src/main_unified.rs"
+description = "Kernel de ReactOS en Rust"
 
 [lib]
-name = "reactos_rust_kernel"
-path = "src/lib.rs"
+name = "reactos_kernel"
+crate-type = ["lib"]
 
 [dependencies]
-# Dependencias del kernel
-bitflags = "2.0"
-spin = "0.9"
+# Dependencias básicas para no_std
+libc = "0.2"
+anyhow = "1.0"
 
-[target.x86_64-unknown-none]
-rustflags = ["-C", "link-arg=-Tmultiboot.ld"]
-
-[profile.release]
-opt-level = 3
-lto = "fat"
-codegen-units = 1
-panic = "abort"
-strip = true
-overflow-checks = false
-
-[profile.dev]
-opt-level = "s"
-debug = true
-panic = "abort"
+[features]
+default = []
+no_std = []

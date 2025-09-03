@@ -1,21 +1,34 @@
 [package]
-name = "reactos-rust-bootloader"
-version = "1.0.0"
+name = "reactos-uefi-bootloader"
+version = "0.1.0"
 edition = "2021"
 authors = ["ReactOS Rust Team"]
-description = "Bootloader para ReactOS Rust OS"
+description = "Bootloader UEFI moderno para ReactOS Rust OS"
+license = "GPL-2.0"
 
-[dependencies]
-# No dependencies for bootloader - pure Rust
-
-[profile.release]
-opt-level = "z"  # Optimize for size
-lto = true
-codegen-units = 1
-panic = "abort"
-strip = true
-overflow-checks = false
+# Configuración para binario UEFI
+[[bin]]
+name = "bootloader"
+path = "src/uefi_bootloader.rs"
 
 [profile.dev]
-opt-level = "s"  # Optimize for size in dev too
+panic = "abort"
+lto = false
+opt-level = "z"
 debug = true
+overflow-checks = true
+
+[profile.release]
+panic = "abort"
+lto = false
+opt-level = "z"
+debug = false
+overflow-checks = false
+
+[dependencies]
+# Dependencias mínimas para UEFI
+uefi = "0.35"
+
+[build-dependencies]
+# Herramientas de build para UEFI
+uefi-macros = "0.8"

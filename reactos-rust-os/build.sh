@@ -3,13 +3,12 @@
 # Script de build para ReactOS Rust OS
 echo "🦀 Construyendo ReactOS Rust OS..."
 
-# Configuración - Multi-arquitectura por defecto
+# Configuración - Solo x86_64 por simplicidad
 RUST_TOOLCHAIN="nightly"
-TARGET_X86="i686-unknown-none"
 TARGET_X64="x86_64-unknown-none"
-BUILD_X86=true
+BUILD_X86=false
 BUILD_X64=true
-MULTI_ARCH=true
+MULTI_ARCH=false
 
 # Colores
 RED='\033[0;31m'
@@ -53,34 +52,22 @@ check_dependencies() {
     # Instalar toolchain nightly
     rustup toolchain install nightly
     
-    # Instalar targets para ambas arquitecturas (multi-arquitectura por defecto)
-    print_status "Instalando targets para multi-arquitectura..."
-    rustup target add $TARGET_X86
+    # Instalar target para x86_64
+    print_status "Instalando target para x86_64..."
     rustup target add $TARGET_X64
     
-    print_success "Targets instalados: $TARGET_X86 y $TARGET_X64"
+    print_success "Target instalado: $TARGET_X64"
     
     print_success "Dependencias verificadas"
 }
 
 # Construir bootloader
 build_bootloader() {
-    print_status "Construyendo bootloader multi-arquitectura..."
+    print_status "Construyendo bootloader para x86_64..."
     
     cd bootloader
     
-    # Construir para x86 (32-bit) - Multi-arquitectura por defecto
-    print_status "Construyendo bootloader para x86 (32-bit)..."
-    cargo +$RUST_TOOLCHAIN build --target $TARGET_X86 --release
-    
-    if [ $? -eq 0 ]; then
-        print_success "Bootloader x86 construido exitosamente"
-    else
-        print_error "Error al construir bootloader x86"
-        exit 1
-    fi
-    
-    # Construir para x86_64 (64-bit) - Multi-arquitectura por defecto
+    # Construir para x86_64 (64-bit)
     print_status "Construyendo bootloader para x86_64 (64-bit)..."
     cargo +$RUST_TOOLCHAIN build --target $TARGET_X64 --release
     
@@ -96,22 +83,11 @@ build_bootloader() {
 
 # Construir kernel
 build_kernel() {
-    print_status "Construyendo kernel multi-arquitectura..."
+    print_status "Construyendo kernel para x86_64..."
     
     cd kernel
     
-    # Construir para x86 (32-bit) - Multi-arquitectura por defecto
-    print_status "Construyendo kernel para x86 (32-bit)..."
-    cargo +$RUST_TOOLCHAIN build --target $TARGET_X86 --release
-    
-    if [ $? -eq 0 ]; then
-        print_success "Kernel x86 construido exitosamente"
-    else
-        print_error "Error al construir kernel x86"
-        exit 1
-    fi
-    
-    # Construir para x86_64 (64-bit) - Multi-arquitectura por defecto
+    # Construir para x86_64 (64-bit)
     print_status "Construyendo kernel para x86_64 (64-bit)..."
     cargo +$RUST_TOOLCHAIN build --target $TARGET_X64 --release
     
@@ -127,15 +103,29 @@ build_kernel() {
 
 # Construir userland
 build_userland() {
-    print_status "Construyendo userland..."
+    print_status "Construyendo userland multi-arquitectura..."
     
     cd userland
-    cargo +$RUST_TOOLCHAIN build --target $TARGET --release
+    
+    # Construir para x86 (32-bit)
+    print_status "Construyendo userland para x86 (32-bit)..."
+    cargo +$RUST_TOOLCHAIN build --target $TARGET_X86 --release
     
     if [ $? -eq 0 ]; then
-        print_success "Userland construido exitosamente"
+        print_success "Userland x86 construido exitosamente"
     else
-        print_error "Error al construir userland"
+        print_error "Error al construir userland x86"
+        exit 1
+    fi
+    
+    # Construir para x86_64 (64-bit)
+    print_status "Construyendo userland para x86_64 (64-bit)..."
+    cargo +$RUST_TOOLCHAIN build --target $TARGET_X64 --release
+    
+    if [ $? -eq 0 ]; then
+        print_success "Userland x86_64 construido exitosamente"
+    else
+        print_error "Error al construir userland x86_64"
         exit 1
     fi
     
@@ -144,20 +134,32 @@ build_userland() {
 
 # Construir drivers
 build_drivers() {
-    print_status "Construyendo drivers..."
+    print_status "Construyendo drivers multi-arquitectura..."
     
     cd drivers
     for driver in */; do
         if [ -f "$driver/Cargo.toml" ]; then
             print_status "Construyendo driver: $driver"
             cd "$driver"
-            cargo +$RUST_TOOLCHAIN build --target $TARGET --release
+            
+            # Construir para x86 (32-bit)
+            cargo +$RUST_TOOLCHAIN build --target $TARGET_X86 --release
             if [ $? -eq 0 ]; then
-                print_success "Driver $driver construido exitosamente"
+                print_success "Driver $driver x86 construido exitosamente"
             else
-                print_error "Error al construir driver $driver"
+                print_error "Error al construir driver $driver x86"
                 exit 1
             fi
+            
+            # Construir para x86_64 (64-bit)
+            cargo +$RUST_TOOLCHAIN build --target $TARGET_X64 --release
+            if [ $? -eq 0 ]; then
+                print_success "Driver $driver x86_64 construido exitosamente"
+            else
+                print_error "Error al construir driver $driver x86_64"
+                exit 1
+            fi
+            
             cd ..
         fi
     done
@@ -167,20 +169,32 @@ build_drivers() {
 
 # Construir servicios
 build_services() {
-    print_status "Construyendo servicios..."
+    print_status "Construyendo servicios multi-arquitectura..."
     
     cd services
     for service in */; do
         if [ -f "$service/Cargo.toml" ]; then
             print_status "Construyendo servicio: $service"
             cd "$service"
-            cargo +$RUST_TOOLCHAIN build --target $TARGET --release
+            
+            # Construir para x86 (32-bit)
+            cargo +$RUST_TOOLCHAIN build --target $TARGET_X86 --release
             if [ $? -eq 0 ]; then
-                print_success "Servicio $service construido exitosamente"
+                print_success "Servicio $service x86 construido exitosamente"
             else
-                print_error "Error al construir servicio $service"
+                print_error "Error al construir servicio $service x86"
                 exit 1
             fi
+            
+            # Construir para x86_64 (64-bit)
+            cargo +$RUST_TOOLCHAIN build --target $TARGET_X64 --release
+            if [ $? -eq 0 ]; then
+                print_success "Servicio $service x86_64 construido exitosamente"
+            else
+                print_error "Error al construir servicio $service x86_64"
+                exit 1
+            fi
+            
             cd ..
         fi
     done
@@ -190,15 +204,25 @@ build_services() {
 
 # Construir GUI
 build_gui() {
-    print_status "Construyendo GUI..."
+    print_status "Construyendo GUI multi-arquitectura..."
     
     cd gui
     if [ -f "Cargo.toml" ]; then
-        cargo +$RUST_TOOLCHAIN build --target $TARGET --release
+        # Construir para x86 (32-bit)
+        cargo +$RUST_TOOLCHAIN build --target $TARGET_X86 --release
         if [ $? -eq 0 ]; then
-            print_success "GUI construida exitosamente"
+            print_success "GUI x86 construida exitosamente"
         else
-            print_error "Error al construir GUI"
+            print_error "Error al construir GUI x86"
+            exit 1
+        fi
+        
+        # Construir para x86_64 (64-bit)
+        cargo +$RUST_TOOLCHAIN build --target $TARGET_X64 --release
+        if [ $? -eq 0 ]; then
+            print_success "GUI x86_64 construida exitosamente"
+        else
+            print_error "Error al construir GUI x86_64"
             exit 1
         fi
     fi
@@ -208,20 +232,32 @@ build_gui() {
 
 # Construir aplicaciones
 build_applications() {
-    print_status "Construyendo aplicaciones..."
+    print_status "Construyendo aplicaciones multi-arquitectura..."
     
     cd apps
     for app in */; do
         if [ -f "$app/Cargo.toml" ]; then
             print_status "Construyendo aplicación: $app"
             cd "$app"
-            cargo +$RUST_TOOLCHAIN build --target $TARGET --release
+            
+            # Construir para x86 (32-bit)
+            cargo +$RUST_TOOLCHAIN build --target $TARGET_X86 --release
             if [ $? -eq 0 ]; then
-                print_success "Aplicación $app construida exitosamente"
+                print_success "Aplicación $app x86 construida exitosamente"
             else
-                print_error "Error al construir aplicación $app"
+                print_error "Error al construir aplicación $app x86"
                 exit 1
             fi
+            
+            # Construir para x86_64 (64-bit)
+            cargo +$RUST_TOOLCHAIN build --target $TARGET_X64 --release
+            if [ $? -eq 0 ]; then
+                print_success "Aplicación $app x86_64 construida exitosamente"
+            else
+                print_error "Error al construir aplicación $app x86_64"
+                exit 1
+            fi
+            
             cd ..
         fi
     done

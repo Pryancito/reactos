@@ -1,0 +1,39 @@
+# Configuración de Cargo para el bootloader UEFI
+# Optimizaciones específicas para UEFI
+
+[target.x86_64-unknown-uefi]
+# Configuración del linker para UEFI
+linker = "rust-lld"
+
+# Configuración de Rust para UEFI
+rustflags = [
+    "-C", "opt-level=z",
+    "-C", "codegen-units=1",
+    "-C", "panic=abort",
+    "-C", "target-feature=+crt-static",
+    "-C", "relocation-model=static"
+]
+
+# Configuración de build
+[build]
+# Target por defecto para el bootloader
+target = "x86_64-unknown-uefi"
+
+# Configuración de perfiles
+[profile.dev]
+# Optimizaciones para desarrollo
+opt-level = "z"
+debug = true
+lto = false
+overflow-checks = true
+panic = "abort"
+
+[profile.release]
+# Optimizaciones para release
+opt-level = "z"
+debug = false
+lto = "fat"
+codegen-units = 1
+overflow-checks = false
+panic = "abort"
+strip = true

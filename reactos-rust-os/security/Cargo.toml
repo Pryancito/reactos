@@ -1,0 +1,33 @@
+[package]
+name = "reactos-rust-security"
+version = "0.1.0"
+edition = "2021"
+authors = ["ReactOS Rust Team"]
+description = "Sistema de seguridad avanzado para ReactOS Rust"
+
+[[bin]]
+name = "security-manager"
+path = "src/security_manager.rs"
+
+[[bin]]
+name = "authentication-service"
+path = "src/authentication_service.rs"
+
+[[bin]]
+name = "encryption-service"
+path = "src/encryption_service.rs"
+
+[[bin]]
+name = "audit-service"
+path = "src/audit_service.rs"
+
+[[bin]]
+name = "intrusion-detection"
+path = "src/intrusion_detection.rs"
+
+[[bin]]
+name = "key-management"
+path = "src/key_management.rs"
+
+[dependencies]
+# Sin dependencias externas para evitar problemas de compilación

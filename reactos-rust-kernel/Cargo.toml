@@ -23,13 +23,14 @@ version = "1.4"
 features = ["spin_no_std"]
 
 [profile.release]
-opt-level = "z"      # Optimize for size (better for kernel)
+opt-level = 3        # Maximum optimization for x86_64 performance
 lto = "fat"          # Aggressive link-time optimization
 codegen-units = 1    # Single codegen unit for better optimization
 panic = "abort"      # Smaller binary size
 strip = true         # Remove debug symbols
 overflow-checks = false  # Disable for performance (safe in kernel context)
 debug = false        # No debug info in release
+target-cpu = "native" # Optimize for native CPU features
 
 [profile.dev]
 opt-level = 1        # Some optimization for development

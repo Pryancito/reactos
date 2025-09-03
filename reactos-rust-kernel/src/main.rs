@@ -43,6 +43,8 @@ mod advanced_gui;
 mod apps;
 mod performance;
 mod hardware;
+mod pe_loader;
+mod arch;
 
 // Usar el allocator del sistema de memoria
 #[global_allocator]
@@ -50,7 +52,7 @@ static ALLOCATOR: memory::KernelAllocator = memory::KernelAllocator::new();
 
 /// Punto de entrada del kernel (llamado por el bootloader híbrido)
 #[no_mangle]
-pub extern "C" fn kernel_main() -> ! {
+pub extern "C" fn kernel_main(magic: u32, mb_info: u32) -> ! {
     // Inicializar VGA primero
     vga::init();
     
@@ -58,6 +60,36 @@ pub extern "C" fn kernel_main() -> ! {
     vga_println!("🚀 ReactOS Rust Kernel 1 iniciado!");
     vga_println!("📊 Kernel principal con VGA integrado");
     vga_println!("🔧 Inicializando componentes del kernel...");
+    
+    // Verificar magic de Multiboot
+    if magic == 0x2BADB002 {
+        vga_println!("✅ Multiboot magic correcto: 0x{:x}", magic);
+        
+        // Procesar información Multiboot
+        let mb_info_ptr = mb_info as *const multiboot_header::MultibootInfo;
+        if !mb_info_ptr.is_null() {
+            unsafe {
+                let flags = core::ptr::read_unaligned(mb_info_ptr.cast::<u32>().add(0));
+                let mods_count = core::ptr::read_unaligned(mb_info_ptr.cast::<u32>().add(6));
+                vga_println!("📋 Multiboot info: flags=0x{:x}, mods_count={}", flags, mods_count);
+                
+                // Inicializar PE loader
+                pe_loader::init_pe_loader();
+                
+                // Procesar módulos si existen
+                if mods_count > 0 {
+                    vga_println!("📦 Procesando {} módulos Multiboot...", mods_count);
+                    multiboot_header::process_multiboot_modules(mb_info_ptr);
+                } else {
+                    vga_println!("📦 No hay módulos Multiboot para procesar");
+                }
+            }
+        } else {
+            vga_println!("⚠️ Puntero Multiboot info es NULL");
+        }
+    } else {
+        vga_println!("⚠️ Magic Multiboot inválido: 0x{:x}", magic);
+    }
     
     // Inicializar componentes básicos del kernel
     initialize_kernel_components();
@@ -83,8 +115,8 @@ pub extern "C" fn kernel_main() -> ! {
 
 /// Inicializar componentes básicos del kernel
 fn initialize_kernel_components() {
-    vga_println!("   • Inicializando arquitectura...");
-    // TODO: arch::init();
+    vga_println!("   • Inicializando arquitectura x86_64...");
+    arch::x64::init();
     
     vga_println!("   • Inicializando kernel executive...");
     // TODO: ke::init();
@@ -281,6 +313,12 @@ fn initialize_kernel_components() {
         logging::info("hardware", "Detección de hardware inicializada correctamente");
     } else {
         vga_println!("     ❌ Error al inicializar detección de hardware");
+    }
+    vga_println!("   • Inicializando PE loader 64-bit...");
+    if pe_loader::init_pe_loader() {
+        vga_println!("     ✅ PE loader básico disponible");
+    } else {
+        vga_println!("     ❌ PE loader no disponible");
     }
     
     // Mostrar información del sistema
